@@ -1,0 +1,11 @@
+; $Id $
+name = Teaser Thumbnail
+description = Automatically generate thumbnails from the node content for teasers, RSS feeds and Views.
+core = 6.x
+dependencies[] = imagecache
+; Information added by drupal.org packaging script on 2009-12-26
+version = "6.x-1.6"
+core = "6.x"
+project = "teaserthumbnail"
+datestamp = "1261806660"
+

@@ -1,0 +1,46 @@
+<?php
+// $Id: teaserthumbnail.install,v 1.2 2009/01/26 20:51:12 hunvreus Exp $
+/**
+ * Implementation of hook_schema().
+ */ 
+function teaserthumbnail_schema() {
+  $schema['teaserthumbnail'] = array(
+    'fields' => array(
+      'nid' => array(
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+        'default' => 0,
+        'description' => t('The {node}.nid associated with the thumbnail.'),
+      ),
+      'filepath' => array(
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+        'default' => '',
+        'description' => t('Path of the thumbnail source file.'),
+      ),
+    ),
+    'primary key' => array('nid'),
+  );
+
+  return $schema;
+}
+
+/**
+ * Implementation of hook_install().
+ */
+function teaserthumbnail_install() {
+  // Create table
+  drupal_install_schema('teaserthumbnail');
+}
+
+/**
+ * Implementation of hook_uninstall().
+ */
+function teaserthumbnail_uninstall() {
+  // Delete all the pathauto variables and then clear the variable cache  
+  db_query("DELETE FROM {variable} WHERE name LIKE 'teaserthumbnail_%'");
+  drupal_uninstall_schema('teaserthumbnail');
+  cache_clear_all('variables', 'cache');
+}

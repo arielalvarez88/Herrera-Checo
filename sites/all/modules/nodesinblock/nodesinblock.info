@@ -1,0 +1,11 @@
+; $Id: nodesinblock.info,v 1.1 2008/12/20 15:41:20 swentel Exp $
+name = Nodes in block
+description = "Use nodes as content in one or more regions."
+core = 6.x
+version = VERSION
+; Information added by drupal.org packaging script on 2010-05-12
+version = "6.x-1.6"
+core = "6.x"
+project = "nodesinblock"
+datestamp = "1273647614"
+

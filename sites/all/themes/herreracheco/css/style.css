@@ -1,0 +1,1127 @@
+/*My styles*/
+#main {
+    padding: 0 9px;
+}
+/*header*/
+#logo
+{
+   display: block;
+    float: left;
+    min-height: 1px;
+}
+#content-bottom
+{
+    clear:both;
+}
+
+#header
+{
+      background: none repeat scroll 0 0 white;
+    height: 68px;
+    padding: 40px 10px 10px;
+}
+
+#primary-links
+{
+   float: left;
+    margin-left: 15px;
+    margin-top: 37px;
+    min-height: 1px;
+        
+}
+
+#primary-links li {
+    margin: 0 15px;
+}
+
+#primary-links li a, #primary-links li a:visited{
+  color: black;
+    padding: 5px;
+    text-decoration: none;
+}
+
+#primary-links li a:hover {
+    background-color: #184794;
+    color: white;
+}
+
+
+
+/*header ENDS*/
+
+
+/*default header*/
+
+.section-header-horizontal-gradient-divisor
+{
+
+    
+
+   clear: both;
+ 
+    text-align: center;
+   
+}
+/*default-header ENDS*/
+
+/*front-page-slideshow*/
+
+.front-page-slideshow-photo {
+
+    width: 713px;
+    height: 290px;
+}
+
+#front-page-slideshow {
+        float: left;
+    margin-bottom: 13px;
+    margin-right: 9px;
+    position: relative;       
+}
+#front-page-slideshow-pager {
+ float: left;
+    left: 638px;
+    position: absolute;
+    top: 0;
+    z-index: 1000;
+}
+
+
+/*front-page-slideshow ENDS*/
+
+/*bienvenidos*/
+#bienvenidos {
+     float: left;
+    text-align: left;
+    width: 444px;
+}
+
+/*bienvenidos ENDS*/
+
+/*vertical-gradient-divisor*/
+.vertical-gradient-divisor
+{
+        float: left;
+        margin: 0 12px;
+}
+/*vertical-gradient-divisor END*/
+
+/*gradient-divisor*/
+.horizontal-gradient-divisor
+{
+      clear: both;
+    height: 8px;
+    text-align: center;
+    margin-bottom:20px;
+    
+}
+/*gradient-divisor ENDS*/
+
+/*portafolio-link*/
+#portafolio-link
+{
+        float: left;
+    position: relative;
+    top: -14px;
+}
+/*portafolio-link ENDS*/
+
+
+/*proyectos-comerciales-residenciales*/
+#proyectos-comerciales-residenciales
+{
+   float: left;
+    height: 135px;
+    margin: 0 0 10px 0;
+
+}
+#proyectos-comerciales-residenciales a
+{
+      display: block;
+    float: left;
+
+}
+
+#proyectos-comerciales
+{
+    margin-right: 4px;
+}
+
+
+
+/*proyectos-comerciales-residenciales ENDS*/
+
+/*useful classes*/
+a.no-decoration-anchor, .no-decoration-anchor img, a.no-decoration-anchor:hover, a.no-decoration-anchor:link, a.no-decoration-anchor:visited {
+    border: medium none;
+    text-decoration: none;
+}
+/*useful classes END*/
+
+/*video-de-proyecto*/
+
+#video-de-proyecto {
+     float: right;
+  
+}
+#video-de-proyecto h2
+{
+    margin-bottom: 10px;
+}
+#video-de-proyecto-video-container
+{
+      background-image: url("/sites/default/files/images/videoDeProyecto/fondo.png");
+    height: 278px;
+    margin-bottom: 20px;
+    padding: 7px 0;
+    width: 451px;
+}
+#video-de-proyecto-video
+{
+    margin-right: auto;
+    margin-left: auto;
+    display:block;
+}
+
+/*newsletter*/
+#newsletter {
+    background-image: url("/sites/default/files/images/newsletter/background.png");
+    color: white;
+    float: left;
+    font-weight: bold;
+    height: 98px;
+    padding: 20px;
+    width: 328px;
+}
+
+#newsletter h2
+{
+    clear:both;
+     font-size: 1.5em;
+    font-weight: 900;
+    margin-bottom: 3px;
+}
+
+#newsletter p {
+    font-size: 0.9em;
+}
+
+#newsletter input {
+    -moz-border-radius: 5px 5px 5px 5px;
+    border: 0 none;
+    height: 30px;
+}
+#newsletter span,#newsletter input
+{
+    float:left;
+}
+
+#newsletter span, #newsletter input {
+    float: left;
+}
+
+#newsletter span {
+    -moz-border-radius: 5px 5px 5px 5px;
+    background-color: #17438B;
+    cursor: pointer;
+    display: block;
+    font-size: 0.8em;
+    height: 17px;
+    left: -74px;
+    padding-top: 3px;
+    position: relative;
+    text-align: center;
+    top: 5px;
+    width: 69px;
+}
+/*newsletter ENDS*/
+
+/*Proyecto*/
+#proyecto
+{
+        min-height: 792px;
+    position: relative;
+     
+}
+
+#proyecto-edificios {
+    background-image: url("/sites/default/files/images/common/largeWhiteToGrayGradient.png");
+    height: 291px;
+    padding: 20px 0;
+    width: 326px;
+}
+
+
+#proyecto h3{
+   margin: 0 0 5px;
+}
+#proyecto-slideshow {
+    float: left;
+    margin-right: 10px;
+}
+#proyecto-caracteristicas
+{
+    margin-right: 166px;
+}
+#proyecto-caracteristicas, #proyecto-edificios-container
+{
+    float:left;
+}
+
+
+
+#proyecto-slideshow-pager-container{
+    float:left;
+}
+
+.proyecto-slideshow-slide
+{
+    width: 511px;
+    height: 353px;
+}
+.proyecto-slideshow-photos-selector
+{
+        height: 58px;
+    width: 97px;
+   margin: 9px 0;
+   display: block;
+}
+.proyectos-residenciales-location-block
+{
+    
+}
+.proyecto-slideshow-pager-group{
+    min-height: 277px;
+}
+#proyecto-slideshow-container
+{
+    clear:both;
+    min-height: 358px;
+}
+
+#proyectos-residenciales-localizacion
+{
+    
+       background-image: url("/sites/default/files/images/videoDeProyecto/fondo.png");
+    height: 192px;
+    padding: 5px 0;
+    width: 345px;
+}
+
+
+#proyectos-residenciales-location, #proyectos-residenciales-location-header
+{
+    
+}
+.proyectos-residenciales-location-block
+{
+     padding-left: 331px;
+}
+#proyectos-residenciales-address
+{
+         bottom: -105px;
+    left: 690px;
+    position: absolute;
+}
+#proyecto-direccion {
+    left: 74px;
+    position: absolute;
+    top: 650px;
+}
+
+
+#proyecto-info
+{
+    position:relative;
+}
+
+#proyecto-info,#proyecto-menu{
+    float:left;
+}
+
+#proyecto-menu {
+    margin-right: 31px;
+}
+
+#proyecto-menu-banner
+{
+    height: 320px;
+    border: 1px solid black;
+}
+
+#proyecto .large-gradient-vertical-divisor
+{
+    margin: 0 10px;
+}
+
+#proyecto-info .horizontal-gradient-divisor img
+{
+    width: 610px;
+}
+
+#proyecto-menu a {
+    display: block;
+}
+#proyecto-info .section-header-horizontal-gradient-divisor img
+{
+        width: 610px;
+}
+
+
+/*Proyecto ENDS*/
+
+/*building*/
+
+.building table{
+    border: 0 none;
+    clear: both;
+    width: 326px;;
+}
+
+.building table tr td {
+    width: 90px;
+}
+
+.building-title 
+{
+    background-image: url("/sites/default/files/images/common/whiteToGrayGradient.png");
+    color: #0E95BC;
+    float: left;
+    height: 23px;
+    margin: 0;
+    padding-top: 5px;
+    width: auto;
+     cursor: pointer;
+}
+
+.building table tr {
+        height: 20px;
+    text-align: center;
+}
+.building p{
+    
+}
+.building-apt-header
+{
+    padding-bottom: 12px;
+}
+/*building ENDS*/
+
+/*proyectos-type-menu*/
+
+
+#proyectos-type-menu a {
+    margin: 15px 50px;
+}
+
+
+#proyectos-type-menu-residenciales {
+    position: relative;
+    top: 9px;
+}
+
+/*proyectos-type-menu ENDS*/
+/*footer*/
+
+#footer
+{
+    height: 156px;
+      background-image: url("/sites/default/files/images/common/grayToWhiteLargeGradient.png");
+      padding: 20px;
+}
+
+#footer-left-side
+{
+      float: left;
+    width: 660px;
+}
+#footer-right-side {
+    float: right;
+}
+#herrera-checo-contacto-fax {
+    margin-bottom: 5px;
+}
+#herrera-checo-contacto span {
+    display: block;
+    margin: 5px 0;
+}
+#herrera-checo-contacto {
+}
+
+
+#footer-left-side #logo {
+       margin: 40px 0;
+}
+
+#footer-left-side p {
+    clear: both;
+}
+
+#footer-right-side {
+    float: left;
+    margin-left: 15px;
+}
+
+#footer a.secondary-link {
+    color: black;
+    padding-right: 10px;
+}
+
+#herrera-checo-contacto #herrera-checo-telefono, #herrera-checo-contacto #herrera-checo-fax
+{
+       font-size: 1.2em;
+    font-weight: 900;
+}
+#herrera-checo-contacto #herrera-checo-fax {
+    margin-bottom: 10px;
+    
+}
+#herrera-checo-contacto span {
+    display: block;
+    margin: 5px 0;
+}
+
+
+/*footer ENDS*/
+
+/*company-description*/
+
+#company-description h2 {
+    margin-bottom: 10px;
+}
+#company-description {
+    float: left;
+    margin: 0 51px 0 0;
+    width: 630px;
+}
+/*company-description ENDS*/
+
+/*mision-vision*/
+#mision-vision
+{
+     background-image: url("/sites/default/files/images/misionVision/misionVisionBackground.png");
+    color: white;
+    float: right;
+    height: 363px;
+    margin: 0 0 30px;
+    padding: 10px 0;
+    width: 270px;
+}
+
+#mision-vision h3
+{
+        background-color: #0A85B4;
+    left: 2px;
+    margin: 0;
+    padding-left: 5px;
+    position: relative;
+    width: 263px;
+}
+
+#mision-vision p {
+    padding: 5px;
+}
+/*mision-vision ENDS*/
+
+/*employees*/
+#employees
+{
+    float:left;
+}
+
+.employee-photo {
+    display: block;
+    float: left;
+    margin-bottom: 20px;
+    margin-right: 15px;
+}
+
+.employees-horizontal-divisor{
+   
+     background-image: url("/sites/default/files/images/employees/gradientLargeHorizotalDivisor.png");
+    clear: both;
+    height: 8px;
+    margin: 20px;
+    width: 489px;
+}
+
+.employee-info {
+    float: left;
+}
+
+
+/*employees ENDS*/
+
+
+/*offices-slideshow*/
+
+#offices-slideshow-header
+{
+      clear: right;
+    margin: 0 0 10px;
+}
+#offices-slideshow
+{
+     background-image: url("/sites/default/files/images/common/grayRaysPattern.jpg");
+    height: 215px;
+    padding: 10px;
+    position: relative;
+    width: 368px;
+     float:left;
+}
+.offices-slideshow-photos-selector
+{
+    width: 60px;
+    height: 40px;
+    
+}
+
+.offices-slideshow-photos-selector-container {
+ background-image: url("/sites/default/files/images/common/grayRaysPattern.jpg");
+    float: left;
+    height: 40px;
+    margin: 15px 5px 15px 0;
+    padding: 4px 1px;
+    width: 66px;
+
+}
+
+.offices-slideshow-photos-selector {
+    display: block;
+    height: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60px;
+}
+
+#offices-slideshow-next{
+    position: absolute;
+    right: 0;
+    top: 105px;
+    z-index: 1000;
+}
+#offices-slideshow-previous {
+     left: 0;
+    position: absolute;
+    top: 105px;
+    z-index: 1000;
+
+}
+
+#offices-slideshow-pager
+{
+    
+}
+.offices-slideshow-navigator
+{
+}
+/*offices-slideshow END*/
+
+
+/*servicios*/
+.servicios-icon {
+    float: left;
+    margin-right: 20px;
+}
+.nuestros-servicios-servicio {
+    float: left;
+    width: 731px;
+    margin: 20px 0;
+}
+
+#nuestros-servicios .horizontal-gradient-divisor:first
+{
+    
+}
+.nuestros-servicios-header-horizontal-gradient-divisor {
+    margin: 0;
+}
+
+.section-banner
+{
+    margin-bottom: 0px;
+}
+#nuestros-servicios h2 {
+    margin: 10px 0;
+}
+/*servicios END*/
+
+/*ultimos-proyectos*/
+.ultimos-proyectos-info {
+    float: left;
+}
+.ultimos-proyectos-photo {
+    float: left;
+    margin-right: 5px;
+}
+
+#ultimos-proyectos-header
+{
+    margin-bottom: 10px;
+    float: left;
+}
+
+
+.ultimos-proyectos-info p 
+{
+  color: #8c8c8c;
+}
+
+  .ultimos-proyectos-info h5
+  {
+      border-bottom: 1px dashed black;
+  }
+
+
+.ultimos-proyectos {
+      clear: both;
+    min-height: 147px;
+}
+
+div.ultimos-proyectos div.ultimos-proyectos-info h4{
+    margin : 0;
+}
+div.ultimos-proyectos div.ultimos-proyectos-info h5
+{
+
+     color: #666666;
+    font-weight: normal;
+    margin-bottom: 5px;
+    padding-bottom: 5px;
+    border-bottom: 1px dashed #9d9d9d;
+}
+
+.ultimos-proyectos-photo img
+{
+    width: 209px;
+    height: 121px;
+}
+
+
+/*ultimos-proyectos ENDS*/
+
+
+/*Contactos*/
+
+#contactos-body
+{
+    height: 490px;
+}
+#contactos .horizontal-gradient-divisor
+{
+    margin: 0;
+}
+#contactos-info, #contactos form
+{
+    float:left; 
+}
+
+#contactos form{
+    padding-top: 20px;
+}
+
+#contactos form input, #contactos form  label
+{
+    display:block;
+    float: left;
+
+}
+
+#contactos form label {
+    color: #798D92;
+    font-size: 1.4em;
+    width: 130px;
+}
+
+#contactos form label {
+    width: 100px;
+}
+
+#contactos form  label
+{
+    width: 150px;
+    color: #798d92;
+}
+
+
+#contactos-localizacion {
+    float: left;
+    position: relative;
+    top: -210px;
+}
+#contactos-info {
+    margin-right: 254px;
+}
+
+
+#contactos-info h3
+{
+    margin-bottom: 0;
+}
+
+#contactos form div {
+    margin-bottom: 45px;
+    min-height: 10px;
+}
+
+#contactos form textarea {
+    height: 175px;
+}
+#contactos form input {
+    height: 36px;
+}
+
+#contactos form a{
+    float: right;
+}
+
+#contactos form input, #contactos form textarea {
+    width: 337px;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+}
+
+#contactos-header
+{
+     margin-bottom: 25px;
+}
+
+
+#contactos-localizacion
+{
+    
+}
+/*Contactos ENDS*/
+
+/*vende-alquilar-options*/
+#vender-alquilar-option-container {
+    height: 32px;
+    margin-bottom: 45px;
+}
+
+#vender-alquilar-option-container a.vender-alquilar-option {
+    color: black;
+    display: block;
+    float: left;
+    font-size: 20px;
+    height: 26px;
+    margin: 0 40px 0 0;
+    padding-top: 6px;
+    text-align: center;
+    width: 153px;
+}
+
+#vender-alquilar-option-container a.selected-option
+{
+    background-color: #01a9e7;
+    color:white
+}
+
+/*vende-alquilar-options ENDS*/
+
+
+/*filter*/
+#filter {
+     background-image: url("/sites/default/files/images/common/largeWhiteToGrayGradient.png");
+    float: left;
+    height: 290px;
+    padding-right: 10px;
+    width: 230px;
+}
+#filter-parameters
+{
+    padding-left: 10px;
+}
+#filter select {
+     margin-bottom: 20px;
+}
+
+#filter select, #filter lable{
+    display: block;
+    margin: 5px 0;
+}
+#filter-header {
+    height: 25px;
+    margin-bottom: 23px;
+}
+
+.filter-alquilar-comprar-option {
+    display: block;
+    float: left;
+    height: 25px;
+    text-align: center;
+    width: 112px;
+}
+.filter-selected-option
+{
+    background-image: url('/sites/default/files/images/filter/blueGradient.png');
+}
+#filter-search-button
+{
+       float: right;
+    margin-top: 107px;
+}
+/*filter ENDS*/
+/*useful classes*/
+
+
+
+.bold
+{
+    font-weight: bold;
+}
+.required{
+    color: red;
+}
+.blue-text
+{
+    color: #184794;
+}
+
+.large-gradient-vertical-divisor
+{
+   display: block;
+    float: left;
+    margin: 0 13px;
+}
+.hidden{
+    display:none;
+}
+
+/*useful Classes ENDS*/
+
+
+/*My styles ENDS*/
+
+
+
+
+/* Font styles. */
+/* line 2, ../sass/style.sass */
+body {
+  margin: 0;
+  /* Setting up font size, leading and font family
+   * http://www.markboulton.co.uk/journal/comments/five-simple-steps-to-better-typography */
+    font: small lucida Grande,sans-serif;
+}
+
+/* Links */
+/* line 10, ../sass/style.sass */
+a:link, a:visited {
+  color: blue;
+  text-decoration: none;
+}
+
+/* line 15, ../sass/style.sass */
+a:hover, a:active {
+  color: red;
+  text-decoration: underline;
+}
+
+/* Titles. */
+/* line 21, ../sass/style.sass */
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.3em;
+}
+
+/* line 24, ../sass/style.sass */
+h1 {
+  font-size: 2.2em;
+  font-weight: 300;
+  padding: 0 0 0.5em;
+  margin: 0;
+}
+
+/* line 30, ../sass/style.sass */
+h2 {
+     font-size: 1.8em;
+    font-weight: 500;
+
+}
+
+/* line 35, ../sass/style.sass */
+h3 {
+  font-size: 1.4em;
+  margin-bottom: 1em;
+}
+
+/* line 39, ../sass/style.sass */
+h4 {
+  font-size: 1.2em;
+  margin-bottom: 0.8em;
+}
+
+/* line 43, ../sass/style.sass */
+h5 {
+  font-size: 1.1em;
+  font-weight: 600;
+  margin-bottom: 0;
+}
+
+/* line 48, ../sass/style.sass */
+h6 {
+  font-size: 1em;
+  font-weight: bold;
+}
+
+/* Paragraph styles. */
+/* line 53, ../sass/style.sass */
+p {
+  margin: 0 0 1em 0;
+}
+
+/* List styles. */
+/* line 57, ../sass/style.sass */
+ul, ol {
+  margin-left: 0;
+  padding-left: 2em;
+}
+
+/* Table styles. */
+/* line 62, ../sass/style.sass */
+table {
+  width: 99%;
+}
+
+/* line 67, ../sass/style.sass */
+tr.even td,
+tr.odd td {
+  padding: 10px 5px;
+}
+
+/* line 70, ../sass/style.sass */
+tr.odd {
+  background-color: white;
+}
+
+/* Code. */
+/* line 74, ../sass/style.sass */
+pre, code, tt {
+  font: 1em "andale mono", "lucida console", monospace;
+  line-height: 1.5;
+}
+
+/* line 78, ../sass/style.sass */
+pre {
+  background-color: #efefef;
+  display: block;
+  padding: 5px;
+  margin: 5px 0;
+  border: 1px solid #aaaaaa;
+}
+
+/* List styles. */
+/* line 86, ../sass/style.sass */
+ul {
+  list-style-type: disc;
+}
+/* line 88, ../sass/style.sass */
+ul ul {
+  list-style-type: circle;
+}
+/* line 90, ../sass/style.sass */
+ul ul ul {
+  list-style-type: square;
+}
+/* line 92, ../sass/style.sass */
+ul ul ul ul {
+  list-style-type: circle;
+}
+
+/* line 95, ../sass/style.sass */
+ol {
+  list-style-type: decimal;
+}
+/* line 97, ../sass/style.sass */
+ol ol {
+  list-style-type: lower-alpha;
+}
+/* line 99, ../sass/style.sass */
+ol ol ol {
+  list-style-type: decimal;
+}
+
+/* Abbreviation. */
+/* line 103, ../sass/style.sass */
+abbr {
+  border-bottom: 1px dotted #666666;
+  cursor: help;
+  white-space: nowrap;
+}
+
+/* UI improvments. */
+/* line 109, ../sass/style.sass */
+#edit-title {
+  font-size: 24px;
+  width: 98%;
+}
+
+/* line 113, ../sass/style.sass */
+#system-themes-form img {
+  width: 100px;
+}
+
+/* line 116, ../sass/style.sass */
+.form-item .description {
+  font-style: italic;
+  line-height: 1.2em;
+  font-size: 0.8em;
+  margin-top: 5px;
+  color: #777777;
+}
+
+/* line 123, ../sass/style.sass */
+#edit-delete {
+  color: #cc0000;
+}
+
+/* Console, style from slate theme. */
+/* line 127, ../sass/style.sass */
+div.messages {
+  padding: 9px;
+  margin: 1em 0;
+  color: #003366;
+  background: #bbddff;
+  border: 1px solid #aaccee;
+}
+
+/* line 134, ../sass/style.sass */
+div.warning {
+  color: #884400;
+  background: #ffee66;
+  border-color: #eedd55;
+}
+
+/* line 139, ../sass/style.sass */
+div.error {
+  color: white;
+  background: #ee6633;
+  border-color: #dd5522;
+}
+
+/* line 144, ../sass/style.sass */
+div.status {
+  color: #336600;
+  background: #ccff88;
+  border-color: #bbee77;
+}
+
+/* Region Colors. delete when starting a new theme. */
+/* line 150, ../sass/style.sass */
+
+
+/* line 153, ../sass/style.sass */
+#sidebar-first {
+  background: #e7edff;
+}
+
+/* line 156, ../sass/style.sass */
+#sidebar-second {
+  background: #ffd075;
+}
+
+/* line 159, ../sass/style.sass */
+#navigation {
+  background: #feffa5;
+}
+
