@@ -146,7 +146,10 @@
     margin-right: 4px;
 }
 
-
+#proyecto-propiedades
+{
+    height: 357px;
+}
 
 /*proyectos-comerciales-residenciales ENDS*/
 
@@ -330,9 +333,10 @@ a.no-decoration-anchor, .no-decoration-anchor img, a.no-decoration-anchor:hover,
 }
 #proyectos-residenciales-address
 {
-          bottom: -105px;
+        bottom: -173px;
     left: 375px;
     position: absolute;
+    height: 140px;
 }
 #proyecto-direccion {
     left: 74px;
