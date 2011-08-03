@@ -2,6 +2,7 @@
 <?php
 $buildingNumber = count($node->field_res_project_buildings);
 $slidesNumber = count($node->field_res_project_slides);
+
 ?>
 <?php require dirname(__FILE__) . '/../blocks/defaultTopBanner.php'; ?>
 <div id="proyecto-menu">
@@ -51,8 +52,8 @@ $slidesNumber = count($node->field_res_project_slides);
         </div>
 
         <h3>Descripci&oacute;n:</h3>
-        <p><?php echo $node->field_res_project_description[0]['safe']; ?></p>
-        <div >
+        <p><?php echo $node->field_res_project_large_desc[0]['safe']; ?></p>
+        <div>
             <div id="proyecto-caracteristicas">
                 <h3>Caracter&iacute;sticas</h3>
                 <p><?php echo $node->field_res_project_characteristics[0]['safe']; ?></p>

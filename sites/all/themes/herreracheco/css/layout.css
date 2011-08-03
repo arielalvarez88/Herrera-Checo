@@ -42,6 +42,7 @@ body
 #drupal-content
 {
     clear: both;
+       
 }
 
 
@@ -138,5 +139,5 @@ body
 /* line 95, ../sass/layout.sass */
 .with-navigation #content,
 .with-navigation .sidebar {
-  margin-top: 40px;
+  
 }

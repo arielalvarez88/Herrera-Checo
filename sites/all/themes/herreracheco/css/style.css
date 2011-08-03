@@ -79,9 +79,8 @@
     position: relative;       
 }
 #front-page-slideshow-pager {
- float: left;
-    left: 638px;
-    position: absolute;
+ position: absolute;
+    right: 0;
     top: 0;
     z-index: 1000;
 }
@@ -192,6 +191,7 @@ a.no-decoration-anchor, .no-decoration-anchor img, a.no-decoration-anchor:hover,
     height: 98px;
     padding: 20px;
     width: 328px;
+    position: relative;
 }
 
 #newsletter h2
@@ -210,6 +210,7 @@ a.no-decoration-anchor, .no-decoration-anchor img, a.no-decoration-anchor:hover,
     -moz-border-radius: 5px 5px 5px 5px;
     border: 0 none;
     height: 30px;
+     width: 303px;
 }
 #newsletter span,#newsletter input
 {
@@ -220,6 +221,7 @@ a.no-decoration-anchor, .no-decoration-anchor img, a.no-decoration-anchor:hover,
     float: left;
 }
 
+
 #newsletter span {
     -moz-border-radius: 5px 5px 5px 5px;
     background-color: #17438B;
@@ -227,13 +229,14 @@ a.no-decoration-anchor, .no-decoration-anchor img, a.no-decoration-anchor:hover,
     display: block;
     font-size: 0.8em;
     height: 17px;
-    left: -74px;
     padding-top: 3px;
-    position: relative;
+    position: absolute;
+    right: 49px;
     text-align: center;
-    top: 5px;
+    top: 93px;
     width: 69px;
 }
+
 /*newsletter ENDS*/
 
 /*Proyecto*/
@@ -241,9 +244,16 @@ a.no-decoration-anchor, .no-decoration-anchor img, a.no-decoration-anchor:hover,
 {
         min-height: 792px;
     position: relative;
-     
+     float:left;
+}
+#proyecto p {
+    max-width: 628px;
 }
 
+#proyecto-caracteristicas p 
+{
+    width: 224px;
+}
 #proyecto-edificios {
     background-image: url("/sites/default/files/images/common/largeWhiteToGrayGradient.png");
     height: 291px;
@@ -261,7 +271,7 @@ a.no-decoration-anchor, .no-decoration-anchor img, a.no-decoration-anchor:hover,
 }
 #proyecto-caracteristicas
 {
-    margin-right: 166px;
+    margin-right: 69px;
 }
 #proyecto-caracteristicas, #proyecto-edificios-container
 {
@@ -306,6 +316,7 @@ a.no-decoration-anchor, .no-decoration-anchor img, a.no-decoration-anchor:hover,
     height: 192px;
     padding: 5px 0;
     width: 345px;
+    margin-bottom: 20px;
 }
 
 
@@ -319,8 +330,8 @@ a.no-decoration-anchor, .no-decoration-anchor img, a.no-decoration-anchor:hover,
 }
 #proyectos-residenciales-address
 {
-         bottom: -105px;
-    left: 690px;
+          bottom: -105px;
+    left: 375px;
     position: absolute;
 }
 #proyecto-direccion {
@@ -467,7 +478,7 @@ a.no-decoration-anchor, .no-decoration-anchor img, a.no-decoration-anchor:hover,
     padding-right: 10px;
 }
 
-#herrera-checo-contacto #herrera-checo-telefono, #herrera-checo-contacto #herrera-checo-fax
+#herrera-checo-contacto .herrera-checo-telefono, #herrera-checo-contacto #herrera-checo-fax
 {
        font-size: 1.2em;
     font-weight: 900;
@@ -610,7 +621,7 @@ a.no-decoration-anchor, .no-decoration-anchor img, a.no-decoration-anchor:hover,
 
 #offices-slideshow-pager
 {
-    
+        min-height: 71px;
 }
 .offices-slideshow-navigator
 {
@@ -664,7 +675,11 @@ a.no-decoration-anchor, .no-decoration-anchor img, a.no-decoration-anchor:hover,
 
 .ultimos-proyectos-info p 
 {
-  color: #8c8c8c;
+ color: #8C8C8C;
+    height: 34px;
+    overflow: hidden;
+    width: 215px;
+
 }
 
   .ultimos-proyectos-info h5
@@ -715,6 +730,11 @@ div.ultimos-proyectos div.ultimos-proyectos-info h5
 {
     float:left; 
 }
+#contactos-info {
+ 
+     margin-left: 33px;
+    margin-right: 140px;
+}
 
 #contactos form{
     padding-top: 20px;
@@ -730,27 +750,33 @@ div.ultimos-proyectos div.ultimos-proyectos-info h5
 #contactos form label {
     color: #798D92;
     font-size: 1.4em;
-    width: 130px;
+    width: 111px;
+}
+#contactos-info p {
+    margin-bottom: 25px;
 }
 
-#contactos form label {
-    width: 100px;
-}
-
-#contactos form  label
+#contactos form div#contactos-form-mensaje-container
 {
-    width: 150px;
-    color: #798d92;
+    margin-bottom: 10px;
 }
 
 
 #contactos-localizacion {
     float: left;
+    left: 33px;
     position: relative;
     top: -210px;
 }
-#contactos-info {
-    margin-right: 254px;
+
+
+#contactos form input {
+   
+    height: 36px;
+}
+#contactos form input, #contactos form textarea
+{
+     border: 5px solid #EEEEEE;
 }
 
 
@@ -767,9 +793,7 @@ div.ultimos-proyectos div.ultimos-proyectos-info h5
 #contactos form textarea {
     height: 175px;
 }
-#contactos form input {
-    height: 36px;
-}
+
 
 #contactos form a{
     float: right;
@@ -781,9 +805,13 @@ div.ultimos-proyectos div.ultimos-proyectos-info h5
     -moz-border-radius: 5px;
 }
 
-#contactos-header
-{
-     margin-bottom: 25px;
+
+
+#contactos-header {
+    font-style: italic;
+    letter-spacing: -1px;
+    margin-bottom: 25px;
+    padding-left: 33px;
 }
 
 
@@ -846,9 +874,10 @@ div.ultimos-proyectos div.ultimos-proyectos-info h5
 }
 
 .filter-alquilar-comprar-option {
-    display: block;
+      display: block;
     float: left;
-    height: 25px;
+    height: 21px;
+    padding-top: 4px;
     text-align: center;
     width: 112px;
 }
@@ -903,6 +932,7 @@ body {
   /* Setting up font size, leading and font family
    * http://www.markboulton.co.uk/journal/comments/five-simple-steps-to-better-typography */
     font: small lucida Grande,sans-serif;
+    
 }
 
 /* Links */
@@ -934,7 +964,7 @@ h1 {
 
 /* line 30, ../sass/style.sass */
 h2 {
-     font-size: 1.8em;
+     font-size: 1.5em;
     font-weight: 500;
 
 }
@@ -1125,3 +1155,7 @@ div.status {
   background: #feffa5;
 }
 
+h1,h2,h3,h4,h5,h6
+{
+    letter-spacing: -1px;
+}

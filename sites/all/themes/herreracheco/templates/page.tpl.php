@@ -104,7 +104,8 @@
 
 
                     <div id="drupal-content">
-                        <?php if ($breadcrumb || $title || $mission || $messages || $help || $tabs): ?>
+
+                        <?php if (in_array('administrator', array_values($user->roles)) && ($breadcrumb || $title || $mission || $messages || $help || $tabs)): ?>
                             <div id="content-header">
 
                                 <?php print $breadcrumb; ?>
@@ -128,10 +129,12 @@
                             </div> <!-- /#content-header -->
                         <?php endif; ?>
 
-                        <div id="content-area">
-                            <?php print $content; ?>
-                        </div> <!-- /#content-area -->
-
+                        <?php if ($content): ?>
+                            <div id="content-area">
+                                <?php print $content; ?>
+                            </div> <!-- /#content-area -->
+                        <?php endif; ?>
+                            
                         <?php if ($drupal_content_bottom): ?>
                             <div id="drupal-content-bottom">
 
@@ -161,8 +164,9 @@
                             <li ><a class="secondary-link no-decoration-anchor" href="/">INICIO </a> |</li> 
                             <li ><a class="secondary-link no-decoration-anchor" href="/nosotros">NOSOTROS </a> |</li> 
                             <li><a class="secondary-link no-decoration-anchor" href="/proyectos-residenciales">PROYECTOS </a> | </li>
-                            <li><a class="secondary-link no-decoration-anchor" href="/contactos">CONTACTOS </a> |</li> 
-                            <li><a class="secondary-link no-decoration-anchor" href="/servicios">SERVICIOS</a> </li>
+
+                            <li><a class="secondary-link no-decoration-anchor" href="/servicios">SERVICIOS</a> |</li>
+                            <li><a class="secondary-link no-decoration-anchor" href="/contactos">CONTACTOS </a> </li> 
 
                         </ul>
 
@@ -181,9 +185,10 @@
                         <h2 id="herrera-checo-contacto-header">Contacto</h2>
                         <p id="herrera-checo-contacto">
 
-                            <span id="herrera-checo-telefono" class="blue-text">T. 809-582-8282</span>
-                            <span id="herrera-checo-fax" class="blue-text">F. 809-582-8286</span>
-                            <span id="herrera-checo-direccion">Direcion Av. Juan Pablo Duarte,<br/> Plaza las Ramblas Boulevard</span>
+                            <span class="herrera-checo-telefono blue-text" >T. 809-471-7807</span>
+                            <span class="herrera-checo-telefono blue-text" >T. 809-471-7808</span>
+
+                            <span id="herrera-checo-direccion">Direcci&oacute;n Av. Juan Pablo Duarte,<br/> Plaza las Ramblas Boulevard</span>
                         </p>
                     </div>
 
