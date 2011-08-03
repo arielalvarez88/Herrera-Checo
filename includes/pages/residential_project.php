@@ -53,7 +53,7 @@ $slidesNumber = count($node->field_res_project_slides);
 
         <h3>Descripci&oacute;n:</h3>
         <p><?php echo $node->field_res_project_large_desc[0]['safe']; ?></p>
-        <div>
+        <div id="proyecto-propiedades">
             <div id="proyecto-caracteristicas">
                 <h3>Caracter&iacute;sticas</h3>
                 <p><?php echo $node->field_res_project_characteristics[0]['safe']; ?></p>
