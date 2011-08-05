@@ -10,9 +10,9 @@ function initializeSlidersMenus()
     
     for(slider in sliders)
     {
-         var sliderMenu = sliders[slider];
+        var sliderMenu = sliders[slider];
          
-         $(sliderMenu.titlesSelector).siblings(sliderMenu.siblingsSelectorToSlide + ':nth(0)').show();
+        $(sliderMenu.titlesSelector).siblings(sliderMenu.siblingsSelectorToSlide + ':nth(0)').show();
         $( sliderMenu.titlesSelector).click(function(){
            
            
@@ -146,7 +146,9 @@ initilizeVenderAlquilarOptions = function(){
         if(!venderResults.is(":visible"))
         {
             
-            alquilarResults.hide("slow",function(){venderResults.show();});                        
+            alquilarResults.hide("slow",function(){
+                venderResults.show();
+            });                        
             
         }
         
@@ -161,7 +163,9 @@ initilizeVenderAlquilarOptions = function(){
         if(!alquilarResults.is(":visible"))
         {
             
-            venderResults.hide("slow",function(){alquilarResults.show();});                        
+            venderResults.hide("slow",function(){
+                alquilarResults.show();
+            });                        
             
         }
         
@@ -170,9 +174,145 @@ initilizeVenderAlquilarOptions = function(){
     
 };
 
+Slider = function(parentSelector,minValue,maxValue,minInitialPosition,maxInitialPosition,minDisplaySelector,maxDisplaySelector,step){
+    
+    this.parent = $(parentSelector);
+    this.minValue = minValue;
+    this.maxValue = maxValue;
+    this.minInitialValue = minInitialPosition;
+    this.maxInitialValue = maxInitialPosition;
+    this.minDisplay =$(minDisplaySelector);
+    this.maxDisplay = $(maxDisplaySelector);
+    this.step = step;
+   
+    
+    this.minDisplay.html("$" + this.minInitialValue);
+    this.maxDisplay.html("$" + this.maxInitialValue);
+    
+    var sliderObject = this;
+    
+    
+                        
+    $(this.parent).slider({
+        range: true,
+        min: minValue,
+        max: maxValue,
+        step:sliderObject.step,
+        values: [ sliderObject.minInitialValue , sliderObject.maxInitialValue ],
+        slide: function( event, ui ) {
+            sliderObject.minDisplay.html( "$" + ui.values[ 0 ]);
+            sliderObject.maxDisplay .html("$" + ui.values[ 1 ]);
+        }
+                        
+    });
+    
+   
+    this.getRange = function()
+    {
+        return $(sliderObject.parent).slider("values");
+      
+    };
+   
+    
+    $('.ui-slider-horizontal .ui-slider-handle').width(8); 
+    $('.ui-slider-horizontal .ui-slider-range').attr('left','9.75%');
+} 
+
+
+initializeFilter = function(){
+    
+    
+    var minValue =  1000000;
+        var maxValue = 50000000;
+        var step = 1000000;
+    if($.getUrlVar('condition') && $.getUrlVar('condition') == 'alquilar')
+    {
+         minValue =  5000;
+         maxValue = 300000;
+         step = 1000;
+    }
+
+    
+    var initialMin = $.getUrlVar('minprice') ? $.getUrlVar('minprice') : 1000000;
+    var initialMax = $.getUrlVar('maxprice') ? $.getUrlVar('maxprice') : 50000000;
+    
+        
+    var filter = new Filter(minValue,maxValue,initialMin,initialMax,step);
+}
+
+
+Filter = function (sliderMin,sliderMax,sliderMinInitial,sliderMaxInitial,step){
+    
+    this.sliderMin = sliderMin;
+    this.sliderMax = sliderMax;
+    this.sliderMinInitial = sliderMinInitial;
+    this.sliderMaxInitial = sliderMaxInitial;
+    this.sliderParentSelector = "#filter-slider";
+    this.comprarButton =  $('#filter-comprar-option');
+    this.alquilarButton =  $('#filter-alquilar-option');
+    this.propertyType = $('#filter-property-type');
+    this.propertyState = $('#filter-property-state');   
+    this.intialStep = step;
+    this.searchButton = $('#filter-search-button');
+    this.slider = new Slider('#filter-slider',this.sliderMin,this.sliderMax,this.sliderMinInitial,this.sliderMaxInitial,"#filter-slider-min","#filter-slider-max",this.intialStep);
+    var filter = this;
+
+
+    
+    this.clickFunctionality= function(button,min,max,step){
+        $('.filter-alquilar-comprar-option').removeClass('filter-selected-option');
+        $(button).addClass('filter-selected-option');
+        $('#filter-slide').html('');
+        filter.slider = new Slider('#filter-slider', min, max, min, max, "#filter-slider-min", "#filter-slider-max",step);
+    }
+    
+ 
+    
+    this.comprarButton.click(function(){
+        filter.clickFunctionality(this,1000000,50000000,1000000);
+    });
+    
+    this.alquilarButton.click(function(){
+        filter.clickFunctionality(this,5000,300000,1000);
+    });
+    
+    
+    this.searchButton.click(function(){
+        var propertyType = filter.propertyType.val();
+        var minPrice = filter.slider.getRange()[0];
+        var maxPrice = filter.slider.getRange()[1];
+        var propertyState = filter.propertyState.val();
+        var propertyCondition = filter.comprarButton.hasClass('filter-selected-option')? 'comprar' : 'alquilar';
+        window.location.href = '/buscar-proyectos' + '?type='+ propertyType + '&minprice=' + minPrice + '&maxprice=' + maxPrice + '&state=' + propertyState + '&type=' + propertyType + "&condition=" + propertyCondition;
+    });
+    
+}
+
+
+extendJqueryWithGetVars = function(){
+    $.extend({
+        getUrlVars: function(){
+            var vars = [], hash;
+            var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+            for(var i = 0; i < hashes.length; i++)
+            {
+                hash = hashes[i].split('=');
+                vars.push(hash[0]);
+                vars[hash[0]] = hash[1];
+            }
+            return vars;
+        },
+        getUrlVar: function(name){
+            return $.getUrlVars()[name];
+        }
+    });
+};
+
 $(document).ready(function(){
+    extendJqueryWithGetVars();
     initializeSlideshows();
     initializeSlidersMenus();
     initilizeVenderAlquilarOptions();
+    initializeFilter();
    
 });

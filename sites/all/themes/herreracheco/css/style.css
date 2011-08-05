@@ -91,10 +91,14 @@
 /*bienvenidos*/
 #bienvenidos {
      float: left;
+    margin-top: 16px;
     text-align: left;
     width: 444px;
 }
 
+#bienvenidos h2{
+    margin-bottom: 5px;
+}
 /*bienvenidos ENDS*/
 
 /*vertical-gradient-divisor*/
@@ -127,11 +131,17 @@
 
 
 /*proyectos-comerciales-residenciales*/
+#proyecto-info-header
+{
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
 #proyectos-comerciales-residenciales
 {
    float: left;
     height: 135px;
-    margin: 0 0 10px 0;
+    margin: 0 0 0 0;
 
 }
 #proyectos-comerciales-residenciales a
@@ -155,9 +165,15 @@
 
 /*useful classes*/
 a.no-decoration-anchor, .no-decoration-anchor img, a.no-decoration-anchor:hover, a.no-decoration-anchor:link, a.no-decoration-anchor:visited {
-    border: medium none;
+    
     text-decoration: none;
 }
+.no-decoration-anchor img
+{
+    border: medium none;
+}
+
+
 /*useful classes END*/
 
 /*video-de-proyecto*/
@@ -174,7 +190,7 @@ a.no-decoration-anchor, .no-decoration-anchor img, a.no-decoration-anchor:hover,
 {
       background-image: url("/sites/default/files/images/videoDeProyecto/fondo.png");
     height: 278px;
-    margin-bottom: 20px;
+
     padding: 7px 0;
     width: 451px;
 }
@@ -249,24 +265,23 @@ a.no-decoration-anchor, .no-decoration-anchor img, a.no-decoration-anchor:hover,
     position: relative;
      float:left;
 }
-#proyecto p {
-    max-width: 628px;
-}
 
 #proyecto-caracteristicas p 
 {
-    width: 224px;
+    margin-bottom: 0;
+    width: 524px;
 }
 #proyecto-edificios {
-    background-image: url("/sites/default/files/images/common/largeWhiteToGrayGradient.png");
-    height: 291px;
+    background-image: url("/sites/default/files/images/common/largeWhiteToGrayGradient.jpg");
     padding: 20px 0;
-    width: 326px;
+    width: 250px;
+}
+#proyecto h3#proyecto-condiciones-de-pago {
+    margin-top: 20px;
 }
 
-
 #proyecto h3{
-   margin: 0 0 5px;
+   margin: 10px 0 5px;
 }
 #proyecto-slideshow {
     float: left;
@@ -274,7 +289,7 @@ a.no-decoration-anchor, .no-decoration-anchor img, a.no-decoration-anchor:hover,
 }
 #proyecto-caracteristicas
 {
-    margin-right: 69px;
+  margin-right: 122px;
 }
 #proyecto-caracteristicas, #proyecto-edificios-container
 {
@@ -289,8 +304,8 @@ a.no-decoration-anchor, .no-decoration-anchor img, a.no-decoration-anchor:hover,
 
 .proyecto-slideshow-slide
 {
-    width: 511px;
-    height: 353px;
+         height: 355px;
+    width: 851px;
 }
 .proyecto-slideshow-photos-selector
 {
@@ -329,14 +344,11 @@ a.no-decoration-anchor, .no-decoration-anchor img, a.no-decoration-anchor:hover,
 }
 .proyectos-residenciales-location-block
 {
-     padding-left: 331px;
+     
 }
 #proyectos-residenciales-address
 {
-        bottom: -173px;
-    left: 375px;
-    position: absolute;
-    height: 140px;
+
 }
 #proyecto-direccion {
     left: 74px;
@@ -390,11 +402,11 @@ a.no-decoration-anchor, .no-decoration-anchor img, a.no-decoration-anchor:hover,
 .building table{
     border: 0 none;
     clear: both;
-    width: 326px;;
+    width: 251px;
 }
 
 .building table tr td {
-    width: 90px;
+
 }
 
 .building-title 
@@ -410,16 +422,17 @@ a.no-decoration-anchor, .no-decoration-anchor img, a.no-decoration-anchor:hover,
 }
 
 .building table tr {
-        height: 20px;
+      height: 20px;
     text-align: center;
 }
 .building p{
     
 }
-.building-apt-header
-{
-    padding-bottom: 12px;
+
+    .building-apt-header {
+    padding: 4px 10px;
 }
+
 /*building ENDS*/
 
 /*proyectos-type-menu*/
@@ -495,7 +508,10 @@ a.no-decoration-anchor, .no-decoration-anchor img, a.no-decoration-anchor:hover,
     display: block;
     margin: 5px 0;
 }
-
+#mkt-logo {
+    left: 262px;
+    position: relative;
+}
 
 /*footer ENDS*/
 
@@ -672,7 +688,7 @@ a.no-decoration-anchor, .no-decoration-anchor img, a.no-decoration-anchor:hover,
 
 #ultimos-proyectos-header
 {
-    margin-bottom: 10px;
+    margin-bottom: 17px;
     float: left;
 }
 
@@ -771,6 +787,7 @@ div.ultimos-proyectos div.ultimos-proyectos-info h5
     left: 33px;
     position: relative;
     top: -210px;
+    height: 192px;
 }
 
 
@@ -857,43 +874,94 @@ div.ultimos-proyectos div.ultimos-proyectos-info h5
      background-image: url("/sites/default/files/images/common/largeWhiteToGrayGradient.png");
     float: left;
     height: 290px;
-    padding-right: 10px;
-    width: 230px;
+    
+    width: 240px;
 }
 #filter-parameters
 {
-    padding-left: 10px;
-}
-#filter select {
-     margin-bottom: 20px;
+    padding: 0 10px;
 }
 
-#filter select, #filter lable{
-    display: block;
-    margin: 5px 0;
-}
 #filter-header {
     height: 25px;
     margin-bottom: 23px;
 }
 
-.filter-alquilar-comprar-option {
+#filter-header {
+    border: 1px solid #D9D9D9;
+}
+#filter select, #filter lable{
+    display: block;
+    margin: 5px 0;
+}
+
+#filter-parameters #filter-property-type
+{
+    margin-bottom: 25px;
+}
+
+a.filter-alquilar-comprar-option {
       display: block;
     float: left;
     height: 21px;
     padding-top: 4px;
     text-align: center;
-    width: 112px;
+    width: 119px;
+    color: black;
 }
-.filter-selected-option
+#filter-comprar-option.filter-selected-option, #filter-alquilar-option.filter-selected-option
 {
+    color: white;
     background-image: url('/sites/default/files/images/filter/blueGradient.png');
 }
+#filter-slider
+{
+   margin-left: 8px;
+    width: 201px;
+}
+
 #filter-search-button
 {
-       float: right;
-    margin-top: 107px;
+      float: right;
+    margin-top: 12px;
 }
+
+#filter-parameters select {
+   color: gray;
+    font-size: 1.2em;
+    height: 29px;
+    margin-bottom: 28px;
+    margin-top: 2px;
+    width: 214px;
+}
+
+#filter-parameters label {
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+
+#filter-parameters p {
+   clear: both;
+    height: 17px;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+}
+#filter-parameters .filter-slider-min-position {
+    float:left;
+}
+
+#filter-parameters .filter-slider-max-position {
+    float:right;
+}
+
+.jslider_plastic .jslider-bg i,
+  .jslider_plastic .jslider-pointer
+  { 
+      background-image: url('/sites/default/files/images/filter/jslider.plastic.png'); 
+  }
+
 /*filter ENDS*/
 /*useful classes*/
 
@@ -929,237 +997,3 @@ div.ultimos-proyectos div.ultimos-proyectos-info h5
 
 
 
-/* Font styles. */
-/* line 2, ../sass/style.sass */
-body {
-  margin: 0;
-  /* Setting up font size, leading and font family
-   * http://www.markboulton.co.uk/journal/comments/five-simple-steps-to-better-typography */
-    font: small lucida Grande,sans-serif;
-    
-}
-
-/* Links */
-/* line 10, ../sass/style.sass */
-a:link, a:visited {
-  color: blue;
-  text-decoration: none;
-}
-
-/* line 15, ../sass/style.sass */
-a:hover, a:active {
-  color: red;
-  text-decoration: underline;
-}
-
-/* Titles. */
-/* line 21, ../sass/style.sass */
-h1, h2, h3, h4, h5, h6 {
-  line-height: 1.3em;
-}
-
-/* line 24, ../sass/style.sass */
-h1 {
-  font-size: 2.2em;
-  font-weight: 300;
-  padding: 0 0 0.5em;
-  margin: 0;
-}
-
-/* line 30, ../sass/style.sass */
-h2 {
-     font-size: 1.5em;
-    font-weight: 500;
-
-}
-
-/* line 35, ../sass/style.sass */
-h3 {
-  font-size: 1.4em;
-  margin-bottom: 1em;
-}
-
-/* line 39, ../sass/style.sass */
-h4 {
-  font-size: 1.2em;
-  margin-bottom: 0.8em;
-}
-
-/* line 43, ../sass/style.sass */
-h5 {
-  font-size: 1.1em;
-  font-weight: 600;
-  margin-bottom: 0;
-}
-
-/* line 48, ../sass/style.sass */
-h6 {
-  font-size: 1em;
-  font-weight: bold;
-}
-
-/* Paragraph styles. */
-/* line 53, ../sass/style.sass */
-p {
-  margin: 0 0 1em 0;
-}
-
-/* List styles. */
-/* line 57, ../sass/style.sass */
-ul, ol {
-  margin-left: 0;
-  padding-left: 2em;
-}
-
-/* Table styles. */
-/* line 62, ../sass/style.sass */
-table {
-  width: 99%;
-}
-
-/* line 67, ../sass/style.sass */
-tr.even td,
-tr.odd td {
-  padding: 10px 5px;
-}
-
-/* line 70, ../sass/style.sass */
-tr.odd {
-  background-color: white;
-}
-
-/* Code. */
-/* line 74, ../sass/style.sass */
-pre, code, tt {
-  font: 1em "andale mono", "lucida console", monospace;
-  line-height: 1.5;
-}
-
-/* line 78, ../sass/style.sass */
-pre {
-  background-color: #efefef;
-  display: block;
-  padding: 5px;
-  margin: 5px 0;
-  border: 1px solid #aaaaaa;
-}
-
-/* List styles. */
-/* line 86, ../sass/style.sass */
-ul {
-  list-style-type: disc;
-}
-/* line 88, ../sass/style.sass */
-ul ul {
-  list-style-type: circle;
-}
-/* line 90, ../sass/style.sass */
-ul ul ul {
-  list-style-type: square;
-}
-/* line 92, ../sass/style.sass */
-ul ul ul ul {
-  list-style-type: circle;
-}
-
-/* line 95, ../sass/style.sass */
-ol {
-  list-style-type: decimal;
-}
-/* line 97, ../sass/style.sass */
-ol ol {
-  list-style-type: lower-alpha;
-}
-/* line 99, ../sass/style.sass */
-ol ol ol {
-  list-style-type: decimal;
-}
-
-/* Abbreviation. */
-/* line 103, ../sass/style.sass */
-abbr {
-  border-bottom: 1px dotted #666666;
-  cursor: help;
-  white-space: nowrap;
-}
-
-/* UI improvments. */
-/* line 109, ../sass/style.sass */
-#edit-title {
-  font-size: 24px;
-  width: 98%;
-}
-
-/* line 113, ../sass/style.sass */
-#system-themes-form img {
-  width: 100px;
-}
-
-/* line 116, ../sass/style.sass */
-.form-item .description {
-  font-style: italic;
-  line-height: 1.2em;
-  font-size: 0.8em;
-  margin-top: 5px;
-  color: #777777;
-}
-
-/* line 123, ../sass/style.sass */
-#edit-delete {
-  color: #cc0000;
-}
-
-/* Console, style from slate theme. */
-/* line 127, ../sass/style.sass */
-div.messages {
-  padding: 9px;
-  margin: 1em 0;
-  color: #003366;
-  background: #bbddff;
-  border: 1px solid #aaccee;
-}
-
-/* line 134, ../sass/style.sass */
-div.warning {
-  color: #884400;
-  background: #ffee66;
-  border-color: #eedd55;
-}
-
-/* line 139, ../sass/style.sass */
-div.error {
-  color: white;
-  background: #ee6633;
-  border-color: #dd5522;
-}
-
-/* line 144, ../sass/style.sass */
-div.status {
-  color: #336600;
-  background: #ccff88;
-  border-color: #bbee77;
-}
-
-/* Region Colors. delete when starting a new theme. */
-/* line 150, ../sass/style.sass */
-
-
-/* line 153, ../sass/style.sass */
-#sidebar-first {
-  background: #e7edff;
-}
-
-/* line 156, ../sass/style.sass */
-#sidebar-second {
-  background: #ffd075;
-}
-
-/* line 159, ../sass/style.sass */
-#navigation {
-  background: #feffa5;
-}
-
-h1,h2,h3,h4,h5,h6
-{
-    letter-spacing: -1px;
-}
