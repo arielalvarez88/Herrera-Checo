@@ -176,7 +176,7 @@
                                 <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>"/>
                             </a>
                         <?php endif; ?>
-                        <p>Copright 2011 <span class="blue-text">Constructora Herrero Checo</span></p>
+                        <p>Copyright 2011 <span class="blue-text">Constructora Herrera Checo</span></p>
                     </div>
                     <div class="vertical-gradient-divisor">
                         <img  src="/sites/default/files/images/common/verticalGradientDivisor.png"/>
@@ -188,8 +188,9 @@
                             <span class="herrera-checo-telefono blue-text" >T. 809-471-7807</span>
                             <span class="herrera-checo-telefono blue-text" >T. 809-471-7808</span>
 
-                            <span id="herrera-checo-direccion">Direcci&oacute;n Av. Juan Pablo Duarte,<br/> Plaza las Ramblas Boulevard</span>
+                            <span id="herrera-checo-direccion">Direcci&oacute;n Av. Juan Pablo Duarte,<br/> Plaza Las Ramblas Boulevard</span>
                         </p>
+                        <p id="mkt-logo"><img src="/<?php echo file_directory_path();?>/images/footer/5050mktLogo.png" alt="footer-designed-by"/></p>
                     </div>
 
                 </div> <!-- /footer -->

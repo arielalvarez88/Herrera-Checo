@@ -31,10 +31,15 @@ stylesheets[all][] = css/layout.css
 stylesheets[all][] = css/style.css
 stylesheets[print][] = css/print.css
 
+
+
+
 scripts[] = js/jquery-1.6.1.min
 scripts[] = js/jquery-ui-1.8.14.custom.min.js
 scripts[] = js/jquery.cycle.all.js
 scripts[] = js/herreracheco.js
+
+
 
 ; Compass Support
 ; http://drupal.org/project/compass

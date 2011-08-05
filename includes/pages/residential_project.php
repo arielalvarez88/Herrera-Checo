@@ -5,16 +5,17 @@ $slidesNumber = count($node->field_res_project_slides);
 
 ?>
 <?php require dirname(__FILE__) . '/../blocks/defaultTopBanner.php'; ?>
-<div id="proyecto-menu">
+<!--<div id="proyecto-menu">
     <a><img src="<?php echo $paths->images; ?>/proyecto/leftMenu//comerciales.png"/></a>
     <a><img src="<?php echo $paths->images; ?>/proyecto/leftMenu/residenciales.png"/></a>
     <a><img src="<?php echo $paths->images; ?>/proyecto/leftMenu/residenciales.png"/></a>
     <div id="proyecto-menu-banner"></div>
-</div>
+</div>-->
 
 <div id="proyecto">
 
     <div id="proyecto-info">
+        <h2 id="proyecto-info-header"> <?php echo $node->field_res_project_title[0]['value'];?></h2>
         <div id="proyecto-slideshow-container">
 
 
@@ -51,14 +52,19 @@ $slidesNumber = count($node->field_res_project_slides);
 
         </div>
 
-        <h3>Descripci&oacute;n:</h3>
-        <p><?php echo $node->field_res_project_large_desc[0]['safe']; ?></p>
+       
         <div id="proyecto-propiedades">
+           
             <div id="proyecto-caracteristicas">
+                
+                  <h3>Descripci&oacute;n:</h3>
+            <p><?php echo $node->field_res_project_large_desc[0]['safe']; ?></p>
+            
+                
                 <h3>Caracter&iacute;sticas</h3>
-                <p><?php echo $node->field_res_project_characteristics[0]['safe']; ?></p>
+                <p><?php echo $node->field_res_project_features[0]['value']; ?></p>
 
-                <h3>Terminaciones</h3>
+                <h3 id="proyecto-condiciones-de-pago">Condiciones de pago</h3>
                 <p><?php echo $node->field_res_project_terminations[0]['safe']; ?></p>
             </div>
             <div id="proyecto-edificios-container">
@@ -83,13 +89,17 @@ $slidesNumber = count($node->field_res_project_slides);
         </div>
 
         <?php require dirname(__FILE__) . '/../blocks/horizontalGradientDivisor.php'; ?>
-    </div>
-
-    <?php if ($node->field_res_project_addr[0]['safe']): ?>
+        
         <div id="proyectos-residenciales-address">
             <h3>Direcci&oacute;n</h3>
+            <?php if ($node->field_res_project_addr[0]['safe']): ?>
+        
             <p><?php echo $node->field_res_project_addr[0]['safe']; ?></p>
+            <?php endif; ?>
         </div>
-<?php endif; ?>
+
+    </div>
+
+
 </div>
 
