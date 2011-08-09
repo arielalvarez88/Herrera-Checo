@@ -198,7 +198,9 @@
 
             </div> 
         </div><!-- /page -->
+<!--        <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>-->
         <?php print $scripts; ?>
+        
         <?php print $closure; ?>
     </body>
 </html>

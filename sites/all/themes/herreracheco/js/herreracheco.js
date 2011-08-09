@@ -83,8 +83,8 @@ initializeSlideshows = function()
                 pagerEvent:    'click',               
                 activePagerClass: 'propiedad-viewer-active-selector',
                 pagerAnchorBuilder: function (idx, slide){
-            
-                    return '#proyecto-slideshow-pager img:nth('+idx+')'; 
+              
+                    return '.proyecto-pager-for-'+idx; 
                 }
     
             }
@@ -93,9 +93,10 @@ initializeSlideshows = function()
             selector: '#proyecto-slideshow-pager',
             options:{
                 
-                fx:     'fade', 
-                speed:  'fast', 
-                timeout: 0,                 
+                fx:     'scrollVert', 
+                speed:  'slow', 
+                timeout: 0, 
+                rev:1,                
                 cleartype: true,
                 cleartypeNoBg: true,
                 pagerEvent:    'click',
@@ -308,11 +309,41 @@ extendJqueryWithGetVars = function(){
     });
 };
 
+drawGoogleMap = function(parentSelector, latitude, longitude, markerTitle){
+    var latlng = new google.maps.LatLng(latitude, longitude);
+    var myOptions = {
+        zoom: 15,
+        center: latlng,
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+    };
+    var map = new google.maps.Map(document.getElementById(parentSelector), myOptions);
+    
+    markerTitle = markerTitle || '';
+    
+    var marker = new google.maps.Marker({
+        position: latlng, 
+        map: map, 
+        title: markerTitle
+    });   
+    
+    
+    
+    
+};
+
+drawOficinasMap = function()
+{
+//    if($('#contactos-localizacion').length > 0)
+//        drawGoogleMap('#contactos-localizacion',19.454433,-70.697630);
+}
+
+
 $(document).ready(function(){
     extendJqueryWithGetVars();
     initializeSlideshows();
     initializeSlidersMenus();
     initilizeVenderAlquilarOptions();
     initializeFilter();
+    drawOficinasMap();
    
 });
