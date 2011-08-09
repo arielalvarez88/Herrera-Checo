@@ -120,6 +120,21 @@
 }
 /*gradient-divisor ENDS*/
 
+/*portafolio*/
+#portafolio-header {
+    font-size: 35px;
+}
+
+.protafolio-proyecto {
+   float: left;
+    height: 164px;
+    padding: 25px;
+    width: 430px;
+}
+/*portafolio ENDS*/
+
+
+
 /*portafolio-link*/
 #portafolio-link
 {
@@ -785,7 +800,7 @@ div.ultimos-proyectos div.ultimos-proyectos-info h5
 #contactos-localizacion {
     float: left;
     left: 33px;
-    position: relative;
+    position: absolute;
     top: -210px;
     height: 192px;
 }
