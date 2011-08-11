@@ -16,6 +16,9 @@
             <h3>Email</h3>
             <p>constructoraherreracheco@hotmail.com</p>
 
+            
+         
+            
             <h3>Nuestra ubicaci&oacute;n</h3>
 
                 
@@ -35,6 +38,11 @@
             <input type="text" id="contactos-form-email"/>
             </div>
             
+            <div>
+                <label for="contactos-form-telephone" class="">Tel&eacute;fono</label>
+                
+            <input type="text" id="contactos-form-telephone"/>
+            </div>
             
             <div>
                 <label for="contactos-form-empresa" class="">Empresa</label>

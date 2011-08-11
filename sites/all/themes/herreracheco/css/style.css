@@ -932,7 +932,8 @@ a.filter-alquilar-comprar-option {
 }
 #filter-slider
 {
-   margin-left: 8px;
+      margin-bottom: 2px;
+    margin-left: 8px;
     width: 201px;
 }
 
@@ -966,10 +967,17 @@ a.filter-alquilar-comprar-option {
 }
 #filter-parameters .filter-slider-min-position {
     float:left;
+    
+}
+
+#filter-slider-min, #filter-slider-max
+{
+    font-size: 0.9em;
 }
 
 #filter-parameters .filter-slider-max-position {
     float:right;
+    
 }
 
 .jslider_plastic .jslider-bg i,
