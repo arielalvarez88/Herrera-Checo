@@ -37,9 +37,9 @@ else
         <label>Estado</label>
         
         <select id="filter-property-state" name="filter-property-state" id="filter-property-state">
-            <option value="terminado" <?php echo isset($_GET['state']) && $_GET['state'] == "terminado"? 'selected = "selected"' : '';?>>Terminado</option>
-            <option value="construccion" <?php echo isset($_GET['state']) && $_GET['state'] == "construccion"? 'selected = "selected"' : '';?>>Construccion</option>
-            <option value="planos" <?php echo isset($_GET['state']) && $_GET['state'] == "planos"? 'selected = "selected"' : '';?>>Planos</option>
+            <option value="finished" <?php echo isset($_GET['state']) && $_GET['state'] == "finished"? 'selected = "selected"' : '';?>>Terminado</option>
+            <option value="construction" <?php echo isset($_GET['state']) && $_GET['state'] == "constuction"? 'selected = "selected"' : '';?>>Construccion</option>
+            <option value="bluprints" <?php echo isset($_GET['state']) && $_GET['state'] == "blueprints"? 'selected = "selected"' : '';?>>Planos</option>
         </select>
         
         

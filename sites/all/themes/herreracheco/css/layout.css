@@ -595,11 +595,9 @@ body
 
 #page-wrapper
 {
- 
-    background: url("/sites/default/files/images/common/plano.png") no-repeat scroll 0 0 transparent;
+  background: url("/sites/default/files/images/common/plano.png") no-repeat scroll -79px 0 transparent;
     margin-left: auto;
     margin-right: auto;
-    width: 1735px;
 }
 
 /* Layout rules. (Disclaimer: do not change if you're not sure you know what you're doing.) */
