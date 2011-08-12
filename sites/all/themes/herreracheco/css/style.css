@@ -767,12 +767,12 @@ div.ultimos-proyectos div.ultimos-proyectos-info h5
 }
 #contactos-info {
  
-     margin-left: 33px;
-    margin-right: 140px;
+      margin-left: 33px;
+    margin-right: 195px;
 }
 
 #contactos form{
-    padding-top: 20px;
+    
 }
 
 #contactos form input, #contactos form  label
@@ -785,6 +785,7 @@ div.ultimos-proyectos div.ultimos-proyectos-info h5
 #contactos form label {
     color: #798D92;
     font-size: 1.4em;
+    padding-top: 12px;
     width: 111px;
 }
 #contactos-info p {
@@ -799,10 +800,11 @@ div.ultimos-proyectos div.ultimos-proyectos-info h5
 
 #contactos-localizacion {
     float: left;
-    left: 33px;
-    position: absolute;
-    top: -210px;
     height: 192px;
+    left: 33px;
+    margin-bottom: -160px;
+    position: relative;
+    top: -210px;
 }
 
 

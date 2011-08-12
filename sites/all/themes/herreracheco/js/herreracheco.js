@@ -195,32 +195,34 @@ function commify(num) {
         Num = a[0];   //the part we will commify
         var end = a[1] //the decimal place we will ignore and add back later
     }
-    else {var end = "00";}  
+    else {
+        var end = "00";
+    }  
  
     //this loop actually adds the commas   
     for (var k = Num.length-1; k >= 0; k--){
-      var oneChar = Num.charAt(k);
-      if (count == 3){
-        newNum += ",";
-        newNum += oneChar;
-        count = 1;
-        continue;
-      }
-      else {
-        newNum += oneChar;
-        count ++;
-      }
-   }  //but now the string is reversed!
+        var oneChar = Num.charAt(k);
+        if (count == 3){
+            newNum += ",";
+            newNum += oneChar;
+            count = 1;
+            continue;
+        }
+        else {
+            newNum += oneChar;
+            count ++;
+        }
+    }  //but now the string is reversed!
    
-  //re-reverse the string
-  for (var k = newNum.length-1; k >= 0; k--){
-      var oneChar = newNum.charAt(k);
-      newNum2 += oneChar;
-  }
+    //re-reverse the string
+    for (var k = newNum.length-1; k >= 0; k--){
+        var oneChar = newNum.charAt(k);
+        newNum2 += oneChar;
+    }
    
-   // add dollar sign and decimal ending from above
-   newNum2 = newNum2;
-   return newNum2;
+    // add dollar sign and decimal ending from above
+    newNum2 = newNum2;
+    return newNum2;
 }
 
 
@@ -274,13 +276,13 @@ initializeFilter = function(){
     
     
     var minValue =  500000;
-        var maxValue = 20000000 ;
-        var step = 500000;
+    var maxValue = 20000000 ;
+    var step = 500000;
     if($.getUrlVar('condition') && $.getUrlVar('condition') == 'alquilar')
     {
-         minValue =  5000;
-         maxValue = 300000;
-         step = 1000;
+        minValue =  5000;
+        maxValue = 300000;
+        step = 1000;
     }
 
     
@@ -312,7 +314,20 @@ Filter = function (sliderMin,sliderMax,sliderMinInitial,sliderMaxInitial,step){
     
     this.clickFunctionality= function(button,min,max,step){
         $('.filter-alquilar-comprar-option').removeClass('filter-selected-option');
-        $(button).addClass('filter-selected-option');
+        button = $(button);
+        button.addClass('filter-selected-option');
+        console.log(button.html());
+        if($(button).html()=='ALQUILAR')
+        {
+            this.propertyState.val('finished');   
+            this.propertyState.attr('disabled','disabled');
+        }
+        else
+        {
+            
+            
+            this.propertyState.removeAttr('disabled');
+        }
         $('#filter-slide').html('');
         filter.slider = new Slider('#filter-slider', min, max, min, max, "#filter-slider-min", "#filter-slider-max",step);
     }
@@ -383,9 +398,9 @@ drawGoogleMap = function(parentSelector, latitude, longitude, markerTitle){
 
 drawOficinasMap = function()
 {
-//    if($('#contactos-localizacion').length > 0)
-//        drawGoogleMap('#contactos-localizacion',19.454433,-70.697630);
-}
+    //    if($('#contactos-localizacion').length > 0)
+    //        drawGoogleMap('#contactos-localizacion',19.454433,-70.697630);
+    }
 
 
 $(document).ready(function(){

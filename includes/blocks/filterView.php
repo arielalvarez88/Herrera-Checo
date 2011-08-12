@@ -30,16 +30,17 @@ else
         <label>Tipo de propiedad</label>
 
         <select id="filter-property-type" name="filter-property-type">
-            <option value="residenciales" <?php echo isset($_GET['type']) && $_GET['type'] == "residenciales"? 'selected = "selected"' : '';?>>Apartamentos</option>
-            <option value="comerciales" <?php echo isset($_GET['type']) && $_GET['type'] == "comerciales"? 'selected = "selected"' : '';?>>Local Comerciales</option>
+            <option value="residenciales" <?php echo isset($_GET['type']) && $_GET['type'] == "residenciales"? 'selected = "selected"' : '';?>>Apartamento</option>
+            <option value="comerciales" <?php echo isset($_GET['type']) && $_GET['type'] == "comerciales"? 'selected = "selected"' : '';?>>Local Comercial</option>
+            <option value="casas" <?php echo isset($_GET['type']) && $_GET['type'] == "casas"? 'selected = "selected"' : '';?>>Casa</option>
         </select>
         
         <label>Estado</label>
         
         <select id="filter-property-state" name="filter-property-state" id="filter-property-state">
             <option value="finished" <?php echo isset($_GET['state']) && $_GET['state'] == "finished"? 'selected = "selected"' : '';?>>Terminado</option>
-            <option value="construction" <?php echo isset($_GET['state']) && $_GET['state'] == "constuction"? 'selected = "selected"' : '';?>>Construccion</option>
-            <option value="bluprints" <?php echo isset($_GET['state']) && $_GET['state'] == "blueprints"? 'selected = "selected"' : '';?>>Planos</option>
+            <option value="construction" <?php echo isset($_GET['state']) && $_GET['state'] == "constuction"? 'selected = "selected"' : '';?>>En Construccion</option>
+            <option value="blueprints" <?php echo isset($_GET['state']) && $_GET['state'] == "blueprints"? 'selected = "selected"' : '';?>>Planos</option>
         </select>
         
         
