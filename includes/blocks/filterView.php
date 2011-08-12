@@ -30,23 +30,24 @@ else
         <label>Tipo de propiedad</label>
 
         <select id="filter-property-type" name="filter-property-type">
-            <option value="residenciales" <?php echo isset($_GET['type']) && $_GET['type'] == "residenciales"? 'selected = "selected"' : '';?>>Apartamentos</option>
-            <option value="comerciales" <?php echo isset($_GET['type']) && $_GET['type'] == "comerciales"? 'selected = "selected"' : '';?>>Local Comerciales</option>
+            <option value="residenciales" <?php echo isset($_GET['type']) && $_GET['type'] == "residenciales"? 'selected = "selected"' : '';?>>Apartamento</option>
+            <option value="comerciales" <?php echo isset($_GET['type']) && $_GET['type'] == "comerciales"? 'selected = "selected"' : '';?>>Local Comercial</option>
+            <option value="casas" <?php echo isset($_GET['type']) && $_GET['type'] == "casas"? 'selected = "selected"' : '';?>>Casa</option>
         </select>
         
         <label>Estado</label>
         
         <select id="filter-property-state" name="filter-property-state" id="filter-property-state">
             <option value="finished" <?php echo isset($_GET['state']) && $_GET['state'] == "finished"? 'selected = "selected"' : '';?>>Terminado</option>
-            <option value="construction" <?php echo isset($_GET['state']) && $_GET['state'] == "constuction"? 'selected = "selected"' : '';?>>Construccion</option>
-            <option value="bluprints" <?php echo isset($_GET['state']) && $_GET['state'] == "blueprints"? 'selected = "selected"' : '';?>>Planos</option>
+            <option value="construction" <?php echo isset($_GET['state']) && $_GET['state'] == "constuction"? 'selected = "selected"' : '';?>>En Construccion</option>
+            <option value="blueprints" <?php echo isset($_GET['state']) && $_GET['state'] == "blueprints"? 'selected = "selected"' : '';?>>Planos</option>
         </select>
         
         
         <div id="filter-slider"></div>
        
-        <p><span class="filter-slider-min-position">Desde</span> <span class="filter-slider-max-position">Hasta</span></p>
-        <p><span class="filter-slider-min-position" id="filter-slider-min">RD $1000000</span> <span class="filter-slider-max-position" id="filter-slider-max">RD $5000000</span></p>
+        <p><span class="filter-slider-min-position bold">Desde</span> <span class="filter-slider-max-position bold">Hasta</span></p>
+        <p><span class="filter-slider-min-position" id="filter-slider-min">$500,000</span> <span class="filter-slider-max-position" id="filter-slider-max">M&aacute; de $20,000,000</span></p>
         <a href="#javascript" id="filter-search-button" class="no-decoration-anchor"><img src="<?php echo $paths->images;?>/filter/buscarButton.png"/></a>
     </div>
 </div>

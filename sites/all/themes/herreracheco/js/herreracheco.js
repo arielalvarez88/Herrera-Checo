@@ -175,6 +175,57 @@ initilizeVenderAlquilarOptions = function(){
     
 };
 
+
+function commify(num) {
+    var Num = num;
+    var newNum = "";
+    var newNum2 = "";
+    var count = 0;
+    
+    //check for decimal number
+    if (Num.indexOf('.') != -1){  //number ends with a decimal point
+        if (Num.indexOf('.') == Num.length-1){
+            Num += "00";
+        }
+        if (Num.indexOf('.') == Num.length-2){ //number ends with a single digit
+            Num += "0";
+        }
+        
+        var a = Num.split("."); 
+        Num = a[0];   //the part we will commify
+        var end = a[1] //the decimal place we will ignore and add back later
+    }
+    else {
+        var end = "00";
+    }  
+ 
+    //this loop actually adds the commas   
+    for (var k = Num.length-1; k >= 0; k--){
+        var oneChar = Num.charAt(k);
+        if (count == 3){
+            newNum += ",";
+            newNum += oneChar;
+            count = 1;
+            continue;
+        }
+        else {
+            newNum += oneChar;
+            count ++;
+        }
+    }  //but now the string is reversed!
+   
+    //re-reverse the string
+    for (var k = newNum.length-1; k >= 0; k--){
+        var oneChar = newNum.charAt(k);
+        newNum2 += oneChar;
+    }
+   
+    // add dollar sign and decimal ending from above
+    newNum2 = newNum2;
+    return newNum2;
+}
+
+
 Slider = function(parentSelector,minValue,maxValue,minInitialPosition,maxInitialPosition,minDisplaySelector,maxDisplaySelector,step){
     
     this.parent = $(parentSelector);
@@ -186,9 +237,9 @@ Slider = function(parentSelector,minValue,maxValue,minInitialPosition,maxInitial
     this.maxDisplay = $(maxDisplaySelector);
     this.step = step;
    
-    
-    this.minDisplay.html("$" + this.minInitialValue);
-    this.maxDisplay.html("$" + this.maxInitialValue);
+    var biggerThan = this.maxInitialValue >= 20000000? 'Más de ': '';
+    this.minDisplay.html("$" + commify('' + this.minInitialValue));
+    this.maxDisplay.html(biggerThan + "$" + commify('' + this.maxInitialValue));
     
     var sliderObject = this;
     
@@ -201,8 +252,9 @@ Slider = function(parentSelector,minValue,maxValue,minInitialPosition,maxInitial
         step:sliderObject.step,
         values: [ sliderObject.minInitialValue , sliderObject.maxInitialValue ],
         slide: function( event, ui ) {
-            sliderObject.minDisplay.html( "$" + ui.values[ 0 ]);
-            sliderObject.maxDisplay .html("$" + ui.values[ 1 ]);
+            var bigger = ui.values[ 1 ] >= 20000000? 'Más de ' : '';
+            sliderObject.minDisplay.html( "$" + commify('' + ui.values[ 0 ]));
+            sliderObject.maxDisplay .html(bigger + "$" + commify('' + ui.values[ 1 ]));
         }
                         
     });
@@ -223,19 +275,19 @@ Slider = function(parentSelector,minValue,maxValue,minInitialPosition,maxInitial
 initializeFilter = function(){
     
     
-    var minValue =  1000000;
-        var maxValue = 50000000;
-        var step = 1000000;
+    var minValue =  500000;
+    var maxValue = 20000000 ;
+    var step = 500000;
     if($.getUrlVar('condition') && $.getUrlVar('condition') == 'alquilar')
     {
-         minValue =  5000;
-         maxValue = 300000;
-         step = 1000;
+        minValue =  5000;
+        maxValue = 300000;
+        step = 1000;
     }
 
     
     var initialMin = $.getUrlVar('minprice') ? $.getUrlVar('minprice') : 1000000;
-    var initialMax = $.getUrlVar('maxprice') ? $.getUrlVar('maxprice') : 50000000;
+    var initialMax = $.getUrlVar('maxprice') ? $.getUrlVar('maxprice') : 20000000;
     
         
     var filter = new Filter(minValue,maxValue,initialMin,initialMax,step);
@@ -262,7 +314,20 @@ Filter = function (sliderMin,sliderMax,sliderMinInitial,sliderMaxInitial,step){
     
     this.clickFunctionality= function(button,min,max,step){
         $('.filter-alquilar-comprar-option').removeClass('filter-selected-option');
-        $(button).addClass('filter-selected-option');
+        button = $(button);
+        button.addClass('filter-selected-option');
+        console.log(button.html());
+        if($(button).html()=='ALQUILAR')
+        {
+            this.propertyState.val('finished');   
+            this.propertyState.attr('disabled','disabled');
+        }
+        else
+        {
+            
+            
+            this.propertyState.removeAttr('disabled');
+        }
         $('#filter-slide').html('');
         filter.slider = new Slider('#filter-slider', min, max, min, max, "#filter-slider-min", "#filter-slider-max",step);
     }
@@ -270,7 +335,7 @@ Filter = function (sliderMin,sliderMax,sliderMinInitial,sliderMaxInitial,step){
  
     
     this.comprarButton.click(function(){
-        filter.clickFunctionality(this,1000000,50000000,1000000);
+        filter.clickFunctionality(this,5000000,20000000,500000);
     });
     
     this.alquilarButton.click(function(){
@@ -333,9 +398,9 @@ drawGoogleMap = function(parentSelector, latitude, longitude, markerTitle){
 
 drawOficinasMap = function()
 {
-//    if($('#contactos-localizacion').length > 0)
-//        drawGoogleMap('#contactos-localizacion',19.454433,-70.697630);
-}
+    //    if($('#contactos-localizacion').length > 0)
+    //        drawGoogleMap('#contactos-localizacion',19.454433,-70.697630);
+    }
 
 
 $(document).ready(function(){
