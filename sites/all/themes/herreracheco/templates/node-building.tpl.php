@@ -16,7 +16,7 @@
                    <td><?php echo $apt->field_apt_number[0]['value'];?></td>
                    <td><?php echo $apt->field_apt_construction[0]['value'];?></td>
                    <td><?php echo $apt->field_apt_price[0]['value'];?></td>
-                   <?php var_dump($apt);?>
+                   
                </tr>
             <?php endforeach;?>
          
