@@ -1,0 +1,96 @@
+<?php
+require_once dirname(__FILE__) . '/../../../../includes/classes/ResidentialProjectMaxPriceFilter.php';
+require_once dirname(__FILE__) . '/../../../../includes/classes/ResidentialProjectMinPriceFilter.php';
+require_once dirname(__FILE__) . '/../../../../includes/classes/ResidentialProjectsFindAlgorithm.php';
+require_once dirname(__FILE__) . '/../../../../includes/classes/ResidentialProjectStateFilter.php';
+
+function properties_search_perm() {
+    return array('view_properties_search');
+}
+
+function properties_search_admin() {
+    $form = array();
+
+    $form['properties_search_maxdisp'] = array(
+        '#type' => 'textfield',
+        '#title' => t('Maximum number of links'),
+        '#default_value' => variable_get('properties_search_maxdisp', 3),
+        '#size' => 2,
+        '#maxlength' => 2,
+        '#description' => t("The maximum number of links to display in the block."),
+        '#required' => TRUE,
+    );
+
+    return system_settings_form($form);
+}
+
+function properties_search_block($op='list', $delta=0, $edit=array()) {
+    $block = array();
+    if ($op == 'list') {
+
+        $block[0]["info"] = t('Properties_search_block');
+    } elseif ($op = 'view') {
+        $block['subject'] = 'Properties Search Result';
+
+
+        $projectType = isset($_GET['type']) && $_GET['type'] == "residenciales" ? "residential_project" : "comercial_project";
+        $minprice = isset($_GET['minprice']) && is_numeric($_GET['minprice']) ? $_GET['minprice'] : 5000;
+        $maxprice = isset($_GET['maxprice']) && is_numeric($_GET['maxprice']) ? $_GET['maxprice'] : 30000000;
+        $projectState = isset($_GET['state']) ? $_GET['state'] : 'finished';
+        $minPriceFilter;
+        $maxPriceFilter;
+        $projectStateFilter;
+
+
+        $blockContent = '';
+        $searchAlgorithm;
+        $searchResults;
+
+        if ($projectType == 'residential_project') {
+
+            $minPriceFilter = new ResidentialProjectMinPriceFilter($minprice);
+            $maxPriceFilter = $maxprice >= 20000000? new NullFilter() : new ResidentialProjectMaxPriceFilter($maxprice);
+            $projectStateFilter = new ResidentialProjectStateFilter($projectState);
+            $localsFilters = array($minPriceFilter, $maxPriceFilter);
+            $projectFilters = array($projectStateFilter);
+            $searchAlgorithm = new ResidentialProjectsFindAlgorithm($projectType, $localsFilters, $projectFilters);
+            
+            
+        } else {
+            $minPriceFilter = new ResidentialProjectMinPriceFilter($minprice);
+            $maxPriceFilter = new ResidentialProjectMaxPriceFilter($maxValue);
+            $projectStateFilter = new ResidentialProjectStateFilter($projectState);
+            $localsFilters = array($minPriceFilter, $maxPriceFilter);
+            $projectFilters = array($minPriceFilter, $projectStateFilter);
+            $searchAlgorithm = new ResidentialProjectsFindAlgorithm($projectType, $localsFilters, $projectFilters);
+        }
+
+        $results = $searchAlgorithm->runSearch();
+
+        foreach ($results as $result) {
+        
+              $block['content'] = '<div class="ultimos-proyectos last even">';
+            $block['content'] .= '<div class="ultimos-proyectos-photo">';
+
+            $block['content'] .= '<a class="imagefield imagefield-nodelink imagefield-field_res_project_slides" href="/proyectos-residenciales/res-oasis-del-dorado"><img width="1400" height="900" src="'.$result->getProjectAbstraction()->getPictureUrl().'" alt="" class="imagefield imagefield-field_res_project_slides"/></a>';
+                 $block['content'] .= '</div>';
+
+
+                 $block['content'] .= '<div class="ultimos-proyectos-info">';
+
+
+                     $block['content'] .='<h4>'.$result->getProjectAbstraction()->getTitle();'</h4>';
+                     $block['content'] .='<h5>Proyecto Residencial</h5>';
+                     $block['content'] .='<p>'.$result->getProjectAbstraction()->getDescription().'</p>';
+                     $block['content'] .='<a href="/proyectos-residenciales/res-oasis-del-dorado"><img src="/sites/default/files/images/ultimosProyectos/verProyecto.png"></a>';
+                     $block['content'] .='<p>Coincidencias: '.$result->getCoincidences().'</p>';
+                 $block['content'] .='</div>';
+
+             $block['content'] .='</div>';
+           
+            
+        }
+    }
+    return $block;
+}
+
