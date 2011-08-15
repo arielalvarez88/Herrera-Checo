@@ -66,10 +66,10 @@ function properties_search_block($op='list', $delta=0, $edit=array()) {
         }
 
         $results = $searchAlgorithm->runSearch();
-        var_dump($results);
+        $block['content'] = '';
         foreach ($results as $result) {
-        
-              $block['content'] = '<div class="ultimos-proyectos last even">';
+                
+              $block['content'].= '<div class="ultimos-proyectos last even">';
             $block['content'] .= '<div class="ultimos-proyectos-photo">';
 
             $block['content'] .= '<a class="imagefield imagefield-nodelink imagefield-field_res_project_slides" href="/proyectos-residenciales/res-oasis-del-dorado"><img width="1400" height="900" src="'.$result->getProjectAbstraction()->getPictureUrl().'" alt="" class="imagefield imagefield-field_res_project_slides"/></a>';
@@ -88,7 +88,6 @@ function properties_search_block($op='list', $delta=0, $edit=array()) {
 
              $block['content'] .='</div>';
            
-            
         }
     }
     return $block;
