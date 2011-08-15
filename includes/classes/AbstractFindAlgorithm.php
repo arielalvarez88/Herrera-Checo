@@ -29,7 +29,7 @@ abstract class AbstractFindAlgorithm {
 
         
         $projectsSearchResults = $this->filterLocals($filteredProjectsNodes, $projectsToLocalsMap, $this->localsFilters);
-        var_dump($projectsSearchResults);
+        
         return $projectsSearchResults;
     }
 
