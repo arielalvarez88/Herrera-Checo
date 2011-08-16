@@ -87,11 +87,7 @@ class ResidentialProjectAbstraction implements ProjectAbstraction
     }
     
     
-    function getLocalsContainers()
-    {
-        return $this->projectLocalsContainersFieldName;
-    }
-    
+       
     function getLocals()
     {
         return $this->projectLocalsFieldName;
