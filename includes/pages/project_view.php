@@ -1,8 +1,8 @@
-<?php require dirname(__FILE__) . '/../paths.php'; ?>
-<?php require dirname(__FILE__) . '/../utilities/commify.php'; ?>
-<?php require dirname(__FILE__) . '/../classes/ProjectAbsctractionFactory.php'; ?>
-<?php require dirname(__FILE__) . '/../classes/LocalContainerAbstraction.php'; ?>
-<?php require dirname(__FILE__) . '/../classes/LocalAbstraction.php'; ?>
+<?php require_once  dirname(__FILE__) . '/../paths.php'; ?>
+<?php require_once  dirname(__FILE__) . '/../utilities/commify.php'; ?>
+<?php require_once  dirname(__FILE__) . '/../classes/ProjectAbsctractionFactory.php'; ?>
+<?php require_once  dirname(__FILE__) . '/../classes/LocalContainerAbstraction.php'; ?>
+<?php require_once  dirname(__FILE__) . '/../classes/LocalAbstraction.php'; ?>
 
 <?php
 $projectAbstraction = ProjectAbstractionFactory::createProjectAbstraction($node);

@@ -3,6 +3,7 @@ require_once dirname(__FILE__) . '/../../../../includes/classes/ResidentialProje
 require_once dirname(__FILE__) . '/../../../../includes/classes/ResidentialProjectMinPriceFilter.php';
 require_once dirname(__FILE__) . '/../../../../includes/classes/ResidentialProjectsFindAlgorithm.php';
 require_once dirname(__FILE__) . '/../../../../includes/classes/ResidentialProjectStateFilter.php';
+require_once dirname(__FILE__) . '/../../../../includes/classes/ResidentialProjectSearchResult.php';
 
 function properties_search_perm() {
     return array('view_properties_search');
