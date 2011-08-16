@@ -5,7 +5,7 @@
  * and open the template in the editor.
  */
 require_once dirname(__FILE__).'/IProjectAbstraction.php';
-require_once dirname(__FILE__).'/LocalAbstraction.php';
+require_once dirname(__FILE__).'/LocalContainerAbstraction.php';
 class ResidentialProjectAbstraction implements ProjectAbstraction
 {
     
