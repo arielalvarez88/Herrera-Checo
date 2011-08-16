@@ -39,7 +39,7 @@ class LocalContainerAbstraction
         foreach($locasInfo as $localsInfo)
         {
             $localNode = node_load($localsInfo['nid']);
-            
+            var_dump($localNode);
             $localAbstraction = new LocalAbastraction($localNode->$localsTitle[0]['value'], $localNode->$localsPrice[0]['value'], $localNode->$localsConstruction[0]['value'],$localNode->$localsCondition[0]['value']);
             $localsAbstractions[]= $localAbstraction;
             
