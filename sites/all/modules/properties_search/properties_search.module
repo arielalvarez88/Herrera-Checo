@@ -66,7 +66,7 @@ function properties_search_block($op='list', $delta=0, $edit=array()) {
         }
 
         $results = $searchAlgorithm->runSearch();
-
+        var_dump($results);
         foreach ($results as $result) {
         
               $block['content'] = '<div class="ultimos-proyectos last even">';
