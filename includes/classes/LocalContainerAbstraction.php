@@ -22,7 +22,7 @@ class LocalContainerAbstraction
         $this->localsPriceFieldName = $localsPriceFieldName;
         $this->localsConstructionFieldName = $localsConstructionFieldName;
         $this->localsConditionFieldName = $localsConditionFieldName;
-        $this->locals = generateLocals();
+        $this->locals = $this->generateLocals();
     }
 
 
