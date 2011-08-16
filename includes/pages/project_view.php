@@ -8,7 +8,8 @@
 $projectAbstraction = ProjectAbstractionFactory::createProjectAbstraction($node);
 $localsContainers = $projectAbstraction->getLocalsContainers();
 $localsContainersNumber = count($localsContainers);
-$locals = $localsContainers->getLocals();
+
+
 
 
 $slides = $projectAbstraction->getSlides();
@@ -97,7 +98,7 @@ $showAllApartments = isset($_GET['ver-todos-apartamentos']) && $_GET['ver-todos-
                                         <td class="bold building-apt-header">mts.</td>
                                         <td class="bold building-apt-header">Precio de venta</td>
                                     </tr>
-                                    
+                                    <?php $locals = $localContainer->getLocals();?>
                                     <?php foreach($locals  as $local): ?>
                                    
                                     <?php if(($local->getCondition()=='vendido' && $showAllApartments) || $local->getCondition() =='comprar' || $local->getCondition()=='vender'):?>
