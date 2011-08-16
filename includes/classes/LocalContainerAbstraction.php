@@ -50,8 +50,8 @@ class LocalContainerAbstraction
     public function getTitle()
     {
         $fieldName = $this->titleFieldName;
-        
-        return $this->localContainerNode->$fieldName[0]['value'];;
+        $field = $this->localContainerNode->$fieldName;
+        return $field[0]['value'];
     }
     
     public function getLocals()
