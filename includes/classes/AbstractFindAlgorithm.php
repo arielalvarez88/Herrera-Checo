@@ -23,12 +23,13 @@ abstract class AbstractFindAlgorithm {
        
         $filteredProjectsNodes = $this->filterProjects($allProjectsNodes, $this->projectsFilters);
  
-        var_dump($filteredProjectsNodes);
+        
         $projectsToLocalsMap = $this->getProjectsToLocalsMap($filteredProjectsNodes);
 
 
         
         $projectsSearchResults = $this->filterLocals($filteredProjectsNodes, $projectsToLocalsMap, $this->localsFilters);
+        var_dump($projectsSearchResults);
         return $projectsSearchResults;
     }
 
