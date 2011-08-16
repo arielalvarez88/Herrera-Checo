@@ -24,7 +24,7 @@ abstract class ProjectAbstraction
     protected $localsConditionFileName;
     protected $projectFeaturesFieldName;
     protected $projectPaymentDescFieldName;
-    
+    protected $projectAddressFieldName;
     
 
     protected function generateLocalsContainersAbstractions()
@@ -77,7 +77,7 @@ abstract class ProjectAbstraction
     
     public function getPictureUrl()
     {
-        $fieldName = $this->projectSlides;                
+        $fieldName = $this->projectSlidesFieldName;                
         $field = $this->projectNode->$fieldName;
         return $field[0]['filepath'];
     }
@@ -96,7 +96,13 @@ abstract class ProjectAbstraction
     }
     
     
-       
+    public function getAdderss()
+    {
+        $fieldName = $this->projectAddressFieldName;                
+        $field = $this->projectNode->$fieldName;
+        return $field[0]['value'];
+        
+    }
     function getLocals()
     {
         return $this->projectLocalsFieldName;

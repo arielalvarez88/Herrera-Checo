@@ -28,6 +28,7 @@ class ResidentialProjectAbstraction extends ProjectAbstraction
         $this->localsPriceFieldName = 'field_apt_price';
         $this->localsConstructionFieldName = 'field_apt_construction';
         $this->localsConditionFileName = 'field_apt_conndition';
+        $this->projectAddressFieldName = 'field_res_project_address';
         $this->localsContainersAbstractions = $this->generateLocalsContainersAbstractions();
     }
     
