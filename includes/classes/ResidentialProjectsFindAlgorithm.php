@@ -38,7 +38,7 @@ class ResidentialProjectsFindAlgorithm extends AbstractFindAlgorithm
                     $localNode = node_load($localNodeId);
                     if(!isset($map[$projectHash]))
                         $map[$projectHash] = array();
-                    $map[spl_object_hash($projectNode)][] = $localNode;
+                    $map[$projectHash][] = $localNode;
                 }
                 
             }
