@@ -16,7 +16,7 @@ class LocalContainerAbstraction
     public function __construct($localContainerNode,$titleFieldName,$localsFieldName, $localsTitleFieldName, $localsPriceFieldName,$localsConstructionFieldName,$localsConditionFieldName)
     {
         $this->localContainerNode = $localContainerNode;
-        $this->title = $titleFieldName;
+        $this->titleFieldName = $titleFieldName;
         $this->localsFieldName = $localsFieldName;
         $this->localsTitleFieldName = $localsTitleFieldName;
         $this->localsPriceFieldName = $localsPriceFieldName;
@@ -49,7 +49,9 @@ class LocalContainerAbstraction
     
     public function getTitle()
     {
-        return $this->title;
+        $fieldName = $this->titleFieldName;
+        
+        return $this->localContainerNode->$fieldName[0]['value'];;
     }
     
     public function getLocals()
