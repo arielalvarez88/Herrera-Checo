@@ -25,7 +25,7 @@ abstract class ProjectAbstraction
     protected $projectFeaturesFieldName;
     protected $projectPaymentDescFieldName;
     protected $projectAddressFieldName;
-    
+
 
     protected function generateLocalsContainersAbstractions()
     {
@@ -42,6 +42,7 @@ abstract class ProjectAbstraction
         return $LocalsContainersAbstractions;
     }
     
+
     public function getLocalsContainers()
     {
         return $this->localsContainersAbstractions;
@@ -103,10 +104,7 @@ abstract class ProjectAbstraction
         return $field[0]['value'];
         
     }
-    function getLocals()
-    {
-        return $this->projectLocalsFieldName;
-    }
+ 
     
 }
 ?>
