@@ -9,9 +9,9 @@ private $price;
 private $construction;
 private $condition;
 
-public function __construct($title, $price, $construction,$condition)
+public function __construct($number, $price, $construction,$condition)
 {
-    $this->title = $title;
+    $this->number = $number;
     $this->price = $price;
     $this->construction = $construction;
     $this->condition = $condition;
@@ -20,9 +20,9 @@ public function getPrice()
 {
     return $this->price;
 }
-public function getTitle()
+public function getNumber()
 {
-    return $this->title;
+    return $this->number;
 }
 public function getConstruction()
 {
