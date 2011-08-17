@@ -121,7 +121,7 @@
 /*gradient-divisor ENDS*/
 
 /*portafolio*/
-#portafolio-header {
+.section-header {
     font-size: 35px;
 }
 
@@ -1013,6 +1013,10 @@ a.filter-alquilar-comprar-option {
 }
 .hidden{
     display:none;
+}
+
+.section-header {
+    font-size: 35px;
 }
 
 /*useful Classes ENDS*/
