@@ -9,5 +9,8 @@ interface ProjectAbstraction
     function getTitle();
     function getDescription();
     function getPictureUrl();
+    function getSlides();
+    function getLocalsContainers();
+    function getLocals();
 }
 ?>
