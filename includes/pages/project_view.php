@@ -137,7 +137,7 @@ $showAllApartments = isset($_GET['ver-todos-apartamentos']) && $_GET['ver-todos-
         </div>
 
     </div>
-
+    <?php $section = 'proyectos';?>
 
 </div>
 
