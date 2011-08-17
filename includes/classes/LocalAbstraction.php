@@ -1,6 +1,6 @@
 <?php
 
-class LocalAbastraction{
+class LocalAbstraction{
 
 
 private $title;
