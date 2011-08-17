@@ -3,7 +3,7 @@
 class LocalAbstraction{
 
 
-private $title;
+private $number;
 
 private $price;
 private $construction;
