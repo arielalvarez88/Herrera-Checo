@@ -57,7 +57,7 @@ function properties_search_block($op='list', $delta=0, $edit=array()) {
             $searchAlgorithm = new ResidentialProjectsFindAlgorithm($projectType, $localsFilters, $projectFilters);
             
             
-        } else {
+        } elseif($projectType) {
             $minPriceFilter = new ResidentialProjectMinPriceFilter($minprice);
             $maxPriceFilter = new ResidentialProjectMaxPriceFilter($maxValue);
             $projectStateFilter = new ResidentialProjectStateFilter($projectState);

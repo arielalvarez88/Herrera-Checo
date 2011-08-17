@@ -289,7 +289,7 @@ a.no-decoration-anchor, .no-decoration-anchor img, a.no-decoration-anchor:hover,
 #proyecto-edificios {
     background-image: url("/sites/default/files/images/common/largeWhiteToGrayGradient.jpg");
     padding: 20px 0;
-    width: 250px;
+    width: 290px;
 }
 #proyecto h3#proyecto-condiciones-de-pago {
     margin-top: 20px;
@@ -417,7 +417,7 @@ a.no-decoration-anchor, .no-decoration-anchor img, a.no-decoration-anchor:hover,
 .building table{
     border: 0 none;
     clear: both;
-    width: 251px;
+    width: 290px;
 }
 
 .building table tr td {
