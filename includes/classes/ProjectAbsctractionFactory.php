@@ -4,8 +4,8 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-require dirname(__FILE__).'/ResidentialProjectAbstraction.php';
-require dirname(__FILE__).'/ComercialProjectAbstraction.php';
+require_once  dirname(__FILE__).'/ResidentialProjectAbstraction.php';
+require_once  dirname(__FILE__).'/ComercialProjectAbstraction.php';
 class ProjectAbstractionFactory
 {
 
