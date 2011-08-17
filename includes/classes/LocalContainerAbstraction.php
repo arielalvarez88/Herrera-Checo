@@ -44,7 +44,7 @@ class LocalContainerAbstraction
             
             $localTitleArray = $localNode->$localsTitleFieldName;
             $localTitle = $localTitleArray[0]['value'];
-            var_dump($localTitleArray);
+            var_dump($localNode);
             $localPriceArray = $localNode->$localsPriceFieldName;
             $localPrice = $localPriceArray[0]['value'];
            
