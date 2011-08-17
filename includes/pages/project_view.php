@@ -8,7 +8,7 @@
 $projectAbstraction = ProjectAbstractionFactory::createProjectAbstraction($node);
 $localsContainers = $projectAbstraction->getLocalsContainers();
 $localsContainersNumber = count($localsContainers);
-$locals = $localContainer->getLocals();
+$locals = $localsContainers->getLocals();
 
 
 $slides = $projectAbstraction->getSlides();
