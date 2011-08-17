@@ -7,12 +7,14 @@ private $title;
 
 private $price;
 private $construction;
+private $condition;
 
 public function __construct($title, $price, $construction,$condition)
 {
     $this->title = $title;
     $this->price = $price;
     $this->construction = $construction;
+    $this->condition = $condition;
 }
 public function getPrice()
 {
@@ -29,7 +31,7 @@ public function getConstruction()
 
 public function getCondition()
 {
-    return $this->$condition;
+    return $this->condition;
 }
 
 }
