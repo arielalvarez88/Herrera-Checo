@@ -12,7 +12,7 @@ abstract class ProjectAbstraction
     
     protected $projectNode;
     protected $projectDescriptionFieldName;
-    protected $projectSlides;
+    protected $projectSlidesFieldName;
     protected $projectTitleFieldName;    
     protected $projectLocalsContainersFieldName;
     protected $localsContainersTitleFieldName;
@@ -21,8 +21,10 @@ abstract class ProjectAbstraction
     protected $localsPriceFieldName;
     protected $localsConstructionFieldName;
     protected $localsContainersAbstractions;
+    protected $localsConditionFileName;
+    protected $projectFeaturesFieldName;
+    protected $projectPaymentDescFieldName;
     
-  
     
 
     protected function generateLocalsContainersAbstractions()
@@ -58,6 +60,21 @@ abstract class ProjectAbstraction
         return $field[0]['value'];
     }
     
+    public function getFeatures()
+    {
+        $fieldName = $this->projectFeaturesFieldName;                
+        $field = $this->projectNode->$fieldName;
+        return $field[0]['value'];
+    }
+    
+    public function getPaymentDesc()
+    {
+        $fieldName = $this->projectPaymentDescFieldName;                
+        $field = $this->projectNode->$fieldName;
+        return $field[0]['value'];
+    }
+    
+    
     public function getPictureUrl()
     {
         $fieldName = $this->projectSlides;                
@@ -68,8 +85,13 @@ abstract class ProjectAbstraction
 
     function getSlides()
     {
-         $fieldName = $this->projectPictureUrlFieldName;                
-        return $field = $this->projectNode->$fieldName;
+         $fieldName = $this->projectSlidesFieldName;                
+         $slidesInfo = $this->projectNode->$fieldName;
+         $slides = array();
+         foreach($slidesInfo as $slideInfo)
+             $slides[] = $slideInfo['filepath'];
+        
+         return $slides;
         
     }
     
