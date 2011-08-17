@@ -32,16 +32,30 @@ class LocalContainerAbstraction
         $localsFieldName = $this->localsFieldName;
         $localsInfo = $this->localContainerNode->$localsFieldName;
         $localsAbstractions = array();
-        var_dump($this->localContainerNode);
-        $localsTitle = $this->localsTitleFieldName;
-        $localsPrice = $this->localsPriceFieldName;
-        $localsConstruction = $this->localsConstructionFieldName;
-        $localsCondition = $this->localsConditionFieldName;
-        foreach($locasInfo as $localsInfo)
+        
+        $localsTitleFieldName = $this->localsTitleFieldName;
+        $localsPriceFieldName = $this->localsPriceFieldName;
+        $localsConstructionFieldName = $this->localsConstructionFieldName;
+        $localsConditionFieldName = $this->localsConditionFieldName;
+     
+        foreach($localsInfo as $localsInfo)
         {
             $localNode = node_load($localsInfo['nid']);
-            var_dump($localNode);
-            $localAbstraction = new LocalAbastraction($localNode->$localsTitle[0]['value'], $localNode->$localsPrice[0]['value'], $localNode->$localsConstruction[0]['value'],$localNode->$localsCondition[0]['value']);
+            
+            $localTitleArray = $localNode->$localsTitleFieldName;
+            $localTitle = $localTitleArray[0]['value'];
+            
+            $localPriceArray = $localNode->$localsPriceFieldName;
+            $localPrice = $localPriceArray[0]['value'];
+           
+            
+            $localConstructionArray = $localNode->$localsConstructionFieldName;
+            $localConstruction = $localConstructionArray[0]['value'];
+            
+            $localConditionArray = $localNode->$localsConditionFieldName;
+            $localCondition = $localConditionArray[0]['value'];
+            
+            $localAbstraction = new LocalAbastraction($localTitle, $localPrice, $localConstruction,$localCondition);
             $localsAbstractions[]= $localAbstraction;
             
         }
