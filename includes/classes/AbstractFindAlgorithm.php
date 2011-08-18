@@ -55,13 +55,7 @@ abstract class AbstractFindAlgorithm {
                 break;
             }
         }
-        var_dump($node);
-        echo '--';
-        var_dump($filters);
-        echo '--';
-        var_dump($i == $filtersCount);
-        echo '--';
-        echo '*********';
+        
         return $i == $filtersCount;
             
     }
