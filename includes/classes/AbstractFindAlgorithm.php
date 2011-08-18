@@ -55,13 +55,15 @@ abstract class AbstractFindAlgorithm {
                 break;
             }
         }
-
-        if ($i == $filtersCount) {
-            return true;
-        }
-
-
-        return false;
+        var_dump($node);
+        echo '--';
+        var_dump($filters);
+        echo '--';
+        var_dump($i == $filtersCount);
+        echo '--';
+        echo '*********';
+        return $i == $filtersCount;
+            
     }
 
     public abstract function getProjectsToLocalsMap($localsFilters);
