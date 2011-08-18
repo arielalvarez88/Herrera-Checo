@@ -335,7 +335,7 @@ Filter = function (sliderMin,sliderMax,sliderMinInitial,sliderMaxInitial,step){
  
     
     this.comprarButton.click(function(){
-        filter.clickFunctionality(this,5000000,20000000,500000);
+        filter.clickFunctionality(this,500000,20000000,500000);
     });
     
     this.alquilarButton.click(function(){
