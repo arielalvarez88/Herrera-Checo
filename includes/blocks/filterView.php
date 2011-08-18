@@ -48,6 +48,6 @@ else
        
         <p><span class="filter-slider-min-position bold">Desde</span> <span class="filter-slider-max-position bold">Hasta</span></p>
         <p><span class="filter-slider-min-position" id="filter-slider-min">$500,000</span> <span class="filter-slider-max-position" id="filter-slider-max">M&aacute; de $20,000,000</span></p>
-        <a href="#javascript" id="filter-search-button" class="no-decoration-anchor"><img src="<?php echo $paths->images;?>/filter/buscarButton.png"/></a>
+        <a  id="filter-search-button" class="no-decoration-anchor"><img src="<?php echo $paths->images;?>/filter/buscarButton.png"/></a>
     </div>
 </div>
