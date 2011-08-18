@@ -1,13 +1,13 @@
 <?php
 require_once dirname(__FILE__).'/IFilter.php';
 
-Class ComerciallProjectStateFilter implements IFilter{
+Class ComercialProjectStateFilter implements IFilter{
     public $fieldName;
     public $value;
     
-    public function __construct($value,$fieldName='field_com_project_state')
+    public function __construct($value)
     {
-        $this->fieldName = $fieldName;
+        $this->fieldName = 'field_com_project_state';
         $this->value = $value;
     }
     
