@@ -43,8 +43,8 @@ class LocalContainerAbstraction
             $localNode = node_load($localsInfo['nid']);
             
             $localNumberArray = $localNode->$localsNumberFieldName;
-            $localNumber = $localTitleArray[0]['value'];
-            var_dump($localNumber);
+            $localNumber = $localNumberArray[0]['value'];
+            
             $localPriceArray = $localNode->$localsPriceFieldName;
             $localPrice = $localPriceArray[0]['value'];
            
