@@ -45,7 +45,7 @@ function properties_search_block($op='list', $delta=0, $edit=array()) {
         $block['subject'] = 'Properties Search Result';
 
 
-        $projectType = isset($_GET['type']) ? $_GET['type'] : "residenciales";
+        $projectType = isset($_GET['type']) ? $_GET['type'] : '';
         $minprice = isset($_GET['minprice']) && is_numeric($_GET['minprice']) ? $_GET['minprice'] : 5000;
         $maxprice = isset($_GET['maxprice']) && is_numeric($_GET['maxprice']) ? $_GET['maxprice'] : 30000000;
         $projectState = isset($_GET['state']) ? $_GET['state'] : 'finished';
