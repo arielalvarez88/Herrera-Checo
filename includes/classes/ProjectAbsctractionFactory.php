@@ -6,6 +6,7 @@
  */
 require_once  dirname(__FILE__).'/ResidentialProjectAbstraction.php';
 require_once  dirname(__FILE__).'/ComercialProjectAbstraction.php';
+require_once  dirname(__FILE__).'/CasaAbstraction.php';
 class ProjectAbstractionFactory
 {
 
@@ -16,6 +17,8 @@ class ProjectAbstractionFactory
             return new ResidentialProjectAbstraction($projectNode);
         if($type == 'comercial_project')
             return new ComercialProjectAbstraction($projectNode);
+        if($type == 'casa')
+            return new CasaAbstraction($projectNode);
     }
 }
 
