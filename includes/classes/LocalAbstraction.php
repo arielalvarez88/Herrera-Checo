@@ -22,7 +22,7 @@ public function getPrice()
 }
 public function getTitle()
 {
-    return $this->price;
+    return $this->title;
 }
 public function getConstruction()
 {
