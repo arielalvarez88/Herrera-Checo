@@ -37,14 +37,14 @@ class LocalContainerAbstraction
         $localsPriceFieldName = $this->localsPriceFieldName;
         $localsConstructionFieldName = $this->localsConstructionFieldName;
         $localsConditionFieldName = $this->localsConditionFieldName;
-        var_dump($localsTitleFieldName);
+        
         foreach($localsInfo as $localsInfo)
         {
             $localNode = node_load($localsInfo['nid']);
             
             $localTitleArray = $localNode->$localsTitleFieldName;
             $localTitle = $localTitleArray[0]['value'];
-            
+            var_dump($localTitleArray);
             $localPriceArray = $localNode->$localsPriceFieldName;
             $localPrice = $localPriceArray[0]['value'];
            
