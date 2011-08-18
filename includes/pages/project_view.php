@@ -103,7 +103,7 @@ $showAllApartments = isset($_GET['ver-todos-apartamentos']) && $_GET['ver-todos-
                                    
                                     <?php if(($local->getCondition()=='vendido' && $showAllApartments) || $local->getCondition() =='comprar' || $local->getCondition()=='vender'):?>
                                         <tr>
-                                            <td><?php echo $local->getTitle(); ?></td>
+                                            <td><?php echo $local->getNumber(); ?></td>
                                             <td><?php echo $local->getConstruction(); ?></td>
                                             <td><?php echo commify($local->getPrice()); ?></td>
                                         </tr>
