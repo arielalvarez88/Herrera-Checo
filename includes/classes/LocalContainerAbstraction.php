@@ -1,7 +1,7 @@
 <?php
 
 
-
+require_once dirname(__FILE__).'/LocalAbstraction.php';
 class LocalContainerAbstraction
 {
     private $localContainerNode;
@@ -55,7 +55,7 @@ class LocalContainerAbstraction
             $localConditionArray = $localNode->$localsConditionFieldName;
             $localCondition = $localConditionArray[0]['value'];
             
-            $localAbstraction = new LocalAbastraction($localTitle, $localPrice, $localConstruction,$localCondition);
+            $localAbstraction = new LocalAbstraction($localTitle, $localPrice, $localConstruction,$localCondition);
             $localsAbstractions[]= $localAbstraction;
             
         }
