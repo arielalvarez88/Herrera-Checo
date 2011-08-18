@@ -348,7 +348,7 @@ Filter = function (sliderMin,sliderMax,sliderMinInitial,sliderMaxInitial,step){
         var minPrice = filter.slider.getRange()[0];
         var maxPrice = filter.slider.getRange()[1];
         var propertyState = filter.propertyState.val();
-        var propertyCondition = filter.comprarButton.hasClass('filter-selected-option')? 'comprar' : 'alquilar';
+        var propertyCondition = filter.comprarButton.hasClass('filter-selected-option')? 'venta' : 'alquiler';
         window.location.href = '/buscar-proyectos' + '?type='+ propertyType + '&minprice=' + minPrice + '&maxprice=' + maxPrice + '&state=' + propertyState + '&type=' + propertyType + "&condition=" + propertyCondition;
     });
     
