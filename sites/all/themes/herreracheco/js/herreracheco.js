@@ -250,7 +250,7 @@ Slider = function(parentSelector,minValue,maxValue,minInitialPosition,maxInitial
         min: minValue,
         max: maxValue,
         step:sliderObject.step,
-        values: [ minInitialPosition , minInitialPosition ],
+        values: [ sliderObject.minInitialValue , sliderObject.maxInitialValue ],
         slide: function( event, ui ) {
             var bigger = ui.values[ 1 ] >= 20000000? 'Más de ' : '';
             sliderObject.minDisplay.html( "$" + commify('' + ui.values[ 0 ]));
