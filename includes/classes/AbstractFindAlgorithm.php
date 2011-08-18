@@ -21,7 +21,7 @@ abstract class AbstractFindAlgorithm {
     public function runSearch() {
         $allProjectsNodes = $this->getPropertiesByType($this->projectTypeName);
        
-        var_dump($allProjectsNodes);
+        
         $filteredProjectsNodes = $this->filterProjects($allProjectsNodes, $this->projectsFilters);
         
         

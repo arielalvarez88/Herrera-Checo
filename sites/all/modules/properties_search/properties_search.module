@@ -65,7 +65,7 @@ function properties_search_block($op='list', $delta=0, $edit=array()) {
             $localsConditionsFilter = new ResidentialProjectLocalConditionFilter($localsConditions);
             $localsFilters = array($minPriceFilter, $maxPriceFilter,$localsConditionsFilter);
             $projectFilters = array($projectStateFilter);
-            $searchAlgorithm = new ResidentialProjectsFindAlgorithm($projectType, $localsFilters, $projectFilters);
+            $searchAlgorithm = new ResidentialProjectsFindAlgorithm($localsFilters, $projectFilters);
             
             
             
@@ -76,11 +76,11 @@ function properties_search_block($op='list', $delta=0, $edit=array()) {
             $localsConditionsFilter = new ComercialProjectLocalConditionFilter($localsConditions);
             $localsFilters = array($minPriceFilter, $maxPriceFilter,$localsConditionsFilter);
             $projectFilters = array($projectStateFilter);
-            $searchAlgorithm = new ComercialProjectsFindAlgorithm($projectType, $localsFilters, $projectFilters);
+            $searchAlgorithm = new ComercialProjectsFindAlgorithm($localsFilters, $projectFilters);
         }
         elseif($projectType == 'casas')
         {
-            $searchAlgorithm = new ResidentialProjectsFindAlgorithm($projectType, $localsFilters, $projectFilters);
+            $searchAlgorithm = new ResidentialProjectsFindAlgorithm($localsFilters, $projectFilters);
         }
 
         $results = array();
