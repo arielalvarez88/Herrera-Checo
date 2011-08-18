@@ -17,7 +17,7 @@ $slidesNumber = count($slides);
 $showAllApartments = isset($_GET['ver-todos-apartamentos']) && $_GET['ver-todos-apartamentos'] == 1 ? 1 : 0;
 
 ?>
-<?php require dirname(__FILE__) . '/../blocks/defaultTopBanner.php'; ?>
+
 
 
 <div id="proyecto">
