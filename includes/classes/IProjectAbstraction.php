@@ -21,7 +21,7 @@ abstract class ProjectAbstraction
     protected $localsPriceFieldName;
     protected $localsConstructionFieldName;
     protected $localsContainersAbstractions;
-    protected $localsConditionFileName;
+    protected $localsConditionFieldName;
     protected $projectFeaturesFieldName;
     protected $projectPaymentDescFieldName;
     protected $projectAddressFieldName;
@@ -36,7 +36,7 @@ abstract class ProjectAbstraction
         {
             $localContainerNode = node_load($localsContainerInfo['nid']);
             
-            $localContainerAbstraction = new LocalContainerAbstraction($localContainerNode, $this->localsContainersTitleFieldName, $this->localContainerLocalsFieldName, $this->localsTitleFieldName, $this->localsPriceFieldName, $this->localsConstructionFieldName);
+            $localContainerAbstraction = new LocalContainerAbstraction($localContainerNode, $this->localsContainersTitleFieldName, $this->localContainerLocalsFieldName, $this->localsTitleFieldName, $this->localsPriceFieldName, $this->localsConstructionFieldName,$this->localsConditionFieldName);
             $LocalsContainersAbstractions[] = $localContainerAbstraction;
         }
         return $LocalsContainersAbstractions;
