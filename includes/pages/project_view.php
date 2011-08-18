@@ -130,9 +130,9 @@ $showAllApartments = isset($_GET['ver-todos-apartamentos']) && $_GET['ver-todos-
 
         <div id="proyectos-residenciales-address">
             <h3>Direcci&oacute;n</h3>
-            <?php if ($node->field_res_project_addr[0]['safe']): ?>
+            <?php if ($projectAbstraction->getAdderss()): ?>
 
-                <p><?php echo $node->field_res_project_addr[0]['safe']; ?></p>
+                <p><?php echo $projectAbstraction->getAdderss(); ?></p>
             <?php endif; ?>
         </div>
 
