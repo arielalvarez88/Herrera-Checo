@@ -286,7 +286,7 @@ initializeFilter = function(){
     }
 
     
-    var initialMin = $.getUrlVar('minprice') ? $.getUrlVar('minprice') : 1000000;
+    var initialMin = $.getUrlVar('minprice') ? $.getUrlVar('minprice') : 500000;
     var initialMax = $.getUrlVar('maxprice') ? $.getUrlVar('maxprice') : 20000000;
     
         
