@@ -4,7 +4,7 @@ abstract class ProjectAbstraction
 {
     
   
-    protected function generateLocalsContainersAbstractions();    
+    public function generateLocalsContainersAbstractions();    
     public function getShortDescription();
     public function getLocalsContainers();
     public function getTitle();
@@ -12,7 +12,7 @@ abstract class ProjectAbstraction
     public function getFeatures();    
     public function getPaymentDesc();        
     public function getPictureUrl();
-    function getSlides();        
+    public function getSlides();        
     public function getAdderss();
     
 }
