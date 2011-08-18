@@ -278,7 +278,7 @@ initializeFilter = function(){
     var minValue =  500000;
     var maxValue = 20000000 ;
     var step = 500000;
-    if($.getUrlVar('condition') && $.getUrlVar('condition') == 'alquilar')
+    if($.getUrlVar('condition') && $.getUrlVar('condition') == 'alquiler')
     {
         minValue =  5000;
         maxValue = 300000;
