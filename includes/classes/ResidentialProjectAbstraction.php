@@ -16,11 +16,11 @@ class ResidentialProjectAbstraction extends ProjectAbstraction
                 
         $this->projectNode = $projectNode;
         $this->projectTitleFieldName = 'field_res_project_title';
-        $this->projectDescriptionFieldName = 'field_res_project_description';
+        $this->projectDescriptionFieldName = 'field_res_project_large_desc';
         $this->projectSlidesFieldName = 'field_res_project_slides';
         $this->projectFeaturesFieldName = 'field_res_project_features';
         $this->projectPaymentDescFieldName = 'field_res_project_terminations';
-        
+        $this->projectShortDescriptionFieldName = 'field_res_project_description';
         $this->projectLocalsContainersFieldName = 'field_res_project_buildings';                
         $this->localsContainersTitleFieldName = 'field_building_title';
         $this->localContainerLocalsFieldName = 'field_building_apts';        
