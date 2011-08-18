@@ -17,7 +17,7 @@ require_once dirname(__FILE__) . '/../../../../includes/classes/CasaMaxPriceFilt
 require_once dirname(__FILE__) . '/../../../../includes/classes/CasaMinPriceFilter.php';
 require_once dirname(__FILE__) . '/../../../../includes/classes/CasaFindAlgorithm.php';
 require_once dirname(__FILE__) . '/../../../../includes/classes/CasaStateFilter.php';
-require_once dirname(__FILE__) . '/../../../../includes/classes/CasaLocalConditionFilter.php';
+require_once dirname(__FILE__) . '/../../../../includes/classes/CasaConditionFilter.php';
 
 
 
