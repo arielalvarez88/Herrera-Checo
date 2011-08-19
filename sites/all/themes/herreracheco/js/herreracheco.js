@@ -238,8 +238,8 @@ Slider = function(parentSelector,minValue,maxValue,minInitialPosition,maxInitial
     this.step = step;
    
     var biggerThan = this.maxInitialValue >= 20000000? 'Más de ': '';
-    this.minDisplay.html("$" + commify('' + this.minInitialValue));
-    this.maxDisplay.html(biggerThan + "$" + commify('' + this.maxInitialValue));
+    this.minDisplay.html("$" + commify('' + this.minValue));
+    this.maxDisplay.html(biggerThan + "$" + commify('' + this.maxValue));
     
     var sliderObject = this;
     
@@ -250,7 +250,7 @@ Slider = function(parentSelector,minValue,maxValue,minInitialPosition,maxInitial
         min: minValue,
         max: maxValue,
         step:sliderObject.step,
-        values: [ sliderObject.minInitialValue , sliderObject.maxInitialValue ],
+        values: [ minInitialPosition , minInitialPosition ],
         slide: function( event, ui ) {
             var bigger = ui.values[ 1 ] >= 20000000? 'Más de ' : '';
             sliderObject.minDisplay.html( "$" + commify('' + ui.values[ 0 ]));
