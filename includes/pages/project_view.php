@@ -9,7 +9,7 @@ $projectAbstraction = ProjectAbstractionFactory::createProjectAbstraction($node)
 $localsContainers = $projectAbstraction->getLocalsContainers();
 $localsContainersNumber = count($localsContainers);
 
-var_dump($localsContainers);
+
 
 
 $slides = $projectAbstraction->getSlides();
@@ -90,6 +90,7 @@ $showAllApartments = isset($_GET['ver-todos-apartamentos']) && $_GET['ver-todos-
                             $localContainer = $localsContainers[$i];
                             if ($localContainer):
                             ?>
+                            <?php var_dump($localContainer);?>
                             <div class="building">
                                  
                                 <h4 class="building-title"><?php echo $localContainer->getTitle(); ?></h4><img src="<?php echo $paths->images; ?>/building/buildingTitleCorner.png"/>
