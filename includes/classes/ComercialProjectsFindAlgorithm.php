@@ -18,7 +18,7 @@ class ComercialProjectsFindAlgorithm extends AbstractFindAlgorithm
    
         $map = array();
         $localContainerField = 'field_com_project_levels';
-        $localField = 'field_level_com_locals';
+        $localField = 'field_com_project_level_locals';
         $containers = array();
         foreach($projectsNodes as $projectNode)
         {
