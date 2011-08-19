@@ -92,7 +92,7 @@ function properties_search_block($op='list', $delta=0, $edit=array()) {
             $minPriceFilter = new CasaMinPriceFilter($minprice);
             $maxPriceFilter = $maxprice >= 20000000? new NullFilter() : new CasaMaxPriceFilter($maxprice);
             $projectStateFilter = new CasaStateFilter($projectState);
-            $localsConditionsFilter = new CasaLocalConditionFilter($localsConditions);
+            $localsConditionsFilter = new CasaConditionFilter($localsConditions);
             $localsFilters = array($minPriceFilter, $maxPriceFilter,$localsConditionsFilter);
             $projectFilters = array($projectStateFilter);
             $searchAlgorithm = new CasaFindAlgorithm($localsFilters, $projectFilters);
