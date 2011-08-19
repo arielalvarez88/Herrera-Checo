@@ -6,10 +6,10 @@ require_once dirname(__FILE__).'/AbstractFindAlgorithm.php';
  */
 class ComercialProjectsFindAlgorithm extends AbstractFindAlgorithm 
 {
-    function __construct($filterType,$localsFilters,$projectFilter)
+    function __construct($localsFilters,$projectFilter)
     {
   
-        parent::__construct($filterType,$localsFilters,$projectFilter);
+        parent::__construct('comercial_project',$localsFilters,$projectFilter);
         
     }
     
