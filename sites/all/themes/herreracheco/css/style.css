@@ -950,6 +950,7 @@ a.filter-alquilar-comprar-option {
 {
       float: right;
     margin-top: 12px;
+    cursor: pointer;
 }
 
 #filter-parameters select {
