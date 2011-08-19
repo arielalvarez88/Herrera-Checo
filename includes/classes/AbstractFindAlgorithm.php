@@ -51,11 +51,11 @@ abstract class AbstractFindAlgorithm {
         $filtersCount = count($filters);
         $i = 0;
         for ($i; $i < $filtersCount; $i++) {
-            echo 'Nodo---';
+            echo 'Nodo---<br/><br/>';
             var_dump($node);
-            echo 'filtro---';
+            echo 'filtro---<br/><br/>';
             var_dump($filters[$i]);
-            echo 'Resultado';
+            echo 'Resultado---<br/><br/>';
             var_dump($filters[$i]->testCondition($node));
             if (!$filters[$i]->testCondition($node)) {
 
