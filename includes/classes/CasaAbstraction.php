@@ -58,8 +58,7 @@ class CasaAbstraction extends ProjectAbstraction implements ILocalContainerAbstr
     public function getNumber() {
         $fieldName = $this->localsNumberFieldName;
         $fieldsArray = $this->projectNode->$fieldName;
-        echo '<pre>';
-        var_dump($fieldsArray);
+ 
         return $fieldsArray[0]['value'];
     }
 
