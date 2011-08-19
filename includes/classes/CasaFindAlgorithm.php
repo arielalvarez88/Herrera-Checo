@@ -25,7 +25,7 @@ class CasaFindAlgorithm extends AbstractFindAlgorithm{
         foreach($filteredProjectsNodes as $projectNode)            
         {
             $projectHash = spl_object_hash($projectNode);
-            $map[$projectHash] = $projectNode;
+            $map[$projectHash] = array($projectNode);
         }
        return $map;
     }
