@@ -4,7 +4,7 @@
 
 if(isset($_GET['condition']))
 {
-    if($_GET['condition'] == "comprar")
+    if($_GET['condition'] == "venta")
     {
         $comprarInitialCondition = 'filter-selected-option' ;
     $alquilarInitialCondition = '' ;
