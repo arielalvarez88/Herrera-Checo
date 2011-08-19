@@ -10,10 +10,17 @@ require_once dirname(__FILE__) . '/../../../../includes/classes/ComercialProject
 require_once dirname(__FILE__) . '/../../../../includes/classes/ComercialProjectMinPriceFilter.php';
 require_once dirname(__FILE__) . '/../../../../includes/classes/ComercialProjectsFindAlgorithm.php';
 require_once dirname(__FILE__) . '/../../../../includes/classes/ComercialProjectStateFilter.php';
-
-
-
 require_once dirname(__FILE__) . '/../../../../includes/classes/ComercialProjectLocalConditionFilter.php';
+
+
+require_once dirname(__FILE__) . '/../../../../includes/classes/CasaMaxPriceFilter.php';
+require_once dirname(__FILE__) . '/../../../../includes/classes/CasaMinPriceFilter.php';
+require_once dirname(__FILE__) . '/../../../../includes/classes/CasaFindAlgorithm.php';
+require_once dirname(__FILE__) . '/../../../../includes/classes/CasaStateFilter.php';
+require_once dirname(__FILE__) . '/../../../../includes/classes/CasaLocalConditionFilter.php';
+
+
+
 require_once dirname(__FILE__) . '/../../../../includes/classes/ProjectSearchResult.php';
 
 function properties_search_perm() {
@@ -82,7 +89,13 @@ function properties_search_block($op='list', $delta=0, $edit=array()) {
         }
         elseif($projectType == 'casas')
         {
-            $searchAlgorithm = new ResidentialProjectsFindAlgorithm($localsFilters, $projectFilters);
+            $minPriceFilter = new CasaMinPriceFilter($minprice);
+            $maxPriceFilter = $maxprice >= 20000000? new NullFilter() : new CasaMaxPriceFilter($maxprice);
+            $projectStateFilter = new CasaStateFilter($projectState);
+            $localsConditionsFilter = new CasaLocalConditionFilter($localsConditions);
+            $localsFilters = array($minPriceFilter, $maxPriceFilter,$localsConditionsFilter);
+            $projectFilters = array($projectStateFilter);
+            $searchAlgorithm = new CasaFindAlgorithm($localsFilters, $projectFilters);
         }
 
         $results = array();
