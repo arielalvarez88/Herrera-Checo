@@ -547,11 +547,17 @@ a.no-decoration-anchor, .no-decoration-anchor img, a.no-decoration-anchor:hover,
 {
      background-image: url("/sites/default/files/images/misionVision/misionVisionBackground.png");
     color: white;
-    float: right;
-    height: 363px;
+    float: right;    
     margin: 0 0 30px;
     padding: 10px 0;
     width: 270px;
+    height: 294px;
+    margin-bottom: 44px;
+}
+
+#nodesinblock-4
+{
+    float:left;
 }
 
 #mision-vision h3
@@ -573,6 +579,8 @@ a.no-decoration-anchor, .no-decoration-anchor img, a.no-decoration-anchor:hover,
 #employees
 {
     float:left;
+    margin-top:24px;
+    padding-top: 47px;
 }
 
 .employee-photo {
