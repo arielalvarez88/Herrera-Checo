@@ -238,8 +238,8 @@ Slider = function(parentSelector,minValue,maxValue,minInitialPosition,maxInitial
     this.step = step;
    
     var biggerThan = this.maxInitialValue >= 20000000? 'Más de ': '';
-    this.minDisplay.html("$" + commify('' + this.minValue));
-    this.maxDisplay.html(biggerThan + "$" + commify('' + this.maxValue));
+    this.minDisplay.html("$" + commify('' + this.minInitialValue));
+    this.maxDisplay.html(biggerThan + "$" + commify('' + this.maxInitialValue));
     
     var sliderObject = this;
     
