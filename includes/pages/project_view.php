@@ -103,8 +103,7 @@ $showAllApartments = isset($_GET['ver-todos-apartamentos']) && $_GET['ver-todos-
                                     <?php $locals = $localContainer->getLocals();?>
                                     
                                     <?php foreach($locals  as $local): ?>
-                                   <?php echo '<pre>';?>
-                                    <?php var_dump($local->getNumber());?>
+
                                     <?php if(($local->getCondition()=='vendido' && $showAllApartments) || $local->getCondition() =='venta' || $local->getCondition()=='alquiler'):?>
                                         <tr>
                                             <td><?php echo $local->getNumber(); ?></td>

@@ -69,7 +69,7 @@ class CasaAbstraction extends ProjectAbstraction implements ILocalContainerAbstr
     }
 
     public function getCondition() {
-        $fieldName = $this->localsConstructionFieldName;
+        $fieldName = $this->localsConditionFieldName;
         $fieldsArray = $this->projectNode->$fieldName;
         return $fieldsArray[0]['value'];
     }
