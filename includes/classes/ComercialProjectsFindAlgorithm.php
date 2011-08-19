@@ -4,7 +4,7 @@ require_once dirname(__FILE__).'/AbstractFindAlgorithm.php';
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-class ResidentialProjectsFindAlgorithm extends AbstractFindAlgorithm 
+class ComercialProjectsFindAlgorithm extends AbstractFindAlgorithm 
 {
     function __construct($filterType,$localsFilters,$projectFilter)
     {
