@@ -4,7 +4,7 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-require_once dirname(__FILE__).'/IProjectAbstraction.php';
+require_once dirname(__FILE__).'/ProjectAbstraction.php';
 require_once dirname(__FILE__).'/LocalContainerAbstraction.php';
 class ResidentialProjectAbstraction extends ProjectAbstraction
 {
