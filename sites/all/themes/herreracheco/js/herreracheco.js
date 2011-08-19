@@ -256,10 +256,10 @@ Slider = function(parentSelector,minValue,maxValue,minInitialPosition,maxInitial
             sliderObject.minDisplay.html( "$" + commify('' + ui.values[ 0 ]));
             sliderObject.maxDisplay .html(bigger + "$" + commify('' + ui.values[ 1 ]));
         }
-                        
+        
     });
     
-   
+   $(this.parent).slider("option","values",[sliderObject.minInitialValue, sliderObject.maxInitialValue]);
     this.getRange = function()
     {
         return $(sliderObject.parent).slider("values");
@@ -316,7 +316,7 @@ Filter = function (sliderMin,sliderMax,sliderMinInitial,sliderMaxInitial,step){
         $('.filter-alquilar-comprar-option').removeClass('filter-selected-option');
         button = $(button);
         button.addClass('filter-selected-option');
-        console.log(button.html());
+     
         if($(button).html()=='ALQUILAR')
         {
             this.propertyState.val('finished');   
