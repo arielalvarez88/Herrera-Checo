@@ -27,7 +27,7 @@ abstract class ProjectAbstraction implements IProjectAbstraction
     protected $projectAddressFieldName;
     protected $projectShortDescriptionFieldName;
 
-    protected function generateLocalsContainersAbstractions()
+    public function generateLocalsContainersAbstractions()
     {
         $LocalsContainersAbstractions = array();
         $projectLocalsContainerFieldName = $this->projectLocalsContainersFieldName;
