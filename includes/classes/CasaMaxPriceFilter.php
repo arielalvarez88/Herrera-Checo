@@ -1,7 +1,7 @@
 <?php
 require_once dirname(__FILE__).'/IFilter.php';
 
-Class CasaMinPriceFilter implements IFilter{
+Class CasaMaxPriceFilter implements IFilter{
     public $fieldName;
     public $value;
     
