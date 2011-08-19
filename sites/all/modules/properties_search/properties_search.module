@@ -3,6 +3,15 @@ require_once dirname(__FILE__) . '/../../../../includes/classes/ResidentialProje
 require_once dirname(__FILE__) . '/../../../../includes/classes/ResidentialProjectMinPriceFilter.php';
 require_once dirname(__FILE__) . '/../../../../includes/classes/ResidentialProjectsFindAlgorithm.php';
 require_once dirname(__FILE__) . '/../../../../includes/classes/ResidentialProjectStateFilter.php';
+require_once dirname(__FILE__) . '/../../../../includes/classes/ResidentialProjectLocalConditionFilter.php';
+
+
+require_once dirname(__FILE__) . '/../../../../includes/classes/ComercialProjectMaxPriceFilter.php';
+require_once dirname(__FILE__) . '/../../../../includes/classes/ComercialProjectMinPriceFilter.php';
+require_once dirname(__FILE__) . '/../../../../includes/classes/ComercialProjectsFindAlgorithm.php';
+require_once dirname(__FILE__) . '/../../../../includes/classes/ComercialProjectStateFilter.php';
+
+require_once dirname(__FILE__) . '/../../../../includes/classes/ComercialProjectLocalConditionFilter.php';
 require_once dirname(__FILE__) . '/../../../../includes/classes/ProjectSearchResult.php';
 
 function properties_search_perm() {
@@ -34,10 +43,11 @@ function properties_search_block($op='list', $delta=0, $edit=array()) {
         $block['subject'] = 'Properties Search Result';
 
 
-        $projectType = isset($_GET['type']) && $_GET['type'] == "residenciales" ? "residential_project" : "comercial_project";
+        $projectType = isset($_GET['type']) ? $_GET['type'] : "residenciales";
         $minprice = isset($_GET['minprice']) && is_numeric($_GET['minprice']) ? $_GET['minprice'] : 5000;
         $maxprice = isset($_GET['maxprice']) && is_numeric($_GET['maxprice']) ? $_GET['maxprice'] : 30000000;
         $projectState = isset($_GET['state']) ? $_GET['state'] : 'finished';
+        $localsConditions = isset($_GET['condition']) ? $_GET['condition'] : 'venta';
         $minPriceFilter;
         $maxPriceFilter;
         $projectStateFilter;
@@ -47,27 +57,39 @@ function properties_search_block($op='list', $delta=0, $edit=array()) {
         $searchAlgorithm;
         $searchResults;
 
-        if ($projectType == 'residential_project') {
+        if ($projectType == 'residenciales') {
 
             $minPriceFilter = new ResidentialProjectMinPriceFilter($minprice);
             $maxPriceFilter = $maxprice >= 20000000? new NullFilter() : new ResidentialProjectMaxPriceFilter($maxprice);
             $projectStateFilter = new ResidentialProjectStateFilter($projectState);
-            $localsFilters = array($minPriceFilter, $maxPriceFilter);
+            $localsConditionsFilter = new ResidentialProjectLocalConditionFilter($localsConditions);
+            $localsFilters = array($minPriceFilter, $maxPriceFilter,$localsConditionsFilter);
             $projectFilters = array($projectStateFilter);
             $searchAlgorithm = new ResidentialProjectsFindAlgorithm($projectType, $localsFilters, $projectFilters);
             
             
-        } elseif($projectType) {
-            $minPriceFilter = new ResidentialProjectMinPriceFilter($minprice);
-            $maxPriceFilter = new ResidentialProjectMaxPriceFilter($maxValue);
-            $projectStateFilter = new ResidentialProjectStateFilter($projectState);
-            $localsFilters = array($minPriceFilter, $maxPriceFilter);
-            $projectFilters = array($minPriceFilter, $projectStateFilter);
+            
+        } elseif($projectType == 'comerciales') {
+            $minPriceFilter = new ComercialProjectMinPriceFilter($minprice);
+            $maxPriceFilter = $maxprice >= 20000000? new NullFilter() : new ComercialProjectMaxPriceFilter($maxprice);
+            $projectStateFilter = new ComercialProjectStateFilter($projectState);
+            $localsConditionsFilter = new ComercialProjectLocalConditionFilter($localsConditions);
+            $localsFilters = array($minPriceFilter, $maxPriceFilter,$localsConditionsFilter);
+            $projectFilters = array($projectStateFilter);
+            $searchAlgorithm = new ComercialProjectsFindAlgorithm($projectType, $localsFilters, $projectFilters);
+        }
+        elseif($projectType == 'casas')
+        {
             $searchAlgorithm = new ResidentialProjectsFindAlgorithm($projectType, $localsFilters, $projectFilters);
         }
 
-        $results = $searchAlgorithm->runSearch();
+        $results = array();
+        
+        if($searchAlgorithm)
+            $results = $searchAlgorithm->runSearch();
+        
         $block['content'] = '';
+        
         foreach ($results as $result) {
                 
               $block['content'].= '<div class="ultimos-proyectos last even">';

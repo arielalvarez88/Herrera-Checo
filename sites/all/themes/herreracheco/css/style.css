@@ -729,14 +729,9 @@ a.no-decoration-anchor, .no-decoration-anchor img, a.no-decoration-anchor:hover,
 }
 
 
-.ultimos-proyectos-com{
+.ultimos-proyectos-res, .ultimos-proyectos-com{
      float:left;
-    min-height: 147px;
-}
-
-.ultimos-proyectos-com{
-     float:left;
-    min-height: 147px;
+     margin: 0 50px 20px 0;
 }
 
 
