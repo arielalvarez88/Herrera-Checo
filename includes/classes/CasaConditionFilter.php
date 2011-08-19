@@ -2,7 +2,7 @@
 
 require_once dirname(__FILE__).'/IFilter.php';
 
-Class ResidentialProjectLocalConditionFilter implements IFilter{
+Class CasaConditionFilter implements IFilter{
     public $fieldName;
     public $value;
     
