@@ -14,6 +14,7 @@ class ComercialProjectAbstraction extends ProjectAbstraction
          $this->projectNode = $projectNode;
         $this->projectTitleFieldName = 'field_com_project_title';
         $this->projectDescriptionFieldName = 'field_com_project_description';
+        $this->projectShortDescriptionFieldName = 'field_com_project_short_desc';
         $this->projectSlidesFieldName = 'field_com_project_slides';
         $this->projectFeaturesFieldName = 'field_com_project_features';
         $this->projectPaymentDescFieldName = 'field_com_project_pay_cond';

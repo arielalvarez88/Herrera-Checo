@@ -106,7 +106,7 @@ function properties_search_block($op='list', $delta=0, $edit=array()) {
 
                      $block['content'] .='<h4>'.$result->getProjectAbstraction()->getTitle();'</h4>';
                      $block['content'] .='<h5>Proyecto Residencial</h5>';
-                     $block['content'] .='<p>'.$result->getProjectAbstraction()->getDescription().'</p>';
+                     $block['content'] .='<p>'.$result->getProjectAbstraction()->getShortDescription().'</p>';
                      $block['content'] .='<a href="/proyectos-residenciales/res-oasis-del-dorado"><img src="/sites/default/files/images/ultimosProyectos/verProyecto.png"></a>';
                      $block['content'] .='<p>Coincidencias: '.$result->getCoincidences().'</p>';
                  $block['content'] .='</div>';
