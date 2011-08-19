@@ -9,7 +9,7 @@
  *
  * @author ariel
  */
-require_once dirname(__FILE__).'/AbstractFindAlgorithm';
+require_once dirname(__FILE__).'/AbstractFindAlgorithm.php';
 
 class CasaFindAlgorithm extends AbstractFindAlgorithm{
     
