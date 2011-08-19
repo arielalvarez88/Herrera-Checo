@@ -2,7 +2,9 @@
 
 
 require_once dirname(__FILE__).'/LocalAbstraction.php';
-class LocalContainerAbstraction
+require_once dirname(__FILE__).'/ILocalContainerAbstraction.php';
+
+class LocalContainerAbstraction implements ILocalContainerAbstraction
 {
     private $localContainerNode;
     private $title;

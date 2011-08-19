@@ -1,6 +1,6 @@
 <?php
-
-class LocalAbstraction{
+require dirname(__FILE__).'/ILocalAbstraction.php';
+class LocalAbstraction implements ILocalAbstraction{
 
 
 private $number;
