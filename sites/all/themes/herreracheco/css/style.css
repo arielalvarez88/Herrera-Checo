@@ -549,16 +549,14 @@ a.no-decoration-anchor, .no-decoration-anchor img, a.no-decoration-anchor:hover,
 /*company-description ENDS*/
 
 /*mision-vision*/
-#mision-vision
-{
-     background-image: url("/sites/default/files/images/misionVision/misionVisionBackground.png");
+#mision-vision {
+    background-image: url("/sites/default/files/images/misionVision/misionVisionBackground.png");
     color: white;
-    float: right;    
-    margin: 0 0 30px;
-    padding: 10px 0 10px 80px;
-    width: 265px;
+    float: right;
     height: 305px;
-    margin-bottom: 14px;
+    margin: 0 0 80px;
+    padding: 10px 0 10px 10px;
+    width: 270px;
 }
 
 #nodesinblock-4
