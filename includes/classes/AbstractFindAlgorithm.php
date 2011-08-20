@@ -23,8 +23,13 @@ abstract class AbstractFindAlgorithm {
 
 
         $filteredProjectsNodes = $this->filterProjects($allProjectsNodes, $this->projectsFilters);
-
-
+        
+        foreach($filteredProjectsNodes as $proyecto)
+        {
+            echo '<br/> Nodo </br>';
+            var_dump($proyecto);
+        }
+            
         $projectsToLocalsMap = $this->getProjectsToLocalsMap($filteredProjectsNodes);
 
 
@@ -51,12 +56,7 @@ abstract class AbstractFindAlgorithm {
         $filtersCount = count($filters);
         $i = 0;
         for ($i; $i < $filtersCount; $i++) {
-            echo 'Nodo---<br/><br/>';
-            var_dump($node);
-            echo 'filtro---<br/><br/>';
-            var_dump($filters[$i]);
-            echo 'Resultado---<br/><br/>';
-            var_dump($filters[$i]->testCondition($node));
+          
             if (!$filters[$i]->testCondition($node)) {
 
                 break;
@@ -66,7 +66,7 @@ abstract class AbstractFindAlgorithm {
         return $i == $filtersCount;
     }
 
-    public abstract function getProjectsToLocalsMap($localsFilters);
+    public abstract function getProjectsToLocalsMap($projectsNodes);
 
     public function filterLocals($projectNodes, $projectsToLocalsMap, $localFilters) {
 
