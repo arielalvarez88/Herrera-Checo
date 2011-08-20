@@ -40,7 +40,7 @@ class CasaAbstraction extends ProjectAbstraction implements ILocalContainerAbstr
     }
 
     public function getTitle() {
-        $fieldName = $this->titleFieldName;
+        $fieldName = $this->localsContainersTitleFieldName;
         $field = $this->projectNode->$fieldName;
         return $field[0]['value'];
     }
