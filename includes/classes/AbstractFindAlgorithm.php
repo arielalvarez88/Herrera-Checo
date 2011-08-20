@@ -12,7 +12,7 @@ abstract class AbstractFindAlgorithm {
 
     function __construct($projectTypeName, $localsFilters, $projectsFilters=null) {
         $this->projectTypeName = $projectTypeName;
-        
+
         $this->localsFilters = $localsFilters;
         $this->projectsFilters = $projectsFilters ? $projectsFilters : array(new NullFilter());
         $this->runSearch();
@@ -20,17 +20,17 @@ abstract class AbstractFindAlgorithm {
 
     public function runSearch() {
         $allProjectsNodes = $this->getPropertiesByType($this->projectTypeName);
-       
-       
-        $filteredProjectsNodes = $this->filterProjects($allProjectsNodes, $this->projectsFilters);
-        
-        
-        $projectsToLocalsMap = $this->getProjectsToLocalsMap($filteredProjectsNodes);
-        var_dump($projectsToLocalsMap);
 
-        
+
+        $filteredProjectsNodes = $this->filterProjects($allProjectsNodes, $this->projectsFilters);
+
+
+        $projectsToLocalsMap = $this->getProjectsToLocalsMap($filteredProjectsNodes);
+
+
+
         $projectsSearchResults = $this->filterLocals($filteredProjectsNodes, $projectsToLocalsMap, $this->localsFilters);
-        
+
         return $projectsSearchResults;
     }
 
@@ -47,17 +47,23 @@ abstract class AbstractFindAlgorithm {
 
     public function applyFilters($node, $filters) {
 
+
         $filtersCount = count($filters);
         $i = 0;
         for ($i; $i < $filtersCount; $i++) {
+            echo 'Nodo---';
+            var_dump($node);
+            echo 'filtro---';
+            var_dump($filters[$i]);
+            echo 'Resultado';
+            var_dump($filters[$i]->testCondition($node));
             if (!$filters[$i]->testCondition($node)) {
 
                 break;
             }
         }
-        
+
         return $i == $filtersCount;
-            
     }
 
     public abstract function getProjectsToLocalsMap($localsFilters);
@@ -66,14 +72,14 @@ abstract class AbstractFindAlgorithm {
 
         $searchResults = array();
         $coincidences = 0;
-       
+
         foreach ($projectNodes as $projectNode) {
-             
+
             $projectHash = spl_object_hash($projectNode);
             $projectLocals = $projectsToLocalsMap[$projectHash];
 
             foreach ($projectLocals as $projectLocal) {
-               
+
                 if ($this->applyFilters($projectLocal, $localFilters)) {
                     if (isset($searchResults[$projectHash]))
                         $searchResults[$projectHash]->addCoincidence();
