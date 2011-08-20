@@ -549,10 +549,10 @@ a.no-decoration-anchor, .no-decoration-anchor img, a.no-decoration-anchor:hover,
     color: white;
     float: right;    
     margin: 0 0 30px;
-    padding: 10px 0;
-    width: 270px;
-    height: 294px;
-    margin-bottom: 44px;
+    padding: 10px 0 10px 11px;
+    width: 265px;
+    height: 305px;
+    margin-bottom: 14px;
 }
 
 #nodesinblock-4
@@ -567,7 +567,7 @@ a.no-decoration-anchor, .no-decoration-anchor img, a.no-decoration-anchor:hover,
     margin: 0;
     padding-left: 5px;
     position: relative;
-    width: 263px;
+    width: 256px;
 }
 
 #mision-vision p {
