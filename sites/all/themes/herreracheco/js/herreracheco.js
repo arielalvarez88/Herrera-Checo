@@ -1,4 +1,6 @@
-
+var inputsSelectorDefaultText = {
+  "#newsletter input" : "Tu email aquí"  
+};
 function initializeSlidersMenus()
 {
     var sliders = {
@@ -396,6 +398,38 @@ drawGoogleMap = function(parentSelector, latitude, longitude, markerTitle){
     
 };
 
+
+setInputsDefaultText = function (){
+    
+    
+    for(selector in inputsSelectorDefaultText) 
+    {
+       
+        var element = $(selector);
+        element.val(inputsSelectorDefaultText[selector]);
+        
+        
+        element.click(function(event){
+            if(element.val()== inputsSelectorDefaultText[selector])
+                $(element).val("");
+            
+        });
+                
+                
+        element.blur(function(event){
+            if($(event.target).val() == "")
+            {
+                $(event.target).val(inputsSelectorDefaultText[selector]);
+            }
+        });
+    }
+
+ 
+
+    
+}
+
+
 drawOficinasMap = function()
 {
     //    if($('#contactos-localizacion').length > 0)
@@ -408,6 +442,7 @@ $(document).ready(function(){
     initializeSlideshows();
     initializeSlidersMenus();
     initilizeVenderAlquilarOptions();
+    setInputsDefaultText();
     initializeFilter();
     drawOficinasMap();
    

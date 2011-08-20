@@ -228,6 +228,10 @@ a.no-decoration-anchor, .no-decoration-anchor img, a.no-decoration-anchor:hover,
     position: relative;
 }
 
+#newsletter input {
+    color: #333333;
+    font-size: 1.2em;
+}
 #newsletter h2
 {
     clear:both;
@@ -242,9 +246,11 @@ a.no-decoration-anchor, .no-decoration-anchor img, a.no-decoration-anchor:hover,
 
 #newsletter input {
     -moz-border-radius: 5px 5px 5px 5px;
+    border-radius: 5px;
     border: 0 none;
     height: 30px;
-     width: 303px;
+    padding-left: 5px;
+    width: 298px;
 }
 #newsletter span,#newsletter input
 {
@@ -549,7 +555,7 @@ a.no-decoration-anchor, .no-decoration-anchor img, a.no-decoration-anchor:hover,
     color: white;
     float: right;    
     margin: 0 0 30px;
-    padding: 10px 0 10px 11px;
+    padding: 10px 0 10px 80px;
     width: 265px;
     height: 305px;
     margin-bottom: 14px;
@@ -747,10 +753,16 @@ a.no-decoration-anchor, .no-decoration-anchor img, a.no-decoration-anchor:hover,
 }
 
 
-div.ultimos-proyectos div.ultimos-proyectos-info h4{
+
+div.ultimos-proyectos div.ultimos-proyectos-info h4, 
+div.ultimos-proyectos-res div.ultimos-proyectos-info h4,
+div.ultimos-proyectos-com div.ultimos-proyectos-info h4
+{
     margin : 0;
 }
-div.ultimos-proyectos div.ultimos-proyectos-info h5
+
+div.ultimos-proyectos div.ultimos-proyectos-info h5, div.ultimos-proyectos-res div.ultimos-proyectos-info h5,
+div.ultimos-proyectos-com div.ultimos-proyectos-info h5
 {
 
      color: #666666;
@@ -857,11 +869,15 @@ div.ultimos-proyectos div.ultimos-proyectos-info h5
 }
 
 #contactos form input, #contactos form textarea {
+       color: #333333;
+
+    width: 332px;
     width: 337px;
     border-radius: 5px;
     -moz-border-radius: 5px;
+       font-size: 1.9em;
+    padding-left: 5px;
 }
-
 
 
 #contactos-header {
