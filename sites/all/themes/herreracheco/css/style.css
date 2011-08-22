@@ -146,6 +146,9 @@
 
 
 /*proyectos-comerciales-residenciales*/
+
+
+
 #proyecto-info-header
 {
     margin-bottom: 5px;
@@ -745,22 +748,23 @@ a.no-decoration-anchor, .no-decoration-anchor img, a.no-decoration-anchor:hover,
 }
 
 
-.ultimos-proyectos-res, .ultimos-proyectos-com{
+.proyecto{
      float:left;
-     margin: 0 50px 20px 0;
+     width: 460px;
+     height: 160px;
 }
 
 
 
 div.ultimos-proyectos div.ultimos-proyectos-info h4, 
-div.ultimos-proyectos-res div.ultimos-proyectos-info h4,
-div.ultimos-proyectos-com div.ultimos-proyectos-info h4
+div.proyecto div.ultimos-proyectos-info h4,
+div.proyecto div.ultimos-proyectos-info h4
 {
     margin : 0;
 }
 
-div.ultimos-proyectos div.ultimos-proyectos-info h5, div.ultimos-proyectos-res div.ultimos-proyectos-info h5,
-div.ultimos-proyectos-com div.ultimos-proyectos-info h5
+div.ultimos-proyectos div.ultimos-proyectos-info h5, div.proyecto div.ultimos-proyectos-info h5,
+div.proyecto div.ultimos-proyectos-info h5
 {
 
      color: #666666;
@@ -873,7 +877,7 @@ div.ultimos-proyectos-com div.ultimos-proyectos-info h5
     width: 337px;
     border-radius: 5px;
     -moz-border-radius: 5px;
-       font-size: 1.9em;
+       font-size: 1.5em;
     padding-left: 5px;
 }
 
