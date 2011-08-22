@@ -767,7 +767,9 @@ div.proyecto-com-block div.ultimos-proyectos-info h4
 }
 
 div.ultimos-proyectos div.ultimos-proyectos-info h5, div.proyecto div.ultimos-proyectos-info h5,
-div.proyecto div.ultimos-proyectos-info h5
+div.proyecto div.ultimos-proyectos-info h5,
+div.proyecto-res-block div.ultimos-proyectos-info h5,
+div.proyecto-com-block div.ultimos-proyectos-info h5
 {
 
      color: #666666;
