@@ -429,7 +429,51 @@ setInputsDefaultText = function (){
     
 }
 
+showProyectsHeader = function (residencial){
+    if(residencial)
+        $('#residential-projects-header').show();
+    else
+        $('#comercial-projects-header').show();
+    
+};
 
+showAllProjects = function (residencial)
+{
+    if(residencial)
+        $('#show-all-residencial').show();
+    else
+       $('#show-all-comercial').show();
+    
+}
+
+
+generateVerTodosInProyectos = function (){
+    
+    var proyetoResPortafolio = $('.proyectos-res-block');
+    var proyetoResProyectos = $('.proyectos-res-block');
+    
+    if (proyetoResPortafolio.length > 0 || proyetoResProyectos.length > 0)
+    {
+            showProyectsHeader(true);
+            if (proyetoResPortafolio.length > 7 || proyetoResProyectos.length > 7)
+            showAllProjects(true);
+            
+    }
+    
+    var proyetoComPortafolio = $('.proyectos-res-block');
+    var proyetoComProyectos = $('.proyectos-res-block');
+    
+    if (proyetoComPortafolio.length > 0 || proyetoComProyectos.length > 0)
+    {
+            showProyectsHeader(false);
+            if (proyetoComPortafolio.length > 7 || proyetoComProyectos.length > 7)
+            showAllProjects(false);
+            
+    }
+    
+    
+    
+};
 drawOficinasMap = function()
 {
     //    if($('#contactos-localizacion').length > 0)
@@ -444,6 +488,8 @@ $(document).ready(function(){
     initilizeVenderAlquilarOptions();
     setInputsDefaultText();
     initializeFilter();
+    generateVerTodosInProyectos();
     drawOficinasMap();
+    
    
 });
