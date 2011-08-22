@@ -39,7 +39,7 @@ else
         
         <select id="filter-property-state" name="filter-property-state" id="filter-property-state">
             <option value="finished" <?php echo isset($_GET['state']) && $_GET['state'] == "finished"? 'selected = "selected"' : '';?>>Terminado</option>
-            <option value="construction" <?php echo isset($_GET['state']) && $_GET['state'] == "constuction"? 'selected = "selected"' : '';?>>En Construccion</option>
+            <option value="construction" <?php echo isset($_GET['state']) && $_GET['state'] == "constuction"? 'selected = "selected"' : '';?>>En Construcci&oacute;n</option>
             <option value="blueprints" <?php echo isset($_GET['state']) && $_GET['state'] == "blueprints"? 'selected = "selected"' : '';?>>Planos</option>
         </select>
         
