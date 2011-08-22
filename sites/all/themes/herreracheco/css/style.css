@@ -748,7 +748,8 @@ a.no-decoration-anchor, .no-decoration-anchor img, a.no-decoration-anchor:hover,
 }
 
 
-.proyecto{
+.proyecto, .proyecto-com-block, .proyecto-res-block
+{
      float:left;
      width: 460px;
      height: 160px;
@@ -758,7 +759,9 @@ a.no-decoration-anchor, .no-decoration-anchor img, a.no-decoration-anchor:hover,
 
 div.ultimos-proyectos div.ultimos-proyectos-info h4, 
 div.proyecto div.ultimos-proyectos-info h4,
-div.proyecto div.ultimos-proyectos-info h4
+div.proyecto div.ultimos-proyectos-info h4,
+div.proyecto-res-block div.ultimos-proyectos-info h4,
+div.proyecto-com-block div.ultimos-proyectos-info h4
 {
     margin : 0;
 }
