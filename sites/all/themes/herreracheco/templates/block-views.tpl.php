@@ -1,4 +1,4 @@
-<?php var_dump($block->module);?>
+<?php print $block->subject;?>
         <?php print $block->content; ?>
     
  
