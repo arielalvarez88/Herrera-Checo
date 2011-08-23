@@ -285,7 +285,7 @@ a.no-decoration-anchor, .no-decoration-anchor img, a.no-decoration-anchor:hover,
 /*Proyectos Teasers*/
 #show-all-comercial, #show-all-residencial
 {
-    display: hidden;
+    display: none;
    
 }
 
@@ -299,7 +299,7 @@ a.no-decoration-anchor, .no-decoration-anchor img, a.no-decoration-anchor:hover,
 }
 #residential-projects-header, #comercial-projects-header
 {
-    display: hidden;
+    display: none;
 }
 
 #proyecto-caracteristicas p 
