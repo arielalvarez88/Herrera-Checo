@@ -300,10 +300,26 @@ a.no-decoration-anchor, .no-decoration-anchor img, a.no-decoration-anchor:hover,
 #residential-projects-portafolio-header #residential-projects-header, 
 #comercial-projects-portafolio-header #comercial-projects-header,
 #residential-projects-proyectos-header #residential-projects-header,
-#comercial-projects-proyectos-header #comercial-projects-header
+#comercial-projects-proyectos-header #comercial-projects-header,
+#show-all-residencial, 
+#show-all-comercial
 {
     display: none;
+    float: left;
+    clear: none;
+    margin: 10px 0px;
 }
+
+
+
+#comercial-projects-header, #residential-projects-header
+{
+ 
+    margin: 10px 0px;
+    
+    clear: both;
+}
+
 
 #proyecto-caracteristicas p 
 {
