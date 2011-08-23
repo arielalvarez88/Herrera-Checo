@@ -297,7 +297,10 @@ a.no-decoration-anchor, .no-decoration-anchor img, a.no-decoration-anchor:hover,
     position: relative;
      float:left;
 }
-#residential-projects-header, #comercial-projects-header
+#residential-projects-portafolio-header #residential-projects-header, 
+#comercial-projects-portafolio-header #comercial-projects-header,
+#residential-projects-proyectos-header #residential-projects-header,
+#comercial-projects-proyectos-header #comercial-projects-header
 {
     display: none;
 }
