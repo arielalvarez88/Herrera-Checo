@@ -282,12 +282,24 @@ a.no-decoration-anchor, .no-decoration-anchor img, a.no-decoration-anchor:hover,
 
 /*newsletter ENDS*/
 
+/*Proyectos Teasers*/
+#show-all-comercial, #show-all-residencial
+{
+    display: hidden;
+   
+}
+
+/*Proyectos Teasers ENDS*/
 /*Proyecto*/
 #proyecto
 {
         min-height: 792px;
     position: relative;
      float:left;
+}
+#residential-projects-header, #comercial-projects-header
+{
+    display: hidden;
 }
 
 #proyecto-caracteristicas p 

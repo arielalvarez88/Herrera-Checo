@@ -1,1 +1,0 @@
-<h4 class="section-header">Proyectos Comerciales</h4>
