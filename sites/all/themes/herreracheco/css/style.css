@@ -367,7 +367,7 @@ a.no-decoration-anchor, .no-decoration-anchor img, a.no-decoration-anchor:hover,
 #proyecto-slideshow-pager-container{
     float:left;
     margin-left: 9px;
-    margin-top: 30px;
+    margin-top: 34px;
 }
 
 .proyecto-slideshow-slide
@@ -380,7 +380,7 @@ a.no-decoration-anchor, .no-decoration-anchor img, a.no-decoration-anchor:hover,
 {
         height: 58px;
     width: 97px;
-   margin: 8px 0;
+   margin: 7px 0;
    display: block;
 }
 .proyectos-residenciales-location-block
@@ -388,7 +388,7 @@ a.no-decoration-anchor, .no-decoration-anchor img, a.no-decoration-anchor:hover,
     
 }
 .proyecto-slideshow-pager-group{
-    min-height: 268px;
+    min-height: 261px;
 }
 
 #proyecto-slideshow-container
