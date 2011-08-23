@@ -190,7 +190,7 @@
 
                             <span id="herrera-checo-direccion">Direcci&oacute;n Av. Juan Pablo Duarte,<br/> Plaza Las Ramblas Boulevard</span>
                         </p>
-                        <p id="mkt-logo"><img src="/<?php echo file_directory_path();?>/images/footer/5050mktLogo.png" alt="footer-designed-by"/></p>
+                        <p id="mkt-logo"><a href="www.5050mkt.com"><img src="/<?php echo file_directory_path();?>/images/footer/5050mktLogo.png" alt="footer-designed-by"/></a></p>
                     </div>
 
                 </div> <!-- /footer -->
