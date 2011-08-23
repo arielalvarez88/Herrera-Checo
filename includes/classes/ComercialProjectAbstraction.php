@@ -31,7 +31,10 @@ class ComercialProjectAbstraction extends ProjectAbstraction
         $this->localsContainersAbstractions = $this->generateLocalsContainersAbstractions();
     }
     
-    
+       public function getLocalAbbr() {
+        return 'Local';
+    }
+
  
     
     

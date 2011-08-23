@@ -74,6 +74,10 @@ class CasaAbstraction extends ProjectAbstraction implements ILocalContainerAbstr
         return $fieldsArray[0]['value'];
     }
 
+       public function getLocalAbbr() {
+        return 'Casa';
+    }
+
 }
 
 ?>

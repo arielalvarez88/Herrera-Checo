@@ -598,6 +598,7 @@ body
   background: url("/sites/default/files/images/common/plano.png") no-repeat scroll -79px 0 transparent;
     margin-left: auto;
     margin-right: auto;
+    background-position: center;
 }
 
 /* Layout rules. (Disclaimer: do not change if you're not sure you know what you're doing.) */
@@ -712,6 +713,7 @@ body {
   /* Setting up font size, leading and font family
    * http://www.markboulton.co.uk/journal/comments/five-simple-steps-to-better-typography */
     font: small lucida Grande,sans-serif;
+    color: #333333;
     
 }
 

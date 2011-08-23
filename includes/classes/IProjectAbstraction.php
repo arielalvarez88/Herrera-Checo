@@ -14,6 +14,6 @@ interface IProjectAbstraction
     public function getPictureUrl();
     public function getSlides();        
     public function getAdderss();
-    
+    public function getLocalAbbr();
 }
 ?>
