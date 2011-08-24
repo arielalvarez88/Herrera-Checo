@@ -233,7 +233,7 @@ a.no-decoration-anchor, .no-decoration-anchor img, a.no-decoration-anchor:hover,
 
 #newsletter input {
     color: #333333;
-    font-size: 1.2em;
+    font-size: 1em;
 }
 #newsletter h2
 {
@@ -307,7 +307,7 @@ a.no-decoration-anchor, .no-decoration-anchor img, a.no-decoration-anchor:hover,
     display: none;
     float: left;
     clear: none;
-    margin: 10px 0px;
+    margin: 20px 0px;
 }
 
 
@@ -315,7 +315,7 @@ a.no-decoration-anchor, .no-decoration-anchor img, a.no-decoration-anchor:hover,
 #comercial-projects-header, #residential-projects-header
 {
  
-    margin: 10px 0px;
+    margin: 20px 0px;
     
     clear: both;
 }
@@ -391,6 +391,7 @@ a.no-decoration-anchor, .no-decoration-anchor img, a.no-decoration-anchor:hover,
 {
     clear:both;
     min-height: 358px;
+    background-image: url('/sites/default/files/images/proyectos/slideshowBackground.png');
 }
 
 #proyectos-localizacion
