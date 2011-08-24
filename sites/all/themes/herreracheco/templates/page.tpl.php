@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?php print $language->language ?>" lang="<?php print $language->language ?>" dir="<?php print $language->dir ?>">
     <head>
 
-        <title>Constructora Herrera Checo</title>
+        <title>Constructora Herrera Checo</title>        
         <?php print $head; ?>
         <?php print $styles; ?>
         <!--[if lte IE 6]><style type="text/css" media="all">@import "<?php print $base_path . path_to_theme() ?>/css/ie6.css"</style><![endif]-->
@@ -24,6 +24,7 @@
                         <?php if (!empty($logo)): ?>
                             <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" id="logo">
                                 <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>"/>
+                                
                             </a>
                         <?php endif; ?>
 

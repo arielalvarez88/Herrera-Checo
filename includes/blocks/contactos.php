@@ -3,7 +3,7 @@
 
 <div id="contactos">
     <?php require dirname(__FILE__) . '/defaultTopBanner.php'; ?>
-    <h2 id="contactos-header">Si necesitas m&aacute;s informaci&oacute;n, no dudes en contactarnos.</h2>
+    <h2 id="contactos-header">Para m&aacute;s informaci&oacute;n, no dudes en contactarnos.</h2>
 
     <div id="contactos-body">
         <div id="contactos-info">
