@@ -372,6 +372,7 @@ a.no-decoration-anchor, .no-decoration-anchor img, a.no-decoration-anchor:hover,
 {
          height: 355px;
     width: 851px;
+    margin: 13px;
 }
 .proyecto-slideshow-photos-selector
 {
@@ -387,11 +388,15 @@ a.no-decoration-anchor, .no-decoration-anchor img, a.no-decoration-anchor:hover,
 .proyecto-slideshow-pager-group{
     min-height: 277px;
 }
+
 #proyecto-slideshow-container
 {
     clear:both;
-    min-height: 358px;
-    background-image: url('/sites/default/files/images/proyectos/slideshowBackground.png');
+    min-height: 441px;
+    width: 936px;
+    background-image: url('/sites/default/files/images/proyecto/slideshowBackground.png');
+    
+    
 }
 
 #proyectos-localizacion
