@@ -32,7 +32,7 @@ class LocalContainerAbstraction implements ILocalContainerAbstraction
     private function generateLocals()
     {
         $localsFieldName = $this->localsFieldName;
-        var_dump($localsFieldName);
+        
         $localsInfo = $this->localContainerNode->$localsFieldName;
         $localsAbstractions = array();
         
