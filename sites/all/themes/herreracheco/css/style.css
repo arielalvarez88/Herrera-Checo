@@ -612,7 +612,7 @@ a.no-decoration-anchor, .no-decoration-anchor img, a.no-decoration-anchor:hover,
     color: white;
     float: right;
     height: 305px;
-    margin: 0 0 80px;
+    margin: 0 0 35px;
     padding: 10px 0 10px 10px;
     width: 270px;
 }
@@ -647,13 +647,25 @@ a.no-decoration-anchor, .no-decoration-anchor img, a.no-decoration-anchor:hover,
 
 #employees-title
 {
-    margin-bottom: -15px;
+    margin-bottom: 0px;
 }
+
+.employee{
+    height: 75px;
+}
+
 .employee-photo {
     display: block;
     float: left;
-    margin-bottom: 20px;
+    width: 80px;
+    height: auto;
+        
     margin-right: 15px;
+}
+
+.employee-text
+{
+    float:left;
 }
 
 .employees-horizontal-divisor{
@@ -661,7 +673,7 @@ a.no-decoration-anchor, .no-decoration-anchor img, a.no-decoration-anchor:hover,
      background-image: url("/sites/default/files/images/employees/gradientLargeHorizotalDivisor.png");
     clear: both;
     height: 8px;
-    margin: 20px;
+    margin: 10px 20px;
     width: 489px;
 }
 
