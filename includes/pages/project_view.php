@@ -96,7 +96,7 @@ $showAllApartments = isset($_GET['ver-todos-apartamentos']) && $_GET['ver-todos-
                                 <h4 class="building-title"><?php echo $localContainer->getTitle(); ?></h4><img src="<?php echo $paths->images; ?>/building/buildingTitleCorner.png"/>
                                 <table class="hidden">
                                     <tr>
-                                        <td class="bold building-apt-header">Apto.</td>
+                                        <td class="bold building-apt-header"><?php echo $projectAbstraction->getLocalAbbr(); ?></td>
                                         <td class="bold building-apt-header">mts.</td>
                                         <td class="bold building-apt-header">Precio de venta</td>
                                     </tr>

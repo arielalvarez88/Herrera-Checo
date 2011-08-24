@@ -111,7 +111,9 @@ abstract class ProjectAbstraction implements IProjectAbstraction
         
     }
  
-    
+    public function getLocalAbbr() {
+        
+    }
 }
 ?>
 

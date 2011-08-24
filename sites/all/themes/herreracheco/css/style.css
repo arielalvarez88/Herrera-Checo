@@ -276,7 +276,7 @@ a.no-decoration-anchor, .no-decoration-anchor img, a.no-decoration-anchor:hover,
     position: absolute;
     right: 49px;
     text-align: center;
-    top: 93px;
+    top: 95px;
     width: 69px;
 }
 
@@ -320,16 +320,27 @@ a.no-decoration-anchor, .no-decoration-anchor img, a.no-decoration-anchor:hover,
     clear: both;
 }
 
+#proyecto-caracteristicas
+{
+    color: #333333;
+}
+
 
 #proyecto-caracteristicas p 
 {
     margin-bottom: 0;
     width: 524px;
 }
+
+#proyectos-residenciales-address
+{
+    color: #333333;
+}
 #proyecto-edificios {
     background-image: url("/sites/default/files/images/common/largeWhiteToGrayGradient.jpg");
     padding: 20px 0;
     width: 290px;
+    color: #333333;
 }
 #proyecto h3#proyecto-condiciones-de-pago {
     margin-top: 20px;

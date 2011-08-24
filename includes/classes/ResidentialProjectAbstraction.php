@@ -32,7 +32,9 @@ class ResidentialProjectAbstraction extends ProjectAbstraction
         
         $this->localsContainersAbstractions = $this->generateLocalsContainersAbstractions();
     }
-    
+    public function getLocalAbbr() {
+        return 'Apts.';
+    }
 
   
 }
