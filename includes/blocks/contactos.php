@@ -27,19 +27,19 @@
 
         <form>
             <div>
-                <label for="contactos-form-nombre" class="">Nombre <span class="required">*</span></label>
+                <label for="contactos-form-nombre" class="">Nombre <span class="required-text">*</span></label>
                 
             <input type="text" id="contactos-form-nombre"/>
             </div>
             
             <div>
-                <label for="contactos-form-email" class="">Email <span class="required">*</span></label>
+                <label for="contactos-form-email" class="">Email <span class="required-text">*</span></label>
                 
             <input type="text" id="contactos-form-email"/>
             </div>
             
             <div>
-                <label for="contactos-form-telephone" class="">Tel&eacute;fono<span class="required">*</span></label>
+                <label for="contactos-form-telephone" class="">Tel&eacute;fono<span class="required-text">*</span></label>
                 
             <input type="text" id="contactos-form-telephone"/>
             </div>
@@ -51,7 +51,7 @@
             </div>
             
             <div id="contactos-form-mensaje-container">
-                <label for="contactos-form-nombre" class="">Mensaje <span class="required">*</span></label>
+                <label for="contactos-form-nombre" class="">Mensaje <span class="required-text">*</span></label>
                 
                 <textarea></textarea>
             </div>

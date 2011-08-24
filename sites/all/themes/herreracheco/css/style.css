@@ -40,7 +40,7 @@
     text-decoration: none;
 }
 
-#primary-links li a:hover {
+#primary-links li a:hover, .active{
     background-color: #184794;
     color: white;
 }
@@ -1091,7 +1091,7 @@ a.filter-alquilar-comprar-option {
 {
     font-weight: bold;
 }
-.required{
+.required-text{
     color: red;
 }
 .blue-text
