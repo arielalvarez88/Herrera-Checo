@@ -1,0 +1,1 @@
+<img id="comercial-projects-header" src="/sites/default/files/images/proyecto/proyectosComercialesHeader.png" alt="Proyectos Comerciales"/>
