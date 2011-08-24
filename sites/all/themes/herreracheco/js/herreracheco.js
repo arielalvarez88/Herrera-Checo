@@ -429,7 +429,7 @@ setInputsDefaultText = function (){
     
 }
 
-showProyectsHeader = function (residencial){
+showProjectsHeader = function (residencial){
     if(residencial)
         $('#residential-projects-header').show();
     else
@@ -437,7 +437,7 @@ showProyectsHeader = function (residencial){
     
 };
 
-showAllProjects = function (residencial)
+showSeeMoreProjects = function (residencial)
 {
     if(residencial)
         $('#show-all-residencial').show();
@@ -446,30 +446,25 @@ showAllProjects = function (residencial)
     
 }
 
-
+showProjectsSeeAllAndTitle = function(numberOfElements,residencial)
+{
+    
+    if(numberOfElements > 0)
+        {
+            showProjectsHeader(residencial);
+            if(numberOfElements > 6)
+              showSeeMoreProjects(residencial)
+        }
+};
 generateVerTodosInProyectos = function (){
     
-    var proyetoResPortafolio = $('.proyectos-res-block');
-    var proyetoResProyectos = $('.proyectos-res-block');
+    var resProjects = $('.proyecto-res-block');
     
-    if (proyetoResPortafolio.length > 0 || proyetoResProyectos.length > 0)
-    {
-            showProyectsHeader(true);
-            if (proyetoResPortafolio.length > 7 || proyetoResProyectos.length > 7)
-            showAllProjects(true);
-            
-    }
+    showProjectsSeeAllAndTitle(resProjects.length,true);
     
-    var proyetoComPortafolio = $('.proyectos-res-block');
-    var proyetoComProyectos = $('.proyectos-res-block');
     
-    if (proyetoComPortafolio.length > 0 || proyetoComProyectos.length > 0)
-    {
-            showProyectsHeader(false);
-            if (proyetoComPortafolio.length > 7 || proyetoComProyectos.length > 7)
-            showAllProjects(false);
-            
-    }
+    var comProjects = $('.proyecto-com-block');
+    showProjectsSeeAllAndTitle(comProjects.length,false);
     
     
     

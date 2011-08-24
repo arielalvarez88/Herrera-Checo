@@ -297,6 +297,10 @@ a.no-decoration-anchor, .no-decoration-anchor img, a.no-decoration-anchor:hover,
     position: relative;
      float:left;
 }
+#residential-projects-header, #comercial-projects-header
+{
+    display: hidden;
+}
 
 #proyecto-caracteristicas p 
 {
