@@ -8,7 +8,10 @@
    display: block;
     float: left;
     min-height: 1px;
+    text-align: center;
 }
+
+
 #content-bottom
 {
     clear:both;
@@ -32,6 +35,7 @@
 
 #primary-links li {
     margin: 0 15px;
+    padding: 5px;
 }
 
 #primary-links li a, #primary-links li a:visited{
@@ -40,7 +44,7 @@
     text-decoration: none;
 }
 
-#primary-links li a:hover, .active{
+#primary-links li a:hover, #primary-links li a.active{
     background-color: #184794;
     color: white;
 }
