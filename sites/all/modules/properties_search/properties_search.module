@@ -1,6 +1,8 @@
 <?php
 require_once dirname(__FILE__) . '/../../../../includes/classes/ResidentialProjectMaxPriceFilter.php';
 require_once dirname(__FILE__) . '/../../../../includes/classes/ResidentialProjectMinPriceFilter.php';
+require_once dirname(__FILE__) . '/../../../../includes/classes/ResidentialProjectMaxConstructionFilter.php';
+require_once dirname(__FILE__) . '/../../../../includes/classes/ResidentialProjectMinConstructionFilter.php';
 require_once dirname(__FILE__) . '/../../../../includes/classes/ResidentialProjectsFindAlgorithm.php';
 require_once dirname(__FILE__) . '/../../../../includes/classes/ResidentialProjectStateFilter.php';
 require_once dirname(__FILE__) . '/../../../../includes/classes/ResidentialProjectLocalConditionFilter.php';
@@ -8,6 +10,8 @@ require_once dirname(__FILE__) . '/../../../../includes/classes/ResidentialProje
 
 require_once dirname(__FILE__) . '/../../../../includes/classes/ComercialProjectMaxPriceFilter.php';
 require_once dirname(__FILE__) . '/../../../../includes/classes/ComercialProjectMinPriceFilter.php';
+require_once dirname(__FILE__) . '/../../../../includes/classes/ComercialProjectMaxConstructionFilter.php';
+require_once dirname(__FILE__) . '/../../../../includes/classes/ComercialProjectMinConstructionFilter.php';
 require_once dirname(__FILE__) . '/../../../../includes/classes/ComercialProjectsFindAlgorithm.php';
 require_once dirname(__FILE__) . '/../../../../includes/classes/ComercialProjectStateFilter.php';
 require_once dirname(__FILE__) . '/../../../../includes/classes/ComercialProjectLocalConditionFilter.php';
@@ -15,6 +19,8 @@ require_once dirname(__FILE__) . '/../../../../includes/classes/ComercialProject
 
 require_once dirname(__FILE__) . '/../../../../includes/classes/CasaMaxPriceFilter.php';
 require_once dirname(__FILE__) . '/../../../../includes/classes/CasaMinPriceFilter.php';
+require_once dirname(__FILE__) . '/../../../../includes/classes/CasaMaxConstructionFilter.php';
+require_once dirname(__FILE__) . '/../../../../includes/classes/CasaMinConstructionFilter.php';
 require_once dirname(__FILE__) . '/../../../../includes/classes/CasaFindAlgorithm.php';
 require_once dirname(__FILE__) . '/../../../../includes/classes/CasaStateFilter.php';
 require_once dirname(__FILE__) . '/../../../../includes/classes/CasaConditionFilter.php';
@@ -48,13 +54,19 @@ function properties_search_block($op='list', $delta=0, $edit=array()) {
     if ($op == 'list') {
 
         $block[0]["info"] = t('Properties_search_block');
-    } elseif ($op = 'view') {
+    } 
+    
+    elseif ($op = 'view') {
         $block['subject'] = 'Properties Search Result';
 
 
         $projectType = isset($_GET['type']) ? $_GET['type'] : '';
         $minprice = isset($_GET['minprice']) && is_numeric($_GET['minprice']) ? $_GET['minprice'] : 5000;
         $maxprice = isset($_GET['maxprice']) && is_numeric($_GET['maxprice']) ? $_GET['maxprice'] : 30000000;
+        $minAndMaxArray = explode("-",$_GET['construction']);
+        $minAndMaxConstruction["min"] = $minAndMaxArray[0];
+        $minAndMaxConstruction["max"] = $minAndMaxArray[1];                
+        
         $projectState = isset($_GET['state']) ? $_GET['state'] : 'finished';
         $localsConditions = isset($_GET['condition']) ? $_GET['condition'] : 'venta';
         $minPriceFilter;
@@ -65,37 +77,45 @@ function properties_search_block($op='list', $delta=0, $edit=array()) {
         $blockContent = '';
         $searchAlgorithm;
         $searchResults;
-
+        $localNames = '';
         if ($projectType == 'residenciales') {
 
             $minPriceFilter = new ResidentialProjectMinPriceFilter($minprice);
             $maxPriceFilter = $maxprice >= 20000000? new NullFilter() : new ResidentialProjectMaxPriceFilter($maxprice);
+            $minConstructionFilter = is_numeric($minAndMaxConstruction['min'])?  new ResidentialProjectMinConstructionFilter($minAndMaxConstruction['min']) : new NullFilter();
+            $maxConstructionFilter = is_numeric($minAndMaxConstruction['max'])?  new ResidentialProjectMaxConstructionFilter($minAndMaxConstruction['max']) : new NullFilter();
             $projectStateFilter = new ResidentialProjectStateFilter($projectState);
             $localsConditionsFilter = new ResidentialProjectLocalConditionFilter($localsConditions);
             $localsFilters = array($minPriceFilter, $maxPriceFilter,$localsConditionsFilter);
             $projectFilters = array($projectStateFilter);
             $searchAlgorithm = new ResidentialProjectsFindAlgorithm($localsFilters, $projectFilters);
-            
+            $localNames = 'Apartamentos';
             
             
         } elseif($projectType == 'comerciales') {
             $minPriceFilter = new ComercialProjectMinPriceFilter($minprice);
             $maxPriceFilter = $maxprice >= 20000000? new NullFilter() : new ComercialProjectMaxPriceFilter($maxprice);
+            $minConstructionFilter = is_numeric($minAndMaxConstruction['min'])?  new ComercialProjectMinConstructionFilter($minAndMaxConstruction['min']) : new NullFilter();
+            $maxConstructionFilter = is_numeric($minAndMaxConstruction['max'])?  new ComercialProjectMaxConstructionFilter($minAndMaxConstruction['max']) : new NullFilter();
             $projectStateFilter = new ComercialProjectStateFilter($projectState);
             $localsConditionsFilter = new ComercialProjectLocalConditionFilter($localsConditions);
             $localsFilters = array($minPriceFilter, $maxPriceFilter,$localsConditionsFilter);
             $projectFilters = array($projectStateFilter);
             $searchAlgorithm = new ComercialProjectsFindAlgorithm($localsFilters, $projectFilters);
+            $localNames = 'Locales Comerciales';
         }
         elseif($projectType == 'casas')
         {
             $minPriceFilter = new CasaMinPriceFilter($minprice);
             $maxPriceFilter = $maxprice >= 20000000? new NullFilter() : new CasaMaxPriceFilter($maxprice);
+            $minConstructionFilter = is_numeric($minAndMaxConstruction['min'])?  new CasaMinConstructionFilter($minAndMaxConstruction['min']) : new NullFilter();
+            $maxConstructionFilter = is_numeric($minAndMaxConstruction['max'])?  new CasaMaxConstructionFilter($minAndMaxConstruction['max']) : new NullFilter();
             $projectStateFilter = new CasaStateFilter($projectState);
             $localsConditionsFilter = new CasaConditionFilter($localsConditions);
             $localsFilters = array($minPriceFilter, $maxPriceFilter,$localsConditionsFilter);
             $projectFilters = array($projectStateFilter);
             $searchAlgorithm = new CasaFindAlgorithm($localsFilters, $projectFilters);
+            
         }
 
         $results = array();
@@ -110,18 +130,20 @@ function properties_search_block($op='list', $delta=0, $edit=array()) {
               $block['content'].= '<div class="ultimos-proyectos last even">';
             $block['content'] .= '<div class="ultimos-proyectos-photo">';
 
-            $block['content'] .= '<a class="imagefield imagefield-nodelink imagefield-field_res_project_slides" href="/proyectos-residenciales/res-oasis-del-dorado"><img width="1400" height="900" src="'.$result->getProjectAbstraction()->getPictureUrl().'" alt="" class="imagefield imagefield-field_res_project_slides"/></a>';
+            $block['content'] .= '<a class="imagefield imagefield-nodelink imagefield-field_res_project_slides" href="'.$result->getProjectAbstraction()->getPath().'"><img width="1400" height="900" src="'.$result->getProjectAbstraction()->getPictureUrl().'" alt="" class="imagefield imagefield-field_res_project_slides"/></a>';
                  $block['content'] .= '</div>';
 
 
                  $block['content'] .= '<div class="ultimos-proyectos-info">';
 
 
-                     $block['content'] .='<h4>'.$result->getProjectAbstraction()->getTitle();'</h4>';
+                     $block['content'] .='<h4>'.$result->getProjectAbstraction()->getTitle().'</h4>';
                      $block['content'] .='<h5>Proyecto Residencial</h5>';
-                     $block['content'] .='<p>'.$result->getProjectAbstraction()->getShortDescription().'</p>';
-                     $block['content'] .='<a href="/proyectos-residenciales/res-oasis-del-dorado"><img src="/sites/default/files/images/ultimosProyectos/verProyecto.png"></a>';
-                     $block['content'] .='<p>Coincidencias: '.$result->getCoincidences().'</p>';
+                     $block['content'] .='<p class="search">'.$result->getProjectAbstraction()->getShortDescription().'</p>';
+                     $block['content'] .='<a href="'.$result->getProjectAbstraction()->getPath().'"><img src="/sites/default/files/images/ultimosProyectos/verProyecto.png"></a>';
+
+                     
+                     $block['content'] .='<p class="search">'.$localNames.' Disponibles: '.$result->getCoincidences().'</p>';
                  $block['content'] .='</div>';
 
              $block['content'] .='</div>';

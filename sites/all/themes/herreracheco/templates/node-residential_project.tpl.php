@@ -1,1 +1,1 @@
-<?php require dirname(__FILE__).'/../../../../../includes/pages/project_view.php';?>
+<?php require dirname(__FILE__).'/../../../../../includes/views/project_view.php';?>

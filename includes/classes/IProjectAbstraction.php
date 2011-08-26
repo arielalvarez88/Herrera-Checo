@@ -15,5 +15,10 @@ interface IProjectAbstraction
     public function getSlides();        
     public function getAdderss();
     public function getLocalAbbr();
+    public function getType();
+    public function getPath();
+    public function getFriendlyType();
+    public function getRelatedProjectsAbstractions();
+    
 }
 ?>

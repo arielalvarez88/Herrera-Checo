@@ -20,7 +20,11 @@ if (theme_get_setting('basic_zen_tabs')) {
  */
 
 function herreracheco_preprocess_page(&$vars, $hook) {
-
+ $path = drupal_lookup_path('alias', $_GET['q']);
+    
+    $sections = explode('/',$path);
+    
+    $vars['section'] = $sections[0];
  
   // Don't display empty help from node_help().
   if ($vars['help'] == "<div class=\"help\"><p></p>\n</div>") {
@@ -123,6 +127,13 @@ function herreracheco_preprocess_page(&$vars, $hook) {
 
 function herreracheco_preprocess_node(&$vars, $hook) {
   // Special classes for nodes
+   $path = drupal_lookup_path('alias', $_GET['q']);
+    
+    $sections = explode('/',$path);
+    
+    $vars['section'] = $sections[0];  
+    
+    
   $classes = array('node');
  
   if ($vars['sticky']) {
@@ -183,7 +194,9 @@ function herreracheco_preprocess_block(&$vars, $hook) {
     $path = drupal_lookup_path('alias', $_GET['q']);
     
     $sections = explode('/',$path);
-    $vars['section'] = $sections[0];  
+    
+    $vars['section'] = $sections[0]; 
+    
     
     // special block classes
     $classes = array('block');
