@@ -147,7 +147,7 @@ abstract class ProjectAbstraction implements IProjectAbstraction
     public function getAtractives()
     {
         
-        return getFieldFromNode($this->projectAtractivesFieldName);
+        return $this->getFieldFromNode($this->projectAtractivesFieldName);
     }
     
     
