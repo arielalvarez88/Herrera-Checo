@@ -19,6 +19,7 @@ class CasaAbstraction extends ProjectAbstraction implements ILocalContainerAbstr
         $this->projectFeaturesFieldName = 'field_casa_features';
         $this->projectPaymentDescFieldName = 'field_casa_payment';
 $this->projectRelatedProyectsFieldName = 'field_casa_relateds';
+        $this->projectAtractivesFieldName = 'field_casa_atractives';
 
         $this->localsContainersTitleFieldName = 'field_casa_title';
 

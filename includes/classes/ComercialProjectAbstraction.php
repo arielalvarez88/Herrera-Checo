@@ -27,7 +27,7 @@ class ComercialProjectAbstraction extends ProjectAbstraction
         $this->localsConstructionFieldName = 'field_com_local_construction';
         $this->localsConditionFieldName = 'field_com_local_condition';
         $this->projectAddressFieldName = 'field_com_project_address';
-        
+        $this->projectAtractivesFieldName = 'field_com_project_atractives';
         $this->localsContainersAbstractions = $this->generateLocalsContainersAbstractions();
     }
     
