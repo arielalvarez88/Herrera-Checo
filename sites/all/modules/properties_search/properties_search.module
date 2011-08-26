@@ -102,7 +102,7 @@ function properties_search_block($op='list', $delta=0, $edit=array()) {
             $localsFilters = array($minPriceFilter, $maxPriceFilter,$localsConditionsFilter);
             $projectFilters = array($projectStateFilter);
             $searchAlgorithm = new ComercialProjectsFindAlgorithm($localsFilters, $projectFilters);
-            $localNames = 'Locales Comerciales';
+            $localNames = 'Locales';
         }
         elseif($projectType == 'casas')
         {
