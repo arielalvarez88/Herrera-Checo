@@ -19,6 +19,6 @@ interface IProjectAbstraction
     public function getPath();
     public function getFriendlyType();
     public function getRelatedProjectsAbstractions();
-    
+    public function getAtractives();
 }
 ?>

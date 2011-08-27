@@ -27,7 +27,8 @@ abstract class ProjectAbstraction implements IProjectAbstraction
     protected $projectPaymentDescFieldName;
     protected $projectAddressFieldName;
     protected $projectShortDescriptionFieldName;
-
+    protected $projectAtractivesFieldName;
+    
     public function generateLocalsContainersAbstractions()
     {
         $LocalsContainersAbstractions = array();
@@ -135,6 +136,20 @@ abstract class ProjectAbstraction implements IProjectAbstraction
     public function getPath(){
         return $this->projectNode->path;
     }
+    
+    public function getFieldFromNode($fieldName)
+    {
+        
+        $field = $this->projectNode->$fieldName;
+        return $field[0]['value'];
+    }
+    
+    public function getAtractives()
+    {
+        
+        return getFieldFromNode($this->projectAtractivesFieldName);
+    }
+    
     
     public function getFriendlyType()
     {

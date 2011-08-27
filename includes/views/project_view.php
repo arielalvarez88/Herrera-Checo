@@ -101,7 +101,9 @@ $viewsParams['projectsAbstractions'] = $relatedProjects;
 
                 <div id="proyecto-atractivos">
                     <h3>Atractivos</h3>
-                    <div id="proyecto-atractivos-text"></div>
+                    <div id="proyecto-atractivos-text">
+                        <?php $projectAbstraction->getAtractives();?>
+                    </div>
                     <div class="proyecto-shadow">
                         <img alt="sombra" src="<?php echo $paths->images; ?>/proyecto/shadow.png" />
                     </div>

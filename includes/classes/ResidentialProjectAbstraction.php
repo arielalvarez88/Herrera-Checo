@@ -30,7 +30,7 @@ class ResidentialProjectAbstraction extends ProjectAbstraction
         $this->localsConstructionFieldName = 'field_apt_construction';
         $this->localsConditionFieldName = 'field_apt_condition';
         $this->projectAddressFieldName = 'field_res_project_addr';
-        
+        $this->projectAtractivesFieldName = 'field_res_project_atractives';
         $this->localsContainersAbstractions = $this->generateLocalsContainersAbstractions();
     }
     public function getLocalAbbr() {
