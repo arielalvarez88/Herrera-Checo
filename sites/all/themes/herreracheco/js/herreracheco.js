@@ -307,12 +307,19 @@ Filter = function (sliderMin,sliderMax,sliderMinInitial,sliderMaxInitial,step){
     this.alquilarButton =  $('#filter-alquilar-option');
     this.propertyType = $('#filter-property-type');
     this.propertyState = $('#filter-property-state');   
+    this.propertyConstruction = $('#filter-property-construction')
     this.intialStep = step;
     this.searchButton = $('#filter-search-button');
+    
     this.slider = new Slider('#filter-slider',this.sliderMin,this.sliderMax,this.sliderMinInitial,this.sliderMaxInitial,"#filter-slider-min","#filter-slider-max",this.intialStep);
     var filter = this;
 
 
+    this.getPropertyConstruction = function()
+    {
+        
+        return this.propertyConstruction.val();
+    }
     
     this.clickFunctionality= function(button,min,max,step){
         $('.filter-alquilar-comprar-option').removeClass('filter-selected-option');
@@ -350,8 +357,9 @@ Filter = function (sliderMin,sliderMax,sliderMinInitial,sliderMaxInitial,step){
         var minPrice = filter.slider.getRange()[0];
         var maxPrice = filter.slider.getRange()[1];
         var propertyState = filter.propertyState.val();
+        var propertyConstruction = filter.getPropertyConstruction();
         var propertyCondition = filter.comprarButton.hasClass('filter-selected-option')? 'venta' : 'alquiler';
-        window.location.href = '/buscar-proyectos' + '?type='+ propertyType + '&minprice=' + minPrice + '&maxprice=' + maxPrice + '&state=' + propertyState + '&type=' + propertyType + "&condition=" + propertyCondition;
+        window.location.href = '/buscar-proyectos' + '?type='+ propertyType + '&minprice=' + minPrice + '&maxprice=' + maxPrice + '&state=' + propertyState + '&type=' + propertyType + "&condition=" + propertyCondition + "&construction=" + propertyConstruction;
     });
     
 }

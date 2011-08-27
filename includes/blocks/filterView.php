@@ -1,5 +1,7 @@
 <?php require dirname(__FILE__).'/../paths.php';?>
+
 <?php $section = isset($section) && $section ? $section . '-' : ''; ?>
+
 <?php 
 
 if(isset($_GET['condition']))
@@ -37,12 +39,21 @@ else
         
         <label>Estado</label>
         
-        <select id="filter-property-state" name="filter-property-state" id="filter-property-state">
+        <select id="filter-property-state" name="filter-property-state" >
             <option value="finished" <?php echo isset($_GET['state']) && $_GET['state'] == "finished"? 'selected = "selected"' : '';?>>Terminado</option>
             <option value="construction" <?php echo isset($_GET['state']) && $_GET['state'] == "constuction"? 'selected = "selected"' : '';?>>En Construcci&oacute;n</option>
             <option value="blueprints" <?php echo isset($_GET['state']) && $_GET['state'] == "blueprints"? 'selected = "selected"' : '';?>>Planos</option>
         </select>
         
+        <label>Metros de la propiedad</label>
+        
+         <select id="filter-property-construction" name="filter-property-construction">
+             <option value="all" <?php echo isset($_GET['construction']) && $_GET['construction'] == "all"? 'selected = "selected"' : '';?>>Eligir Tama&ntilde;o</option>
+            <option value="50-100" <?php echo isset($_GET['construction']) && $_GET['construction'] == "50-100"? 'selected = "selected"' : '';?>>50 a 100 Metros</option>
+            <option value="100-200" <?php echo isset($_GET['construction']) && $_GET['construction'] == "100-200"? 'selected = "selected"' : '';?>>100 a 200 Metros</option>
+            <option value="200-300" <?php echo isset($_GET['construction']) && $_GET['construction'] == "200-300"? 'selected = "selected"' : '';?>>200 a 300 Metros</option>
+            <option value="300-x" <?php echo isset($_GET['construction']) && $_GET['construction'] == "300-x"? 'selected = "selected"' : '';?>>Mayor de 300 Metros</option>
+        </select>
         
         <div id="filter-slider"></div>
        

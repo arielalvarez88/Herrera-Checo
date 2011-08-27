@@ -15,6 +15,7 @@ abstract class ProjectAbstraction implements IProjectAbstraction
     protected $projectSlidesFieldName;
     protected $projectTitleFieldName;    
     protected $projectLocalsContainersFieldName;
+    protected $projectRelatedProyectsFieldName;
     protected $localsContainersTitleFieldName;
     protected $localContainerLocalsFieldName;
     protected $localsNumberFieldName;
@@ -111,9 +112,39 @@ abstract class ProjectAbstraction implements IProjectAbstraction
         
     }
  
+    public function getRelatedProjectsAbstractions()
+    {
+        $relatedProjectsAbstractions = array();
+        $fieldName = $this->projectRelatedProyectsFieldName;
+        $relatedProjectsInfo = $this->projectNode->$fieldName;        
+        foreach($relatedProjectsInfo as $relatedProjectInfo)
+        {
+            $relatedProjectNode = node_load($relatedProjectInfo['nid']);
+            $relatedProjectsAbstractions[] = ProjectAbstractionFactory::createProjectAbstraction($relatedProjectNode);
+            
+        }
+        
+        return $relatedProjectsAbstractions;
+    }
+    
+    public function getType()
+    {
+        return $this->projectNode->type;
+    }
+    
+    public function getPath(){
+        return $this->projectNode->path;
+    }
+    
+    public function getFriendlyType()
+    {
+        
+    }
+    
     public function getLocalAbbr() {
         
     }
+    
 }
 ?>
 

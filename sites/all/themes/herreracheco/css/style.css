@@ -24,6 +24,11 @@
     padding: 40px 10px 10px;
 }
 
+#header.buscar-proyectos
+{
+    margin-bottom: 20px;
+}
+
 #primary-links
 {
    float: left;
@@ -53,6 +58,16 @@
 
 /*header ENDS*/
 
+/*buscar-proyectos*/
+#buscar-proyectos-header
+{
+    font-size: 2em;
+    line-height: 24px;
+}
+
+/*buscar-proyectos*/
+
+/*Header*/
 
 /*default header*/
 
@@ -300,6 +315,7 @@ a.no-decoration-anchor, .no-decoration-anchor img, a.no-decoration-anchor:hover,
         min-height: 792px;
     position: relative;
      float:left;
+     padding: 0 14px;
 }
 #residential-projects-portafolio-header #residential-projects-header, 
 #comercial-projects-portafolio-header #comercial-projects-header,
@@ -324,16 +340,11 @@ a.no-decoration-anchor, .no-decoration-anchor img, a.no-decoration-anchor:hover,
     clear: both;
 }
 
-#proyecto-caracteristicas
-{
-    color: #333333;
-}
 
-
-#proyecto-caracteristicas p 
+#proyecto-info-pago p 
 {
     margin-bottom: 0;
-    width: 524px;
+    
 }
 
 #proyectos-residenciales-address
@@ -346,22 +357,92 @@ a.no-decoration-anchor, .no-decoration-anchor img, a.no-decoration-anchor:hover,
     width: 290px;
     color: #333333;
 }
-#proyecto h3#proyecto-condiciones-de-pago {
-    margin-top: 20px;
+
+
+#proyecto-condiciones-pago-text
+{
+    height: 57px;
 }
 
-#proyecto h3{
-   margin: 10px 0 5px;
+#proyecto-caracteristicas-text
+{
+    height: 152px;
+}
+
+#proyecto-caracteristicas-atractivos,
+#proyecto-atractivos
+{
+    float:left;
+}
+#proyecto-caracteristicas-atractivos
+{
+    margin-right: 29px;
+}
+#proyecto-shadow
+{
+    margin-bottom: 20px;
+}
+.proyecto-shadow
+{
+    margin-top: -3px;
+}
+#proyecto-atractivos-text
+{
+    height: 281px;
+}
+
+#proyecto-address
+{
+    height: 16px;
+    margin: 0 0 3px 0;
+    
+}
+#proyectos-residenciales-address h3
+{
+    margin: 0;
+}
+
+
+#proyecto-caracteristicas h3,
+#proyecto-caracteristicas-text,
+#proyecto-condiciones-pago h3,
+#proyecto-condiciones-pago-text,
+#proyecto-atractivos h3,
+#proyecto-atractivos-text
+{
+      background-image: url("/sites/default/files/images/proyecto/characteristicsBackground.png");
+      padding-left: 10px;
+      width: 283px;
+      padding-top: 10px;
+      
+}
+
+#proyecto-caracteristicas-text,
+#proyecto-condiciones-pago-text,
+#proyecto-atractivos-text
+{
+    background-position: 0 -35px;
+    overflow: hidden;
+    
+}
+
+#proyecto-info-pago h3{
+   margin: 0;
+   height: 26px;
+   padding-top: 6px;
+   
 }
 #proyecto-slideshow {
     float: left;
     margin-right: 13px;
 }
-#proyecto-caracteristicas
+#proyecto-info-pago
 {
   margin-right: 122px;
+   color: #333333;
+   margin-right: 29px;
 }
-#proyecto-caracteristicas, #proyecto-edificios-container
+#proyecto-info-pago, #proyecto-edificios-container
 {
     float:left;
 }
@@ -394,15 +475,19 @@ a.no-decoration-anchor, .no-decoration-anchor img, a.no-decoration-anchor:hover,
 .proyecto-slideshow-pager-group{
     min-height: 261px;
 }
-
+#proyecto-description-header{
+    margin: 10px 0 0 0;
+}
 #proyecto-slideshow-container
 {
     clear:both;
+
     min-height: 430px;
     width: 922px;
     padding-left: 13px;
     padding-top: 14px;
     background-image: url('/sites/default/files/images/proyecto/slideshowBackground.png');
+    
         
 }
 
@@ -410,13 +495,19 @@ a.no-decoration-anchor, .no-decoration-anchor img, a.no-decoration-anchor:hover,
 {
     
        background-image: url("/sites/default/files/images/videoDeProyecto/fondo.png");
-    height: 192px;
-    padding: 5px 0;
-    width: 345px;
+    height: 250px;
+    padding: 9px 0;
+    width: 475px;
     margin-bottom: 20px;
+    margin-left: 14px;
+    
+    
 }
 
-
+#proyecto-relacionado .ultimos-proyectos
+{
+    
+}
 #proyectos-residenciales-location, #proyectos-residenciales-location-header
 {
     
@@ -427,8 +518,17 @@ a.no-decoration-anchor, .no-decoration-anchor img, a.no-decoration-anchor:hover,
 }
 #proyectos-residenciales-address
 {
-
+    float:left;
+    margin-right: 410px;
+    
 }
+
+#proyecto-relacionado
+{
+    position: absolute;
+    left: 505px;
+}
+
 #proyecto-direccion {
     left: 74px;
     position: absolute;
@@ -804,6 +904,17 @@ a.no-decoration-anchor, .no-decoration-anchor img, a.no-decoration-anchor:hover,
 
 }
 
+.ultimos-proyectos-info p.search
+{
+ color: #8C8C8C;
+    height: 34px;
+    overflow: hidden;
+    width: 215px;
+    margin-bottom: 3px;
+}
+
+
+
   .ultimos-proyectos-info h5
   {
       border-bottom: 1px dashed black;
@@ -1011,9 +1122,12 @@ div.proyecto-com-block div.ultimos-proyectos-info h5
 
 #filter-header {
     height: 25px;
-    margin-bottom: 23px;
+    margin-bottom: 5px;
     width: 238px;
+    
+    
 }
+
 
 #filter-header {
     border: 1px solid #D9D9D9;
@@ -1023,9 +1137,9 @@ div.proyecto-com-block div.ultimos-proyectos-info h5
     margin: 5px 0;
 }
 
-#filter-parameters #filter-property-type
+#filter-parameters #filter-property-construction
 {
-    margin-bottom: 25px;
+    margin-bottom: 15px;
 }
 
 a.filter-alquilar-comprar-option {
@@ -1052,7 +1166,7 @@ a.filter-alquilar-comprar-option {
 #filter-search-button
 {
       float: right;
-    margin-top: 12px;
+    margin-top: 5px;
     cursor: pointer;
 }
 
@@ -1060,7 +1174,7 @@ a.filter-alquilar-comprar-option {
    color: gray;
     font-size: 1.2em;
     height: 29px;
-    margin-bottom: 28px;
+    margin-bottom: 5px;
     margin-top: 2px;
     width: 214px;
 }

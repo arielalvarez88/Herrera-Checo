@@ -18,7 +18,7 @@ class ComercialProjectAbstraction extends ProjectAbstraction
         $this->projectSlidesFieldName = 'field_com_project_slides';
         $this->projectFeaturesFieldName = 'field_com_project_features';
         $this->projectPaymentDescFieldName = 'field_com_project_pay_cond';
-        
+        $this->projectRelatedProyectsFieldName = 'field_com_project_relateds';
         $this->projectLocalsContainersFieldName = 'field_com_project_levels';                
         $this->localsContainersTitleFieldName = 'field_com_project_level_title';
         $this->localContainerLocalsFieldName = 'field_com_project_level_locals';        
@@ -34,7 +34,10 @@ class ComercialProjectAbstraction extends ProjectAbstraction
        public function getLocalAbbr() {
         return 'Local';
     }
-
+    public  function getFriendlyType()
+    {
+        return 'Proyecto Comercial';
+    }
  
     
     

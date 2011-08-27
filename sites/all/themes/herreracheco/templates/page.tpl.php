@@ -12,13 +12,14 @@
     </head>
 
     <body class="<?php print $body_classes; ?>">
+        
         <div id="skip"><a href="#content"><?php print t('Skip to Content'); ?></a> <a href="#navigation"><?php print t('Skip to Navigation'); ?></a></div>  
         <div id="page-wrapper">
             <div id="page">
 
                 <!-- ______________________ HEADER _______________________ -->
 
-                <div id="header">
+                <div id="header" <?php echo $section? 'class="'.$section.'"' : '';?>>
 
                     <div id="logo-title">
                         <?php if (!empty($logo)): ?>
@@ -191,7 +192,7 @@
 
                             <span id="herrera-checo-direccion">Direcci&oacute;n Av. Juan Pablo Duarte,<br/> Plaza Las Ramblas Boulevard</span>
                         </p>
-                        <p id="mkt-logo"><a href="www.5050mkt.com"><img src="/<?php echo file_directory_path();?>/images/footer/5050mktLogo.png" alt="footer-designed-by"/></a></p>
+                        <p id="mkt-logo"><a href="http://www.5050mkt.com"><img src="/<?php echo file_directory_path();?>/images/footer/5050mktLogo.png" alt="footer-designed-by"/></a></p>
                     </div>
 
                 </div> <!-- /footer -->
