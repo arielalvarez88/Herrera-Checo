@@ -56,7 +56,7 @@ function properties_search_block($op='list', $delta=0, $edit=array()) {
         $block[0]["info"] = t('Properties_search_block');
     } 
     
-    elseif ($op = 'view') {
+    elseif ($op == 'view') {
         $block['subject'] = 'Properties Search Result';
 
 
