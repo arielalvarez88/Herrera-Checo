@@ -264,6 +264,7 @@ a.no-decoration-anchor, .no-decoration-anchor img, a.no-decoration-anchor:hover,
 
 #newsletter p {
     font-size: 0.9em;
+    height: 30px;
 }
 
 #newsletter input {
