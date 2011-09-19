@@ -72,25 +72,7 @@ initializeSlideshows = function()
     
             }
         },
-        proyectoSlideshow:{
-            selector: '#proyecto-slideshow',
-            options:{
-                
-                fx:     'fade', 
-                speed:  'fast', 
-                timeout: 0, 
-                pager:  '#proyecto-slideshow-pager',
-                cleartype: true,
-                cleartypeNoBg: true,
-                pagerEvent:    'click',               
-                activePagerClass: 'propiedad-viewer-active-selector',
-                pagerAnchorBuilder: function (idx, slide){
-              
-                    return '.proyecto-pager-for-'+idx; 
-                }
-    
-            }
-        },
+        
         proyectoSlideshowPager:{
             selector: '#proyecto-slideshow-pager',
             options:{
@@ -484,6 +466,20 @@ drawOficinasMap = function()
     }
 
 
+
+initializeProjectsSlideshow = function()
+{
+  $('.proyecto-slideshow-photos-selector').click(function(){
+      var pager = $(this);
+      var newPictureHtml = pager.attr('value');
+      $('.proyecto-slideshow-slide').fadeOut('slow',function(){
+          $(this).replaceWith(newPictureHtml);
+      });
+  });
+  
+};
+
+
 $(document).ready(function(){
     extendJqueryWithGetVars();
     initializeSlideshows();
@@ -493,6 +489,7 @@ $(document).ready(function(){
     initializeFilter();
     generateVerTodosInProyectos();
     drawOficinasMap();
+    initializeProjectsSlideshow();
     
    
 });

@@ -3,12 +3,14 @@
 <?php require_once dirname(__FILE__) . '/../classes/ProjectAbsctractionFactory.php'; ?>
 <?php require_once dirname(__FILE__) . '/../classes/LocalContainerAbstraction.php'; ?>
 <?php require_once dirname(__FILE__) . '/../classes/LocalAbstraction.php'; ?>
+<?php require_once dirname(__FILE__) . '/../classes/SlideshowUtilities.php'; ?>
 
 <?php
 
 $projectAbstraction = ProjectAbstractionFactory::createProjectAbstraction($node);
 $localsContainers = $projectAbstraction->getLocalsContainers();
 $localsContainersNumber = count($localsContainers);
+
 
 
 
@@ -22,6 +24,8 @@ $relatedProjects = $projectAbstraction->getRelatedProjectsAbstractions();
 
 $viewsParams = array();
 $viewsParams['projectsAbstractions'] = $relatedProjects;
+$imageCacheFolderPath = '/sites/default/files/imagecache/';
+$pagerSlidesHtml = array();
 ?>
 
 
@@ -36,34 +40,29 @@ $viewsParams['projectsAbstractions'] = $relatedProjects;
             <div id="proyecto-slideshow">
 
                 <?php for ($i = 0; $i < $slidesNumber; $i++): ?>
-
-
-
-                    <img src="/<?php echo $slides[$i]; ?> " class="proyecto-slideshow-slide"/>
-
-
-
-
+                
+                    <?php $bigSlideHtml = theme('imagecache','projects_slides', $slides[$i],'slide','slide',array('class' => 'proyecto-slideshow-slide'));?>
+                    <?php  $pagerSlidesHtml[] = theme('imagecache','projects_slides_pagers', $slides[$i],'slide-pager','slide-pager',array('class' => 'proyecto-slideshow-photos-selector', 'id'=>'proyecto-pager-for-'.$i, 'value' => $bigSlideHtml));?> 
+                    <?php echo $i == 0?  $bigSlideHtml : '';?>
+                    
                 <?php endfor; ?>
             </div>
+            
             <div id="proyecto-slideshow-pager-container">
                 <img id="proyecto-slideshow-previous" src="<?php echo $paths->images; ?>/proyecto/previousButton.png"/>
                 <div id="proyecto-slideshow-pager">
-                    <?php $limit = $slidesNumber < 4 ? $slidesNumber : 4; ?>
-                    <?php for ($i = 0; $i < $slidesNumber; $i++): ?>
-
-                        <?php for ($j = 0; $j < $limit && $i + $limit <= $slidesNumber; $j++): ?>
-                            <?php if (($j + 1) == 1 || ($j + 1) % 5 == 0): ?>
+                    <?php $pagerSubsets = SlideshowUtilities::getPagerSubset($pagerSlidesHtml, 4);?>
+                    <?php foreach ($pagerSubsets as $pagerSubset): ?>
+                    
+                    
                                 <div class="proyecto-slideshow-pager-group">
-                                <?php endif; ?>
+                                    <?php echo $pagerSubset;?>
 
-                                <img src="/<?php echo $slides[$i + $j]; ?>" class="proyecto-slideshow-photos-selector proyecto-pager-for-<?php echo $i + $j; ?>"/>
-
-                                <?php if ($j == $slidesNumber - 1 || ($j + 1) % 4 == 0): ?>
+                                    
                                 </div>
-                            <?php endif; ?>
-                        <?php endfor; ?>
-                    <?php endfor; ?>
+            
+                        <?php endforeach; ?>
+     
                 </div>
                 <img id="proyecto-slideshow-next" src="<?php echo $paths->images; ?>/proyecto/nextButton.png"/>
             </div>
