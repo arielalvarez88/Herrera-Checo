@@ -11,6 +11,17 @@
  * See COPYRIGHT.txt and LICENSE.txt.
  */
 
+require './includes/environmentVars.php';
+
+if($environment->name == 'production')
+{
+    require './includes/views/maintenancePage.php';
+        return;
+}
+        
+
+
+
 require_once './includes/bootstrap.inc';
 drupal_bootstrap(DRUPAL_BOOTSTRAP_FULL);
 
