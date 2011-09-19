@@ -130,7 +130,7 @@ function properties_search_block($op='list', $delta=0, $edit=array()) {
               $block['content'].= '<div class="ultimos-proyectos last even">';
             $block['content'] .= '<div class="ultimos-proyectos-photo">';
 
-            $block['content'] .= '<a class="imagefield imagefield-nodelink imagefield-field_res_project_slides" href="'.$result->getProjectAbstraction()->getPath().'"><img width="1400" height="900" src="'.$result->getProjectAbstraction()->getPictureUrl().'" alt="" class="imagefield imagefield-field_res_project_slides"/></a>';
+            $block['content'] .= '<a class="imagefield imagefield-nodelink imagefield-field_res_project_slides" href="'.$result->getProjectAbstraction()->getPath().'">'.theme('imagecache','projects_thumbs',$result->getProjectAbstraction()->getPictureUrl(),'foto-de-la-propiedad',$result->getProjectAbstraction()->getTitle(),'').'</a>';
                  $block['content'] .= '</div>';
 
 

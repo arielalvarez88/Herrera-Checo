@@ -7,7 +7,9 @@ require dirname(__FILE__) . '/../../../../../includes/paths.php';
     <div id="front-page-slideshow-photo">
         <?php foreach($node->field_front_page_slides as $slide):?>
             <?php if ($slide): ?>
-                <img alt="slide" src="/<?php echo $slide['filepath']; ?>" class="front-page-slideshow-photo"/>
+        
+                <?php echo theme('imagecache','frontpage_slides_thumbs', $slide['filepath'],'slide','slide',array('class' => 'front-page-slideshow-photo'));?>
+                
             <?php endif; ?>
         <?php endforeach; ?>
     </div>
