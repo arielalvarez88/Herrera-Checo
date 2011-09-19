@@ -13,7 +13,7 @@
             $fieldname = $field[0]['filepath'];
             ?>
             <?php if ($fieldname): ?>
-                <img class="offices-slideshow-photos" src="<?php echo '/' . $fieldname; ?>"/>
+                <?php echo theme('imagecache','offices_slides_thumbs',$fieldname,'slide','slide',array('class' => 'offices-slideshow-photos')); ?>
             <?php endif; ?>
         <?php endfor; ?>
     </div>
