@@ -469,11 +469,17 @@ drawOficinasMap = function()
 
 initializeProjectsSlideshow = function()
 {
+  
+  
   $('.proyecto-slideshow-photos-selector').click(function(){
       var pager = $(this);
       var newPictureHtml = pager.attr('value');
       $('.proyecto-slideshow-slide').fadeOut('slow',function(){
-          $(this).replaceWith(newPictureHtml);
+          
+          var newSlide = $(this).replaceWith(newPictureHtml);
+          $('.proyecto-slideshow-slide').fadeIn("slow");
+            
+          
       });
   });
   
@@ -481,6 +487,7 @@ initializeProjectsSlideshow = function()
 
 
 $(document).ready(function(){
+    
     extendJqueryWithGetVars();
     initializeSlideshows();
     initializeSlidersMenus();
@@ -490,6 +497,7 @@ $(document).ready(function(){
     generateVerTodosInProyectos();
     drawOficinasMap();
     initializeProjectsSlideshow();
+    
     
    
 });
