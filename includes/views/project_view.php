@@ -40,11 +40,12 @@ $pagerSlidesHtml = array();
             <div id="proyecto-slideshow">
                 <?php $isHidden = '';?>
                 <?php for ($i = 0; $i < $slidesNumber; $i++): ?>
-                    
-                    <?php $bigSlideHtml = theme('imagecache','projects_slides', $slides[$i],'slide','slide',array('class' => 'proyecto-slideshow-slide'.$isHidden));?>
-                    <?php  $pagerSlidesHtml[] = theme('imagecache','projects_slides_pagers', $slides[$i],'slide-pager','slide-pager',array('class' => 'proyecto-slideshow-photos-selector', 'id'=>'proyecto-pager-for-'.$i, 'value' => $bigSlideHtml));?> 
+                
+                    <?php $bigSlideHtml = theme('imagecache','projects_slides', $slides[$i],'slide','slide',array('id' => 'proyecto-slideshow-slide'.$i, 'class' => 'proyecto-slideshow-slide'.$isHidden));?>
+                    <?php  $pagerSlidesHtml[] = theme('imagecache','projects_slides_pagers', $slides[$i],'slide-pager','slide-pager',array('class' => 'proyecto-slideshow-photos-selector proyecto-pager-for-slide'.$i, 'big-slide-id' => 'proyecto-slideshow-slide'.$i , 'big-slide-html' => $bigSlideHtml));?> 
                     <?php echo $i == 0?  $bigSlideHtml : '';?>
                     <?php $isHidden = ' hidden';?>
+                
                 <?php endfor; ?>
             </div>
             

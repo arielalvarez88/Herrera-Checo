@@ -11,7 +11,7 @@ class SlideshowUtilities
         
         for($i=0; $i < $length; $i++)
         {
-            $numbersOfPicsOfThisSet = $i + $setsSize-1 <= $length-1 ? $setsSize : $length-1;   
+            $numbersOfPicsOfThisSet = $i + $setsSize-1 <= $length-1 ? $setsSize : $length - $i;   
             
             $imagesSets[] = implode(" ", array_slice($imagesArray, $i, $numbersOfPicsOfThisSet));
            

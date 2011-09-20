@@ -467,24 +467,60 @@ drawOficinasMap = function()
 
 
 
-initializeProjectsSlideshow = function()
+intializeProjectSlideshow = function()
 {
   
   
-  $('.proyecto-slideshow-photos-selector').click(function(){
-      var pager = $(this);
-      var newPictureHtml = pager.attr('value');
-      $('.proyecto-slideshow-slide').fadeOut('slow',function(){
-          
-          var newSlide = $(this).replaceWith(newPictureHtml);
-          $('.proyecto-slideshow-slide').fadeIn("slow");
-            
-          
-      });
-  });
+
+  
+  var slideshowSlidesContainer= $('#proyecto-slideshow');
+  var pagers = $('.proyecto-slideshow-photos-selector');
+ 
+  var pagersLength = pagers.length;
+  var i =0;
+  
+  for(i=0; i<pagersLength; i++)
+  {
+      var bigSlideId = $(pagers[i]).attr('big-slide-id'); 
+      var nextBigSlide = $('#' + bigSlideId);
+      
+      if(nextBigSlide.length <= 0)
+          {
+              
+              $(slideshowSlidesContainer).append($(pagers[i]).attr('big-slide-html'));
+          }
+        
+  
+  }
+  
+ $('#proyecto-slideshow').cycle({
+                
+                fx:     'fade', 
+                speed:  'fast', 
+                timeout: 0, 
+                pager:  '#proyecto-slideshow-pager',
+                cleartype: true,
+                cleartypeNoBg: true,
+                pagerEvent:    'click',
+                prev: '#offices-slideshow-previous',
+                next: '#offices-slideshow-next',
+                after: hideNextorPrevious,
+                activePagerClass: 'propiedad-viewer-active-selector',
+                pagerAnchorBuilder: function (idx, slide){
+                    
+                    return '.proyecto-pager-for-slide'+idx; 
+                }
+    
+            });
+
   
 };
 
+
+window.onload = function()
+{
+    var projectBehaviour = intializeProjectSlideshow();
+}
 
 $(document).ready(function(){
     
@@ -496,7 +532,7 @@ $(document).ready(function(){
     initializeFilter();
     generateVerTodosInProyectos();
     drawOficinasMap();
-    initializeProjectsSlideshow();
+    
     
     
    

@@ -436,6 +436,9 @@ a.no-decoration-anchor, .no-decoration-anchor img, a.no-decoration-anchor:hover,
 #proyecto-slideshow {
     float: left;
     margin-right: 13px;
+    width: 793px;
+    height: 411px;
+    overflow: hidden;
 }
 #proyecto-info-pago
 {
