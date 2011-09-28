@@ -899,6 +899,7 @@ a.no-decoration-anchor, .no-decoration-anchor img, a.no-decoration-anchor:hover,
 {
     margin-bottom: 17px;
     float: left;
+    width: 100%;
 }
 
 

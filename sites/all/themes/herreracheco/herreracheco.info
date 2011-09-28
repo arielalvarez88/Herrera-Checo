@@ -34,7 +34,7 @@ stylesheets[print][] = css/print.css
 
 
 
-scripts[] = js/jquery-1.6.1.min.js
+
 scripts[] = js/jquery-ui-1.8.14.custom.min.js
 scripts[] = js/jquery.cycle.all.js
 scripts[] = js/herreracheco.js
