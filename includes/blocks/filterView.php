@@ -55,7 +55,7 @@ else
             <option class=" filter-construction-value filter-construction-residential-value" value="251-350" <?php echo isset($_GET['construction']) && $_GET['construction'] == "251-350"? 'selected = "selected"' : '';?>>251 a 350 Metros</option>
             <option class=" filter-construction-value filter-construction-residential-value" value="351-x" <?php echo isset($_GET['construction']) && $_GET['construction'] == "351"? 'selected = "selected"' : '';?>>Mayor que 350 Metros</option>
             
-            <option class=" filter-construction-value filter-construction-comercial-value" class="" value="10-30" <?php echo isset($_GET['construction']) && $_GET['construction'] == "10-30"? 'selected = "selected"' : '';?>>10 a 30 Metros</option>
+            <option class=" filter-construction-value filter-construction-comercial-value " class="" value="10-30" <?php echo isset($_GET['construction']) && $_GET['construction'] == "10-30"? 'selected = "selected"' : '';?>>10 a 30 Metros</option>
             <option class=" filter-construction-value filter-construction-comercial-value" class="" value="31-60" <?php echo isset($_GET['construction']) && $_GET['construction'] == "31-60"? 'selected = "selected"' : '';?>>31 a 60 Metros</option>
             <option class=" filter-construction-value filter-construction-comercial-value" class="" value="61-90" <?php echo isset($_GET['construction']) && $_GET['construction'] == "61-90"? 'selected = "selected"' : '';?>>61 a 90 Metros</option>
             <option class=" filter-construction-value filter-construction-comercial-value" class="" value="91-120" <?php echo isset($_GET['construction']) && $_GET['construction'] == "91-120"? 'selected = "selected"' : '';?>>91 a 120 Metros</option>

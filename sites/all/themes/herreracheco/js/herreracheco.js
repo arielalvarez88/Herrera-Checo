@@ -261,7 +261,7 @@ initializeFilter = function(){
     
     var minValue =  500000;
     var maxValue = 20000000 ;
-    var visibleConstructionOptionsSelector = $.getUrlVar('type') && ($.getUrlVar('type') == 'residenciales' || $.getUrlVar('type') == 'casas' )  ? '.filter-construction-residential-value' : '.filter-construction-comercial-value';
+    var hiddenConstructionOptionsSelector = !($.getUrlVar('type') && ($.getUrlVar('type') == 'comerciales'))  ? '.filter-construction-comercial-value' : '.filter-construction-residential-value' ;
     var step = 500000;
     if($.getUrlVar('condition') && $.getUrlVar('condition') == 'alquiler')
     {
@@ -276,11 +276,11 @@ initializeFilter = function(){
     var initialMax = $.getUrlVar('maxprice') ? $.getUrlVar('maxprice') : 20000000;
     
         
-    var filter = new Filter(minValue,maxValue,initialMin,initialMax,step,visibleConstructionOptionsSelector);
+    var filter = new Filter(minValue,maxValue,initialMin,initialMax,step,hiddenConstructionOptionsSelector);
 }
 
 
-Filter = function (sliderMin,sliderMax,sliderMinInitial,sliderMaxInitial,step,visibleConstructionOptionsSelector){
+Filter = function (sliderMin,sliderMax,sliderMinInitial,sliderMaxInitial,step,hiddenConstructionOptionsSelector){
     
     var thisObject = this;
     this.sliderMin = sliderMin;
@@ -295,20 +295,22 @@ Filter = function (sliderMin,sliderMax,sliderMinInitial,sliderMaxInitial,step,vi
     this.propertyConstruction = $('#filter-property-construction')
     this.intialStep = step;
     this.searchButton = $('#filter-search-button');
-    this.visibleConstructionOptionsSelector = visibleConstructionOptionsSelector;
+    this.hiddenConstructionOptionsSelector = hiddenConstructionOptionsSelector;
+    this.constructionValues = this.propertyConstruction.html();
     
     
-    $('.filter-construction-value').hide();
-    $(thisObject.visibleConstructionOptionsSelector).show();
+    $(hiddenConstructionOptionsSelector).remove();        
+    
+        
+    
     
     this.propertyType.change(function(){
         var selectedType = thisObject.propertyType.val();
-        thisObject.visibleConstructionOptionsSelector =  selectedType == 'residenciales' || selectedType == 'casas' ? '.filter-construction-residential-value' : '.filter-construction-comercial-value';
-        $('.filter-construction-value').hide();
+        thisObject.hiddenConstructionOptionsSelector =  selectedType == 'residenciales' || selectedType == 'casas' ? '.filter-construction-comercial-value' : '.filter-construction-residential-value';
+        thisObject.propertyConstruction.html('');
         
-        $(thisObject.visibleConstructionOptionsSelector).show();
-        thisObject.propertyConstruction.val('all');
-        
+        thisObject.propertyConstruction.append(thisObject.constructionValues);        
+        $(thisObject.hiddenConstructionOptionsSelector).remove();        
     });
     
     this.slider = new Slider('#filter-slider',this.sliderMin,this.sliderMax,this.sliderMinInitial,this.sliderMaxInitial,"#filter-slider-min","#filter-slider-max",this.intialStep);
