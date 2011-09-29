@@ -15,7 +15,7 @@
             <div class="ultimos-proyectos-photo">
 
 
-                <a class="imagefield imagefield-nodelink imagefield-field_res_project_slides" href="/proyectos/residencial-oasis-del-dorado"><img width="1400" height="900" src="/<?php echo $projectAbstraction->getPictureUrl(); ?>" alt="" class="imagefield imagefield-field_res_project_slides"></a>
+                <a class="imagefield imagefield-nodelink imagefield-field_res_project_slides" href="/proyectos/residencial-oasis-del-dorado"><?php echo theme('imagecache','projects_thumbs',$projectAbstraction->getPictureUrl(),'foto-del-proyecto',$projectAbstraction->getTitle())?></a>
             </div>
 
 
