@@ -930,10 +930,14 @@ a.no-decoration-anchor, .no-decoration-anchor img, a.no-decoration-anchor:hover,
 
 
 .ultimos-proyectos {
-      clear: both;
+    float: left;
     min-height: 147px;
 }
 
+.ultimos-proyectos.odd 
+{
+    margin-right: 92px;
+}
 
 .proyecto, .proyecto-com-block, .proyecto-res-block
 {
