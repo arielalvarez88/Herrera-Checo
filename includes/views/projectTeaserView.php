@@ -10,7 +10,7 @@
 <?php foreach ($projectsAbstractions as $projectAbstraction): ?>
 
     <?php if ($projectAbstraction): ?>
-        <div class="proyecto first last odd">
+        <div class="related-projects first last odd">
 
             <div class="ultimos-proyectos-photo">
 
@@ -21,9 +21,9 @@
 
             <div class="ultimos-proyectos-info">
 
-
-                <h4><?php echo $projectAbstraction->getTitle(); ?></h4>
                 <h5><?php echo $projectAbstraction->getFriendlyType(); ?></h5>
+                <h4><?php echo $projectAbstraction->getTitle(); ?></h4>
+
                 <p><?php echo $projectAbstraction->getShortDescription(); ?></p>
                 <a href="/<?php echo $projectAbstraction->getPath(); ?>"><img src="/sites/default/files/images/ultimosProyectos/verProyecto.png"></a>
 

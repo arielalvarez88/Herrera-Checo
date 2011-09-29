@@ -123,11 +123,11 @@ function properties_search_block($op='list', $delta=0, $edit=array()) {
         if($searchAlgorithm)
             $results = $searchAlgorithm->runSearch();
         
-        $block['content'] = '';
+        $block['content'] = '<div id="search-results">';
         
         foreach ($results as $result) {
                 
-              $block['content'].= '<div class="ultimos-proyectos last even">';
+              $block['content'].= '<div class="search-result">';
             $block['content'] .= '<div class="ultimos-proyectos-photo">';
 
             $block['content'] .= '<a class="imagefield imagefield-nodelink imagefield-field_res_project_slides" href="'.$result->getProjectAbstraction()->getPath().'">'.theme('imagecache','projects_thumbs',$result->getProjectAbstraction()->getPictureUrl(),'foto-de-la-propiedad',$result->getProjectAbstraction()->getTitle(),'').'</a>';
@@ -149,6 +149,8 @@ function properties_search_block($op='list', $delta=0, $edit=array()) {
              $block['content'] .='</div>';
            
         }
+        
+        $block['content'] .= '</div>';
     }
     return $block;
 }

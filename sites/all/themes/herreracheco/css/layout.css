@@ -632,6 +632,7 @@ body
 #drupal-content-bottom
 {
     clear: both;
+    float: left;
 }
 #center-left {
     
