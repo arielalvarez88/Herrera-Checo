@@ -48,12 +48,21 @@ else
         <label>Metros de la propiedad</label>
         
          <select id="filter-property-construction" name="filter-property-construction">
-             <option value="all" <?php echo isset($_GET['construction']) && $_GET['construction'] == "all"? 'selected = "selected"' : '';?>>Eligir Tama&ntilde;o</option>
-            <option value="50-100" <?php echo isset($_GET['construction']) && $_GET['construction'] == "50-100"? 'selected = "selected"' : '';?>>50 a 100 Metros</option>
-            <option value="100-200" <?php echo isset($_GET['construction']) && $_GET['construction'] == "100-200"? 'selected = "selected"' : '';?>>100 a 200 Metros</option>
-            <option value="200-300" <?php echo isset($_GET['construction']) && $_GET['construction'] == "200-300"? 'selected = "selected"' : '';?>>200 a 300 Metros</option>
-            <option value="300-x" <?php echo isset($_GET['construction']) && $_GET['construction'] == "300-x"? 'selected = "selected"' : '';?>>Mayor de 300 Metros</option>
+            <option value="all" <?php echo isset($_GET['construction']) && $_GET['construction'] == "all"? 'selected = "selected"' : '';?>>Mostrar Todos</option>
+            
+            <option class=" filter-construction-value filter-construction-residential-value" value="60-150" <?php echo isset($_GET['construction']) && $_GET['construction'] == "60-150"? 'selected = "selected"' : '';?>>60 a 150 Metros</option>
+            <option class=" filter-construction-value filter-construction-residential-value" value="151-250" <?php echo isset($_GET['construction']) && $_GET['construction'] == "151-250"? 'selected = "selected"' : '';?>>151 a 250 Metros</option>
+            <option class=" filter-construction-value filter-construction-residential-value" value="251-350" <?php echo isset($_GET['construction']) && $_GET['construction'] == "251-350"? 'selected = "selected"' : '';?>>251 a 350 Metros</option>
+            <option class=" filter-construction-value filter-construction-residential-value" value="351-x" <?php echo isset($_GET['construction']) && $_GET['construction'] == "351"? 'selected = "selected"' : '';?>>Mayor que 350 Metros</option>
+            
+            <option class=" filter-construction-value filter-construction-comercial-value" class="" value="10-30" <?php echo isset($_GET['construction']) && $_GET['construction'] == "10-30"? 'selected = "selected"' : '';?>>10 a 30 Metros</option>
+            <option class=" filter-construction-value filter-construction-comercial-value" class="" value="31-60" <?php echo isset($_GET['construction']) && $_GET['construction'] == "31-60"? 'selected = "selected"' : '';?>>31 a 60 Metros</option>
+            <option class=" filter-construction-value filter-construction-comercial-value" class="" value="61-90" <?php echo isset($_GET['construction']) && $_GET['construction'] == "61-90"? 'selected = "selected"' : '';?>>61 a 90 Metros</option>
+            <option class=" filter-construction-value filter-construction-comercial-value" class="" value="91-120" <?php echo isset($_GET['construction']) && $_GET['construction'] == "91-120"? 'selected = "selected"' : '';?>>91 a 120 Metros</option>
+            <option class=" filter-construction-value filter-construction-comercial-value" class="" value="121-150" <?php echo isset($_GET['construction']) && $_GET['construction'] ==  "121-150"? 'selected = "selected"' : '';?>>121 a 150 Metros</option>
+            <option class=" filter-construction-value filter-construction-comercial-value" class="" value="151-x" <?php echo isset($_GET['construction']) && $_GET['construction'] == "151-x"? 'selected = "selected"' : '';?>>Mayor que 150 Metros</option>
         </select>
+                
         
         <div id="filter-slider"></div>
        

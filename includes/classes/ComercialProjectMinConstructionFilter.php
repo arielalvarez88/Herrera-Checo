@@ -2,7 +2,7 @@
 
 require_once dirname(__FILE__).'/IFilter.php';
 
-Class ComercialProjectMinConstructioneFilter implements IFilter{
+Class ComercialProjectMinConstructionFilter implements IFilter{
     public $fieldName;
     public $value;
     

@@ -261,6 +261,7 @@ initializeFilter = function(){
     
     var minValue =  500000;
     var maxValue = 20000000 ;
+    var visibleConstructionOptionsSelector = $.getUrlVar('type') && ($.getUrlVar('type') == 'residenciales' || $.getUrlVar('type') == 'casas' )  ? '.filter-construction-residential-value' : '.filter-construction-comercial-value';
     var step = 500000;
     if($.getUrlVar('condition') && $.getUrlVar('condition') == 'alquiler')
     {
@@ -268,18 +269,20 @@ initializeFilter = function(){
         maxValue = 300000;
         step = 1000;
     }
+    
 
     
     var initialMin = $.getUrlVar('minprice') ? $.getUrlVar('minprice') : 500000;
     var initialMax = $.getUrlVar('maxprice') ? $.getUrlVar('maxprice') : 20000000;
     
         
-    var filter = new Filter(minValue,maxValue,initialMin,initialMax,step);
+    var filter = new Filter(minValue,maxValue,initialMin,initialMax,step,visibleConstructionOptionsSelector);
 }
 
 
-Filter = function (sliderMin,sliderMax,sliderMinInitial,sliderMaxInitial,step){
+Filter = function (sliderMin,sliderMax,sliderMinInitial,sliderMaxInitial,step,visibleConstructionOptionsSelector){
     
+    var thisObject = this;
     this.sliderMin = sliderMin;
     this.sliderMax = sliderMax;
     this.sliderMinInitial = sliderMinInitial;
@@ -292,6 +295,21 @@ Filter = function (sliderMin,sliderMax,sliderMinInitial,sliderMaxInitial,step){
     this.propertyConstruction = $('#filter-property-construction')
     this.intialStep = step;
     this.searchButton = $('#filter-search-button');
+    this.visibleConstructionOptionsSelector = visibleConstructionOptionsSelector;
+    
+    
+    $('.filter-construction-value').hide();
+    $(thisObject.visibleConstructionOptionsSelector).show();
+    
+    this.propertyType.change(function(){
+        var selectedType = thisObject.propertyType.val();
+        thisObject.visibleConstructionOptionsSelector =  selectedType == 'residenciales' || selectedType == 'casas' ? '.filter-construction-residential-value' : '.filter-construction-comercial-value';
+        $('.filter-construction-value').hide();
+        
+        $(thisObject.visibleConstructionOptionsSelector).show();
+        thisObject.propertyConstruction.val('all');
+        
+    });
     
     this.slider = new Slider('#filter-slider',this.sliderMin,this.sliderMax,this.sliderMinInitial,this.sliderMaxInitial,"#filter-slider-min","#filter-slider-max",this.intialStep);
     var filter = this;

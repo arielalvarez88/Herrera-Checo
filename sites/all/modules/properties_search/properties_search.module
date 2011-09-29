@@ -64,8 +64,11 @@ function properties_search_block($op='list', $delta=0, $edit=array()) {
         $minprice = isset($_GET['minprice']) && is_numeric($_GET['minprice']) ? $_GET['minprice'] : 5000;
         $maxprice = isset($_GET['maxprice']) && is_numeric($_GET['maxprice']) ? $_GET['maxprice'] : 30000000;
         $minAndMaxArray = explode("-",$_GET['construction']);
-        $minAndMaxConstruction["min"] = $minAndMaxArray[0];
-        $minAndMaxConstruction["max"] = $minAndMaxArray[1];                
+   
+        $minAndMaxConstruction["min"] = $minAndMaxArray  && is_numeric($minAndMaxArray[0])? $minAndMaxArray[0] : 'x';
+        $minAndMaxConstruction["max"] = $minAndMaxArray  && is_numeric($minAndMaxArray[1])? $minAndMaxArray[1] : 'x';
+        
+             
         
         $projectState = isset($_GET['state']) ? $_GET['state'] : 'finished';
         $localsConditions = isset($_GET['condition']) ? $_GET['condition'] : 'venta';
@@ -86,7 +89,7 @@ function properties_search_block($op='list', $delta=0, $edit=array()) {
             $maxConstructionFilter = is_numeric($minAndMaxConstruction['max'])?  new ResidentialProjectMaxConstructionFilter($minAndMaxConstruction['max']) : new NullFilter();
             $projectStateFilter = new ResidentialProjectStateFilter($projectState);
             $localsConditionsFilter = new ResidentialProjectLocalConditionFilter($localsConditions);
-            $localsFilters = array($minPriceFilter, $maxPriceFilter,$localsConditionsFilter);
+            $localsFilters = array($minPriceFilter, $maxPriceFilter,$localsConditionsFilter, $minConstructionFilter, $maxConstructionFilter);
             $projectFilters = array($projectStateFilter);
             $searchAlgorithm = new ResidentialProjectsFindAlgorithm($localsFilters, $projectFilters);
             $localNames = 'Apartamentos';
@@ -99,7 +102,7 @@ function properties_search_block($op='list', $delta=0, $edit=array()) {
             $maxConstructionFilter = is_numeric($minAndMaxConstruction['max'])?  new ComercialProjectMaxConstructionFilter($minAndMaxConstruction['max']) : new NullFilter();
             $projectStateFilter = new ComercialProjectStateFilter($projectState);
             $localsConditionsFilter = new ComercialProjectLocalConditionFilter($localsConditions);
-            $localsFilters = array($minPriceFilter, $maxPriceFilter,$localsConditionsFilter);
+            $localsFilters = array($minPriceFilter, $maxPriceFilter,$localsConditionsFilter, $minConstructionFilter, $maxConstructionFilter);
             $projectFilters = array($projectStateFilter);
             $searchAlgorithm = new ComercialProjectsFindAlgorithm($localsFilters, $projectFilters);
             $localNames = 'Locales';
@@ -112,7 +115,7 @@ function properties_search_block($op='list', $delta=0, $edit=array()) {
             $maxConstructionFilter = is_numeric($minAndMaxConstruction['max'])?  new CasaMaxConstructionFilter($minAndMaxConstruction['max']) : new NullFilter();
             $projectStateFilter = new CasaStateFilter($projectState);
             $localsConditionsFilter = new CasaConditionFilter($localsConditions);
-            $localsFilters = array($minPriceFilter, $maxPriceFilter,$localsConditionsFilter);
+            $localsFilters = array($minPriceFilter, $maxPriceFilter,$localsConditionsFilter,$minConstructionFilter,$maxConstructionFilter);
             $projectFilters = array($projectStateFilter);
             $searchAlgorithm = new CasaFindAlgorithm($localsFilters, $projectFilters);
             
