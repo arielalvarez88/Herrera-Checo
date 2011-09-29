@@ -10,7 +10,7 @@
 <?php foreach ($projectsAbstractions as $projectAbstraction): ?>
 
     <?php if ($projectAbstraction): ?>
-        <div class="ultimos-proyectos first last odd">
+        <div class="proyecto first last odd">
 
             <div class="ultimos-proyectos-photo">
 
