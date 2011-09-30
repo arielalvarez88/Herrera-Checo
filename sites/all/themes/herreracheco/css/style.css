@@ -940,6 +940,11 @@ a.no-decoration-anchor, .no-decoration-anchor img, a.no-decoration-anchor:hover,
     margin-right: 92px;
 }
 
+.ultimos-proyectos.comerciales.odd
+{
+    margin-right: 0;
+}
+
 .proyecto, .proyecto-com-block, .proyecto-res-block
 {
      float:left;
