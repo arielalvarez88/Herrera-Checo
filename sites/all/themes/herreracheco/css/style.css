@@ -953,7 +953,8 @@ div.ultimos-proyectos div.ultimos-proyectos-info h4,
 div.proyecto div.ultimos-proyectos-info h4,
 div.proyecto div.ultimos-proyectos-info h4,
 div.proyecto-res-block div.ultimos-proyectos-info h4,
-div.proyecto-com-block div.ultimos-proyectos-info h4
+div.proyecto-com-block div.ultimos-proyectos-info h4,
+div.related-projects h4 
 {
     margin : 0;
 }
@@ -961,7 +962,8 @@ div.proyecto-com-block div.ultimos-proyectos-info h4
 div.ultimos-proyectos div.ultimos-proyectos-info h5, div.proyecto div.ultimos-proyectos-info h5,
 div.proyecto div.ultimos-proyectos-info h5,
 div.proyecto-res-block div.ultimos-proyectos-info h5,
-div.proyecto-com-block div.ultimos-proyectos-info h5
+div.proyecto-com-block div.ultimos-proyectos-info h5,
+div.related-projects h5
 {
 
      color: #666666;
