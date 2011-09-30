@@ -133,7 +133,7 @@ function properties_search_block($op='list', $delta=0, $edit=array()) {
               $block['content'].= '<div class="search-result">';
             $block['content'] .= '<div class="ultimos-proyectos-photo">';
 
-            $block['content'] .= '<a class="imagefield imagefield-nodelink imagefield-field_res_project_slides" href="'.$result->getProjectAbstraction()->getPath().'">'.theme('imagecache','projects_thumbs',$result->getProjectAbstraction()->getPictureUrl(),'foto-de-la-propiedad',$result->getProjectAbstraction()->getTitle(),'').'</a>';
+            $block['content'] .= '<a class="imagefield imagefield-nodelink imagefield-field_res_project_slides" href="'.$result->getProjectAbstraction()->getPath().'?mostrar-solo-disponibles=1">'.theme('imagecache','projects_thumbs',$result->getProjectAbstraction()->getPictureUrl(),'foto-de-la-propiedad',$result->getProjectAbstraction()->getTitle(),'').'</a>';
                  $block['content'] .= '</div>';
 
 
@@ -143,7 +143,7 @@ function properties_search_block($op='list', $delta=0, $edit=array()) {
                      $block['content'] .='<h4>'.$result->getProjectAbstraction()->getTitle().'</h4>';
                      $block['content'] .='<h5>Proyecto Residencial</h5>';
                      $block['content'] .='<p class="search">'.$result->getProjectAbstraction()->getShortDescription().'</p>';
-                     $block['content'] .='<a href="'.$result->getProjectAbstraction()->getPath().'"><img src="/sites/default/files/images/ultimosProyectos/verProyecto.png"></a>';
+                     $block['content'] .='<a href="'.$result->getProjectAbstraction()->getPath().'?mostrar-solo-disponibles=1"><img src="/sites/default/files/images/ultimosProyectos/verProyecto.png"></a>';
 
                      
                      $block['content'] .='<p class="search">'.$localNames.' Disponibles: '.$result->getCoincidences().'</p>';

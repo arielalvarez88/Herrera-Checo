@@ -17,7 +17,7 @@ $localsContainersNumber = count($localsContainers);
 
 $slides = $projectAbstraction->getSlides();
 $slidesNumber = count($slides);
-$showAllApartments = isset($_GET['ver-todos-apartamentos']) && $_GET['ver-todos-apartamentos'] == 1 ? 1 : 0;
+$showOnlyAvailable = isset($_GET['mostrar-solo-disponibles']) && $_GET['mostrar-solo-disponibles'] == 1 ? 1 : 0;
 
 
 $relatedProjects = $projectAbstraction->getRelatedProjectsAbstractions();
@@ -135,7 +135,7 @@ $pagerSlidesHtml = array();
 
                                         <?php foreach ($locals as $local): ?>
 
-                                            <?php if (($local->getCondition() == 'vendido' && $showAllApartments) || $local->getCondition() == 'venta' || $local->getCondition() == 'alquiler'): ?>
+                                            <?php if (($local->getCondition() == 'vendido' && !$showOnlyAvailable) || $local->getCondition() == 'venta' || $local->getCondition() == 'alquiler'): ?>
                                                 <tr>
                                                     <td><?php echo $local->getNumber(); ?></td>
                                                     <td><?php echo $local->getConstruction(); ?></td>
