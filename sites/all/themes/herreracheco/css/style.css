@@ -366,9 +366,11 @@ a.no-decoration-anchor, .no-decoration-anchor img, a.no-decoration-anchor:hover,
     height: 75px;
 }
 
+
+
 #proyecto-caracteristicas-text
 {
-    height: 152px;
+        overflow: auto;
 }
 
 #proyecto-caracteristicas-atractivos,
@@ -424,7 +426,7 @@ a.no-decoration-anchor, .no-decoration-anchor img, a.no-decoration-anchor:hover,
 #proyecto-atractivos-text
 {
     background-position: 0 -35px;
-    overflow: hidden;
+    overflow: auto;
     
 }
 
