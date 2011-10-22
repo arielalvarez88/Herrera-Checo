@@ -431,7 +431,13 @@ a.no-decoration-anchor, .no-decoration-anchor img, a.no-decoration-anchor:hover,
 {
     background-position: 0 -35px;
     overflow: auto;
+    height: 281px;
     
+}
+
+#proyecto-condiciones-pago-text
+{
+    height: 75px;
 }
 
 #proyecto-info-pago h3{
