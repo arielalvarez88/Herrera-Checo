@@ -251,10 +251,6 @@ a.no-decoration-anchor, .no-decoration-anchor img, a.no-decoration-anchor:hover,
     position: relative;
 }
 
-#newsletter input {
-    color: #333333;
-    font-size: 1em;
-}
 #newsletter h2
 {
     clear:both;
@@ -263,18 +259,26 @@ a.no-decoration-anchor, .no-decoration-anchor img, a.no-decoration-anchor:hover,
     margin-bottom: 3px;
 }
 
+#newsletter #newsletter-email-container {
+    background-color: white;
+    border-radius: 5px 5px 5px 5px;
+    height: 30px;
+    width: 303px;
+}
+
 #newsletter p {
     font-size: 0.9em;
     height: 30px;
 }
 
 #newsletter input {
-    -moz-border-radius: 5px 5px 5px 5px;
-    border-radius: 5px;
     border: 0 none;
+    border-radius: 5px 5px 5px 5px;
     height: 30px;
     padding-left: 5px;
-    width: 298px;
+    width: 224px;
+    color: #333333;
+    font-size: 1em;
 }
 #newsletter span,#newsletter input
 {
