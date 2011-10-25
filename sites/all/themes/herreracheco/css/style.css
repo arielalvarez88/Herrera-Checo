@@ -349,10 +349,6 @@ a.no-decoration-anchor, .no-decoration-anchor img, a.no-decoration-anchor:hover,
     
 }
 
-#proyectos-residenciales-address
-{
-    color: #333333;
-}
 #proyecto-edificios {
     background-image: url("/sites/default/files/images/common/largeWhiteToGrayGradient.jpg");
     padding: 0 0 20px 0;
@@ -529,7 +525,8 @@ a.no-decoration-anchor, .no-decoration-anchor img, a.no-decoration-anchor:hover,
 #proyectos-residenciales-address
 {
     float:left;
-    margin-right: 410px;
+    width: 475px;
+    color: #333333;
     
 }
 

@@ -166,7 +166,7 @@ $pagerSlidesHtml = array();
             <h3>Direcci&oacute;n</h3>
             
 
-                <p id="proyecto-address"><?php echo $projectAbstraction->getAdderss(); ?></p>
+                <div id="proyecto-address"><?php echo $projectAbstraction->getAdderss(); ?></div>
             
         </div>
         <?php if($relatedProjects[0]): ?>

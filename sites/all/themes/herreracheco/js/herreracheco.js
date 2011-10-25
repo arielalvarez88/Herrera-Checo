@@ -253,7 +253,7 @@ Slider = function(parentSelector,minValue,maxValue,minInitialPosition,maxInitial
     
     $('.ui-slider-horizontal .ui-slider-handle').width(8); 
     $('.ui-slider-horizontal .ui-slider-range').attr('left','9.75%');
-} 
+}; 
 
 
 initializeFilter = function(){
