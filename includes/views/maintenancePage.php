@@ -1,4 +1,4 @@
-<?php require dirname(__FILE__).'/../paths.php'?>
+<?php require dirname(__FILE__).'/../paths.php';?>
 <html>
     <head>
         <title>Constructora Herrara-Checo</title>
